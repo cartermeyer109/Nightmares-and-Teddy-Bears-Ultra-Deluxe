@@ -3842,7 +3842,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.602698
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3866,7 +3866,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.6300001, y: 0.95000005, z: -11.3}
+  m_LocalPosition: {x: -6.63, y: -1, z: -11.3}
   m_LocalScale: {x: 1.64832, y: 1.64832, z: 0.82416}
   m_Children:
   - {fileID: 1056580946}
@@ -11213,6 +11213,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7602329650241005322, guid: a862949eb3baf5040a8a985c2dcfe1cb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7602329650772129572, guid: a862949eb3baf5040a8a985c2dcfe1cb, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -11220,6 +11224,22 @@ PrefabInstance:
     - target: {fileID: 7602329650772129573, guid: a862949eb3baf5040a8a985c2dcfe1cb, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602329650772129575, guid: a862949eb3baf5040a8a985c2dcfe1cb, type: 3}
+      propertyPath: m_Size.x
+      value: 0.57211417
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602329650772129575, guid: a862949eb3baf5040a8a985c2dcfe1cb, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7725135
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602329650772129575, guid: a862949eb3baf5040a8a985c2dcfe1cb, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.04375407
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602329650772129575, guid: a862949eb3baf5040a8a985c2dcfe1cb, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.035345733
       objectReference: {fileID: 0}
     - target: {fileID: 7602329650772129576, guid: a862949eb3baf5040a8a985c2dcfe1cb, type: 3}
       propertyPath: m_SortingOrder
