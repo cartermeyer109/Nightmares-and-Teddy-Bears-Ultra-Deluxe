@@ -10,6 +10,8 @@ public class GooGremlinScript : MonoBehaviour
     Animator enemyAnimator;
     private int enemyHealth;
     GameObject player;
+    float attackedTime = 0f;
+
 
     //To be used in updating (flipping code)
     public bool facingRight;
@@ -63,6 +65,16 @@ public class GooGremlinScript : MonoBehaviour
                 hasFlipped = false;
             }
         }
+
+        //Has the death animation play before object gets destroyed
+        if (enemyHealth <= 0)
+        {
+            enemyAnimator.Play("Goo-Gremlin-DieAnimation");
+            if ((Time.time - attackedTime) > .91666)
+            {
+                Destroy(this.gameObject);
+            }
+        }
     }
 
     public void takeDamage()
@@ -79,9 +91,7 @@ public class GooGremlinScript : MonoBehaviour
         Debug.Log("Enemy health after hit: " + enemyHealth);
 
         //Kills enemy if they have no health
-        if (enemyHealth <= 0)
-        {
-            Destroy(this.gameObject);
-        }
+
+        attackedTime = Time.time;
     }
 }

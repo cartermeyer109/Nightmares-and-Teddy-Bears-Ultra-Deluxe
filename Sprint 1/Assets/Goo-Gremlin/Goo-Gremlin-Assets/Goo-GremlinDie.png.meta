@@ -1,49 +1,43 @@
 fileFormatVersion: 2
-guid: c93889fcdc6252643ad51f64817f1a68
+guid: c80a3292d17d6fd4781e17ad7ab59761
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4072628043276972471
-    second: Cuddlesworth-WIP-jump__fall-sprites_0
+      213: -5844076719495959543
+    second: Goo-GremlinDie_0
   - first:
-      213: 2636490190659054371
-    second: Cuddlesworth-WIP-jump__fall-sprites_1
+      213: -2485880973930974943
+    second: Goo-GremlinDie_1
   - first:
-      213: -1660368641581625235
-    second: Cuddlesworth-WIP-jump__fall-sprites_2
+      213: -3914569895861334698
+    second: Goo-GremlinDie_2
   - first:
-      213: -4378308360220107736
-    second: Cuddlesworth-WIP-jump__fall-sprites_3
+      213: 7702900926234926515
+    second: Goo-GremlinDie_3
   - first:
-      213: 4290821228980710593
-    second: Cuddlesworth-WIP-jump__fall-sprites_4
+      213: 1019789631267656818
+    second: Goo-GremlinDie_4
   - first:
-      213: -6234317701789688280
-    second: Cuddlesworth-WIP-jump__fall-sprites_5
+      213: -4958061993087226882
+    second: Goo-GremlinDie_5
   - first:
-      213: -7935669231428894686
-    second: Cuddlesworth-WIP-jump__fall-sprites_6
+      213: -4892687496014112418
+    second: Goo-GremlinDie_6
   - first:
-      213: 9218664163141255965
-    second: Cuddlesworth-WIP-jump__fall-sprites_7
+      213: -7761114351435891352
+    second: Goo-GremlinDie_7
   - first:
-      213: -832704686063764642
-    second: Cuddlesworth-WIP-jump__fall-sprites_8
+      213: 6763418071199199187
+    second: Goo-GremlinDie_8
   - first:
-      213: -4738159360129956930
-    second: Cuddlesworth-WIP-jump__fall-sprites_9
+      213: -5445361390248600814
+    second: Goo-GremlinDie_9
   - first:
-      213: 8062269722725230880
-    second: Cuddlesworth-WIP-jump__fall-sprites_10
+      213: 7374050512857737713
+    second: Goo-GremlinDie_10
   - first:
-      213: 9176791247511855649
-    second: Cuddlesworth-WIP-jump__fall-sprites_11
-  - first:
-      213: -7536317875543483953
-    second: Cuddlesworth-WIP-jump__fall-sprites_12
-  - first:
-      213: -6411931775313457569
-    second: Cuddlesworth-WIP-jump__fall-sprites_13
+      213: 8705912904246412643
+    second: Goo-GremlinDie_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -88,7 +82,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -133,295 +127,253 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cuddlesworth-WIP-jump__fall-sprites_0
+      name: Goo-GremlinDie_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 240
-        width: 67
-        height: 80
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 4
+        y: 192
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94e8e225f5e1b77c0800000000000000
-      internalID: -4072628043276972471
+      spriteID: 90c2056df2ba5eea0800000000000000
+      internalID: -5844076719495959543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-WIP-jump__fall-sprites_1
+      name: Goo-GremlinDie_1
       rect:
         serializedVersion: 2
-        x: 99
-        y: 240
-        width: 67
-        height: 80
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 68
+        y: 192
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32be8041cd1b69420800000000000000
-      internalID: 2636490190659054371
+      spriteID: 12131facc60608dd0800000000000000
+      internalID: -2485880973930974943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-WIP-jump__fall-sprites_2
+      name: Goo-GremlinDie_2
       rect:
         serializedVersion: 2
-        x: 191
-        y: 240
-        width: 67
-        height: 80
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 132
+        y: 192
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d60545a748f25f8e0800000000000000
-      internalID: -1660368641581625235
+      spriteID: 65d4fb48b67aca9c0800000000000000
+      internalID: -3914569895861334698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-WIP-jump__fall-sprites_3
+      name: Goo-GremlinDie_3
       rect:
         serializedVersion: 2
-        x: 283
-        y: 160
-        width: 67
-        height: 80
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 196
+        y: 192
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82c15ff5ebf1d33c0800000000000000
-      internalID: -4378308360220107736
+      spriteID: 3bd9248a49336ea60800000000000000
+      internalID: 7702900926234926515
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-WIP-jump__fall-sprites_4
+      name: Goo-GremlinDie_4
       rect:
         serializedVersion: 2
-        x: 8
-        y: 160
-        width: 67
-        height: 80
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 64
+        width: 64
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cca91c8c2f0c8b30800000000000000
-      internalID: 4290821228980710593
+      spriteID: 274d55d3445072e00800000000000000
+      internalID: 1019789631267656818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-WIP-jump__fall-sprites_5
+      name: Goo-GremlinDie_5
       rect:
         serializedVersion: 2
-        x: 99
-        y: 80
-        width: 67
-        height: 80
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 4
+        y: 128
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82e55efb4114b79a0800000000000000
-      internalID: -6234317701789688280
+      spriteID: efbabafd2ec613bb0800000000000000
+      internalID: -4958061993087226882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-WIP-jump__fall-sprites_6
+      name: Goo-GremlinDie_6
       rect:
         serializedVersion: 2
-        x: 191
-        y: 160
-        width: 67
-        height: 80
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 67
+        y: 128
+        width: 59
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2200fa501e6ded190800000000000000
-      internalID: -7935669231428894686
+      spriteID: e59551b15aea91cb0800000000000000
+      internalID: -4892687496014112418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-WIP-jump__fall-sprites_7
+      name: Goo-GremlinDie_7
       rect:
         serializedVersion: 2
-        x: 8
-        y: 80
-        width: 67
-        height: 80
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 128
+        y: 128
+        width: 64
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1388abb6364fef70800000000000000
-      internalID: 9218664163141255965
+      spriteID: 86d3a751e9bfa4490800000000000000
+      internalID: -7761114351435891352
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-WIP-jump__fall-sprites_8
+      name: Goo-GremlinDie_8
       rect:
         serializedVersion: 2
-        x: 191
-        y: 80
-        width: 67
-        height: 80
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 192
+        y: 128
+        width: 64
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5bbd58ff73a174f0800000000000000
-      internalID: -832704686063764642
+      spriteID: 3df2941d6ec7cdd50800000000000000
+      internalID: 6763418071199199187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-WIP-jump__fall-sprites_9
+      name: Goo-GremlinDie_9
       rect:
         serializedVersion: 2
-        x: 283
-        y: 80
-        width: 67
-        height: 80
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 64
+        y: 64
+        width: 64
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb303427a2dae3eb0800000000000000
-      internalID: -4738159360129956930
+      spriteID: 21bda949aa03e64b0800000000000000
+      internalID: -5445361390248600814
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-WIP-jump__fall-sprites_10
+      name: Goo-GremlinDie_10
       rect:
         serializedVersion: 2
-        x: 8
-        y: 0
-        width: 67
-        height: 80
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 128
+        y: 64
+        width: 64
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 029ac6ad89fe2ef60800000000000000
-      internalID: 8062269722725230880
+      spriteID: 1f92cae3fd3e55660800000000000000
+      internalID: 7374050512857737713
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-WIP-jump__fall-sprites_11
+      name: Goo-GremlinDie_11
       rect:
         serializedVersion: 2
-        x: 99
-        y: 0
-        width: 67
-        height: 80
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 192
+        y: 64
+        width: 64
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 122abd5d4038a5f70800000000000000
-      internalID: 9176791247511855649
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cuddlesworth-WIP-jump__fall-sprites_12
-      rect:
-        serializedVersion: 2
-        x: 99
-        y: 160
-        width: 67
-        height: 80
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc9ddc142de996790800000000000000
-      internalID: -7536317875543483953
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cuddlesworth-WIP-jump__fall-sprites_13
-      rect:
-        serializedVersion: 2
-        x: 283
-        y: 240
-        width: 67
-        height: 80
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f5ec660b50e3407a0800000000000000
-      internalID: -6411931775313457569
+      spriteID: 365c81719ad91d870800000000000000
+      internalID: 8705912904246412643
       vertices: []
       indices: 
       edges: []
