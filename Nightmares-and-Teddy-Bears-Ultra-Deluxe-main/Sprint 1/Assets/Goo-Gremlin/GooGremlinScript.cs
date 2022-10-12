@@ -6,6 +6,7 @@ public class GooGremlinScript : MonoBehaviour
 {//GooGremlinScript right now just contains a take damage function to lower health,
  // and a flipper in the update function to slip the sprite and hitbox depending on the players location
 
+    //Hello
     //Fields
     Animator enemyAnimator;
     private int enemyHealth;
@@ -65,33 +66,28 @@ public class GooGremlinScript : MonoBehaviour
                 hasFlipped = false;
             }
         }
-
-        //Has the death animation play before object gets destroyed
-        if (enemyHealth <= 0)
-        {
-            enemyAnimator.Play("Goo-Gremlin-DieAnimation");
-            if ((Time.time - attackedTime) > .91666)
-            {
-                Destroy(this.gameObject);
-            }
-        }
     }
 
     public void takeDamage()
     { //To be called in other scripts when something hits this enemy
 
+        if (enemyHealth > 0)
+        {
+            Debug.Log("Enemy health before hit: " + enemyHealth);
 
-        Debug.Log("Enemy health before hit: " + enemyHealth);
+            //Lowers enemy health
+            enemyHealth--;
 
-        //Lowers enemy health
-        enemyHealth--;
-
-        //Plays damage taking animation
-        enemyAnimator.Play("Goo-Gremlin-DmgTakenAnimation");
-        Debug.Log("Enemy health after hit: " + enemyHealth);
+            //Plays damage taking animation
+            enemyAnimator.Play("Goo-Gremlin-DmgTakenAnimation");
+            Debug.Log("Enemy health after hit: " + enemyHealth);
+        }
 
         //Kills enemy if they have no health
 
-        attackedTime = Time.time;
+        if (enemyHealth <= 0)
+        {
+            enemyAnimator.SetBool("healthIsZero", true);
+        }
     }
 }
