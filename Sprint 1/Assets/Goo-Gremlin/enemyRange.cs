@@ -36,7 +36,7 @@ public class enemyRange : MonoBehaviour
                 //This basically checks that at least one second has passed between attacks
                 //so the enemy doesn't attack constatnly. I chose one second because thats
                 //how long one loop of the idle animation is
-                if ((Time.time - attackTime) > 1)
+                if ((Time.time - attackTime) > 2)
                 {
                     enemyAnimator.SetBool("attacked", true);
                     attackTime = Time.time;
