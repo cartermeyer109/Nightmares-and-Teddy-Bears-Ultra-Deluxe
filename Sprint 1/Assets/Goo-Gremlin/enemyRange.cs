@@ -38,7 +38,7 @@ public class enemyRange : MonoBehaviour
                 //how long one loop of the idle animation is
                 if ((Time.time - attackTime) > 1)
                 {
-                    enemyAnimator.Play("Goo-Gremlin-AttackAnimation");
+                    enemyAnimator.SetBool("attacked", true);
                     attackTime = Time.time;
                 }
             }

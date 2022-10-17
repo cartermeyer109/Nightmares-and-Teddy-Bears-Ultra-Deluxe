@@ -11,7 +11,6 @@ public class GooGremlinScript : MonoBehaviour
     Animator enemyAnimator;
     private int enemyHealth;
     GameObject player;
-    float attackedTime = 0f;
 
 
     //To be used in updating (flipping code)
@@ -79,7 +78,7 @@ public class GooGremlinScript : MonoBehaviour
             enemyHealth--;
 
             //Plays damage taking animation
-            enemyAnimator.Play("Goo-Gremlin-DmgTakenAnimation");
+            enemyAnimator.SetBool("dmgTaken", true);
             Debug.Log("Enemy health after hit: " + enemyHealth);
         }
 
