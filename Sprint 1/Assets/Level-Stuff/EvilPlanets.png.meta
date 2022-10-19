@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: bbee56a55ee885e4ca3c474c2c85471e
+guid: f48bbe7c1f8012b47a561217a90fa5e4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8287873616420496286
-    second: clouds_0
+      213: -7852025864024203635
+    second: EvilPlanets_0
   - first:
-      213: 7911139459876737251
-    second: clouds_1
+      213: -400762411456220919
+    second: EvilPlanets_1
   - first:
-      213: -1115256706364395465
-    second: clouds_2
+      213: 809252843009331118
+    second: EvilPlanets_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -100,73 +100,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: clouds_0
+      name: EvilPlanets_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 245
-        width: 563
-        height: 140
+        x: 17
+        y: 91
+        width: 800
+        height: 800
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e936312a421740370800000000000000
-      internalID: 8287873616420496286
+      spriteID: d8e58a71410080390800000000000000
+      internalID: -7852025864024203635
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clouds_1
+      name: EvilPlanets_1
       rect:
         serializedVersion: 2
-        x: 12
-        y: 94
-        width: 347
-        height: 132
+        x: 845
+        y: 379
+        width: 500
+        height: 500
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e0578a7c630acd60800000000000000
-      internalID: 7911139459876737251
+      spriteID: 901b2d9c5b4307af0800000000000000
+      internalID: -400762411456220919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clouds_2
+      name: EvilPlanets_2
       rect:
         serializedVersion: 2
-        x: 319
-        y: 15
-        width: 269
-        height: 132
+        x: 845
+        y: 66
+        width: 250
+        height: 250
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 72.5, y: 66}
-        - {x: -40.5, y: 66}
-        - {x: -80.5, y: 22}
-        - {x: -134.5, y: -8}
-        - {x: -134.5, y: -66}
-        - {x: 124.5, y: -66}
-        - {x: 134.5, y: -56}
-        - {x: 134.5, y: 13}
-        - {x: 131.5, y: 26}
+      outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73037c73fefc580f0800000000000000
-      internalID: -1115256706364395465
+      spriteID: eafcb015c2b0b3b00800000000000000
+      internalID: 809252843009331118
       vertices: []
       indices: 
       edges: []

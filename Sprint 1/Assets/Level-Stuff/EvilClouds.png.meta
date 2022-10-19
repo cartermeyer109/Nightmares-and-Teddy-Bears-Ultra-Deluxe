@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: bbee56a55ee885e4ca3c474c2c85471e
+guid: 0ec79b7c3010719449d3577c37ef94e3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8287873616420496286
-    second: clouds_0
+      213: -5983690678585336006
+    second: EvilClouds_0
   - first:
-      213: 7911139459876737251
-    second: clouds_1
+      213: -2971995433982802374
+    second: EvilClouds_1
   - first:
-      213: -1115256706364395465
-    second: clouds_2
+      213: 491383168963924403
+    second: EvilClouds_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: clouds_0
+      name: EvilClouds_0
       rect:
         serializedVersion: 2
         x: 12
@@ -114,14 +114,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e936312a421740370800000000000000
-      internalID: 8287873616420496286
+      spriteID: a3fda11e709a5fca0800000000000000
+      internalID: -5983690678585336006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clouds_1
+      name: EvilClouds_1
       rect:
         serializedVersion: 2
         x: 12
@@ -135,14 +135,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e0578a7c630acd60800000000000000
-      internalID: 7911139459876737251
+      spriteID: a364f5b26e951c6d0800000000000000
+      internalID: -2971995433982802374
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: clouds_2
+      name: EvilClouds_2
       rect:
         serializedVersion: 2
         x: 319
@@ -154,8 +154,8 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 72.5, y: 66}
-        - {x: -40.5, y: 66}
-        - {x: -80.5, y: 22}
+        - {x: -67.5, y: 66}
+        - {x: -80.5, y: 14}
         - {x: -134.5, y: -8}
         - {x: -134.5, y: -66}
         - {x: 124.5, y: -66}
@@ -165,8 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73037c73fefc580f0800000000000000
-      internalID: -1115256706364395465
+      spriteID: 3b153b2836eb1d600800000000000000
+      internalID: 491383168963924403
       vertices: []
       indices: 
       edges: []
