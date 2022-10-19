@@ -12,6 +12,12 @@ public class GooGremlinScript : MonoBehaviour
     private int enemyHealth;
     GameObject player;
 
+    private GameObject dieSoundObject;
+    private GameObject hurtSoundObject;
+
+    private AudioSource dieSound;
+    private AudioSource hurtSound;
+
 
     //To be used in updating (flipping code)
     public bool facingRight;
@@ -26,6 +32,11 @@ public class GooGremlinScript : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         enemyAnimator = GetComponent<Animator>();
 
+        dieSoundObject = GameObject.Find("SlimeDeathMonster");
+        hurtSoundObject = GameObject.Find("BloodyImpact");
+
+        dieSound = dieSoundObject.GetComponent<AudioSource>();
+        hurtSound = hurtSoundObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -79,6 +90,7 @@ public class GooGremlinScript : MonoBehaviour
 
             //Plays damage taking animation
             enemyAnimator.SetBool("dmgTaken", true);
+            hurtSound.Play();
             Debug.Log("Enemy health after hit: " + enemyHealth);
         }
 
@@ -87,6 +99,7 @@ public class GooGremlinScript : MonoBehaviour
         if (enemyHealth <= 0)
         {
             enemyAnimator.SetBool("healthIsZero", true);
+            dieSound.Play();
         }
     }
 }
