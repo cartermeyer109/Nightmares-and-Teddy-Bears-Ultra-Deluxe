@@ -22,6 +22,13 @@ public class MovementScript : MonoBehaviour
     private GameObject currentProjectile;
     public Transform spawnSpot;
 
+    private GameObject meleeSoundObject;
+    private GameObject jumpSoundObject;
+
+    private AudioSource meleeSound;
+    private AudioSource jumpSound;
+
+
     void Start()
     {
         Debug.Log("Starting...");
@@ -40,6 +47,13 @@ public class MovementScript : MonoBehaviour
         speed = 2.5f;
         fallForce = 0f;
         jumpForce = new Vector2(0, 28); //(0,22);
+
+        meleeSoundObject = GameObject.Find("MeleeSound");
+        jumpSoundObject = GameObject.Find("JumpSound");
+
+        meleeSound = meleeSoundObject.GetComponent<AudioSource>();
+        jumpSound = jumpSoundObject.GetComponent<AudioSource>();
+
     }
 
     void Update()
@@ -84,20 +98,22 @@ public class MovementScript : MonoBehaviour
                 //    myPhysics.AddForce(jumpForce, ForceMode2D.Impulse);
                 //}
                 protagAnimator.Play("Cuddlesworth_jump");
+                jumpSound.Play();
                 canJump = false;
             }
             if (Input.GetKeyDown(KeyCode.J))
             {
                 //Debug.Log("Attack");
                 protagAnimator.Play("protag_attack_anim");
+                meleeSound.Play();
             }
             if (Input.GetKey(KeyCode.K))
             {
-                //do stuff
+                //do stuff (light/courage magic)
             }
             if (Input.GetKey(KeyCode.L))
             {
-
+                //fear mode
             }
             if (facingRight)
             {
