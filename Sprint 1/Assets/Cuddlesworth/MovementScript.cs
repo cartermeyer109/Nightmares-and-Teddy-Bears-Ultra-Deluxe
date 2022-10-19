@@ -90,7 +90,7 @@ public class MovementScript : MonoBehaviour
                 hasFlipped = false;
             }
 
-            if ((Input.GetKey(KeyCode.W) /*|| Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow)*/) && canJump)
+            if ((Input.GetKeyDown(KeyCode.W) /*|| Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow)*/) && canJump)
             {
                 myPhysics.AddForce(jumpForce, ForceMode2D.Impulse);
                 //if (myPhysics.velocity.y < 10) //code to allow small jumps; needs fixing
