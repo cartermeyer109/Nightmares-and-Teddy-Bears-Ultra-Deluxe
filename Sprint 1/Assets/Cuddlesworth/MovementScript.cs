@@ -16,6 +16,8 @@ public class MovementScript : MonoBehaviour
     bool canJump;
     bool facingRight;
     bool hasFlipped;
+    int courage;
+    int fear;
 
     Animator protagAnimator;
     public GameObject theProjectileHolder;
@@ -33,6 +35,8 @@ public class MovementScript : MonoBehaviour
     {
         Debug.Log("Starting...");
         playerHealth = 99;
+        courage = 0;
+        fear = 0;
 
         canJump = false;
         facingRight = true;
@@ -67,14 +71,14 @@ public class MovementScript : MonoBehaviour
                     fallForce = myPhysics.velocity.y;
                     myPhysics.velocity = new Vector2(speed, fallForce);
                     facingRight = true;
-                    protagAnimator.Play("Cuddlesworth_run");
+                    if (canJump) protagAnimator.Play("Cuddlesworth_run");
                 }
                 if (Input.GetKey(KeyCode.A) /*|| Input.GetKey(KeyCode.LeftArrow)*/)
                 {
                     fallForce = myPhysics.velocity.y;
                     myPhysics.velocity = new Vector2(-1 * speed, fallForce);
                     facingRight = false;
-                    protagAnimator.Play("Cuddlesworth_run");
+                    if (canJump) protagAnimator.Play("Cuddlesworth_run");
                 }
             }
 
@@ -92,14 +96,14 @@ public class MovementScript : MonoBehaviour
 
             if ((Input.GetKeyDown(KeyCode.W) /*|| Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow)*/) && canJump)
             {
+                canJump = false;
                 myPhysics.AddForce(jumpForce, ForceMode2D.Impulse);
-                //if (myPhysics.velocity.y < 10) //code to allow small jumps; needs fixing
-                //{
-                //    myPhysics.AddForce(jumpForce, ForceMode2D.Impulse);
-                //}
+                /*if (myPhysics.velocity.y < 10) //code to allow small jumps; needs fixing
+                {
+                    myPhysics.AddForce(jumpForce, ForceMode2D.Impulse);
+                }*/
                 protagAnimator.Play("Cuddlesworth_jump");
                 jumpSound.Play();
-                canJump = false;
             }
             if (Input.GetKeyDown(KeyCode.J))
             {
@@ -135,12 +139,6 @@ public class MovementScript : MonoBehaviour
             canJump = true;
         }
         //ALSO TODO: make canJump false if protag is not touching anything!
-
-        /*if (thingProtagHit.gameObject.CompareTag("killbox")) 
-        {
-            Debug.Log("Cuddlesworth ran into " + thingProtagHit.gameObject.name);
-            Destroy(this.gameObject);
-        }*/
 
         if (thingProtagHit.gameObject.CompareTag("Void"))
         {
