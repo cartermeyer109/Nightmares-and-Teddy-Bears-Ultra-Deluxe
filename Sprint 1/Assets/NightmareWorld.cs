@@ -5,19 +5,18 @@ using UnityEngine;
 public class NightmareWorld : MonoBehaviour
 {
 
-    private GameObject normalBackground;
-    private GameObject normalBackObj;
-    private GameObject normalTiles;
-    
+    private GameObject evilBackground;
+    private GameObject evilBackObj;
+    private GameObject evilTiles;
 
     // Start is called before the first frame update
     void Start()
     {
 
-        normalBackground = GameObject.Find("background");
-        normalBackObj = GameObject.Find("Background");
-        normalTiles = GameObject.Find("NormalTiles");
-        //evilTiles.SetActive(false);
+        evilBackground = GameObject.Find("evilBackground");
+        evilBackObj = GameObject.Find("EvilBackground");
+        evilTiles = GameObject.Find("EvilTiles");
+        endNightmareMode();
     }
 
     // Update is called once per frame
@@ -30,31 +29,38 @@ public class NightmareWorld : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            normalBackground.SetActive(false);
-            normalBackObj.SetActive(false);
-            normalTiles.SetActive(false);
+            setNightmareMode();
         }
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            normalBackground.SetActive(true);
-            normalBackObj.SetActive(true);
-            normalTiles.SetActive(true);
+            endNightmareMode();
         }
     }
 
     public IEnumerator glitchTimedCounter()
     {
         Debug.Log("start nightmare world");
-        normalBackground.SetActive(false);
-        normalBackObj.SetActive(false);
-        normalTiles.SetActive(false);
+        setNightmareMode();
         yield return new WaitForSeconds(1);
         //yield return null;
         Debug.Log("end nightmare world");
-        normalBackground.SetActive(true);
-        normalBackObj.SetActive(true);
-        normalTiles.SetActive(true);
+        endNightmareMode();
     }
+
+    void setNightmareMode()
+    {
+        evilBackground.SetActive(true);
+        evilBackObj.SetActive(true);
+        evilTiles.SetActive(true);
+    }
+
+    void endNightmareMode()
+    {
+        evilBackground.SetActive(false);
+        evilBackObj.SetActive(false);
+        evilTiles.SetActive(false);
+    }
+
 }
 
