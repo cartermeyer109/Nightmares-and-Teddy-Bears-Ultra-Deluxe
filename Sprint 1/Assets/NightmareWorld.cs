@@ -8,6 +8,8 @@ public class NightmareWorld : MonoBehaviour
     private GameObject evilBackground;
     private GameObject evilBackObj;
     private GameObject evilTiles;
+    public bool didGlitch;
+    public bool isNightmareScene;
 
     // Start is called before the first frame update
     void Start()
@@ -16,25 +18,48 @@ public class NightmareWorld : MonoBehaviour
         evilBackground = GameObject.Find("evilBackground");
         evilBackObj = GameObject.Find("EvilBackground");
         evilTiles = GameObject.Find("EvilTiles");
+        didGlitch = false;
         endNightmareMode();
+        isNightmareScene = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    StartCoroutine(glitchTimedCounter());
+        //}
+
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    setNightmareMode();
+        //}
+
+        //if (Input.GetKeyDown(KeyCode.Q))
+        //{
+        //    endNightmareMode();
+        //}
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Mushroom"))
         {
-            StartCoroutine(glitchTimedCounter());
+            //Debug.Log("hit mushroom");
+            if (!didGlitch)
+            {
+                StartCoroutine(glitchTimedCounter());
+                didGlitch = true;
+            }
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (other.gameObject.CompareTag("NightmareLine"))
         {
-            setNightmareMode();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            endNightmareMode();
+            if (!isNightmareScene)
+            {
+                setNightmareMode();
+            }
         }
     }
 
@@ -53,6 +78,7 @@ public class NightmareWorld : MonoBehaviour
         evilBackground.SetActive(true);
         evilBackObj.SetActive(true);
         evilTiles.SetActive(true);
+        isNightmareScene = true;
     }
 
     void endNightmareMode()
@@ -60,6 +86,7 @@ public class NightmareWorld : MonoBehaviour
         evilBackground.SetActive(false);
         evilBackObj.SetActive(false);
         evilTiles.SetActive(false);
+        isNightmareScene = false;
     }
 
 }
