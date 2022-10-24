@@ -24,11 +24,11 @@ public class MovementScript : MonoBehaviour
     private GameObject currentProjectile;
     public Transform spawnSpot;
 
-    private GameObject meleeSoundObject;
-    private GameObject jumpSoundObject;
+    //private GameObject meleeSoundObject;
+    //private GameObject jumpSoundObject;
 
-    private AudioSource meleeSound;
-    private AudioSource jumpSound;
+    //private AudioSource meleeSound;
+    //rivate AudioSource jumpSound;
 
 
     void Start()
@@ -52,11 +52,11 @@ public class MovementScript : MonoBehaviour
         fallForce = 0f;
         jumpForce = new Vector2(0, 28); //(0,22);
 
-        meleeSoundObject = GameObject.Find("MeleeSound");
-        jumpSoundObject = GameObject.Find("JumpSound");
+        //meleeSoundObject = GameObject.Find("MeleeSound");
+        //jumpSoundObject = GameObject.Find("JumpSound");
 
-        meleeSound = meleeSoundObject.GetComponent<AudioSource>();
-        jumpSound = jumpSoundObject.GetComponent<AudioSource>();
+        //meleeSound = meleeSoundObject.GetComponent<AudioSource>();
+        //jumpSound = jumpSoundObject.GetComponent<AudioSource>();
 
     }
 
@@ -104,12 +104,13 @@ public class MovementScript : MonoBehaviour
                 }*/
                 protagAnimator.Play("Cuddlesworth_jump");
                 jumpSound.Play();
+                canJump = false;
             }
             if (Input.GetKeyDown(KeyCode.J))
             {
                 //Debug.Log("Attack");
                 protagAnimator.Play("protag_attack_anim");
-                meleeSound.Play();
+                //meleeSound.Play();
             }
             if (Input.GetKey(KeyCode.K))
             {

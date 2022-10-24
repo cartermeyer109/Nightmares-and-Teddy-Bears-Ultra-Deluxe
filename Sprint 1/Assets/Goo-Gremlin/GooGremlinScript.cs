@@ -12,16 +12,21 @@ public class GooGremlinScript : MonoBehaviour
     private int enemyHealth;
     GameObject player;
 
-    private GameObject dieSoundObject;
-    private GameObject hurtSoundObject;
+    //private GameObject dieSoundObject;
+    //private GameObject hurtSoundObject;
 
-    private AudioSource dieSound;
-    private AudioSource hurtSound;
+    //private AudioSource dieSound;
+    //private AudioSource hurtSound;
 
+    Rigidbody2D myPhysics;
+
+    float fallForce;
+    float speed;
 
     //To be used in updating (flipping code)
-    public bool facingRight;
+    public bool facingLeft;
     public bool hasFlipped = false;
+    public bool dynamicFlipping = false;
 
     // Start is called before the first frame update
     void Start()
@@ -32,11 +37,16 @@ public class GooGremlinScript : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         enemyAnimator = GetComponent<Animator>();
 
-        dieSoundObject = GameObject.Find("SlimeDeathMonster");
-        hurtSoundObject = GameObject.Find("BloodyImpact");
+        myPhysics = GetComponent<Rigidbody2D>();
 
-        dieSound = dieSoundObject.GetComponent<AudioSource>();
-        hurtSound = hurtSoundObject.GetComponent<AudioSource>();
+        speed = 2.5f;
+        fallForce = 0f;
+
+        //dieSoundObject = GameObject.Find("SlimeDeathMonster");
+        //hurtSoundObject = GameObject.Find("BloodyImpact");
+
+        //dieSound = dieSoundObject.GetComponent<AudioSource>();
+        //hurtSound = hurtSoundObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -46,35 +56,60 @@ public class GooGremlinScript : MonoBehaviour
 
         if (player != null)
         {
+            if (enemyAnimator.GetBool("hasAwoken")) {
+                //FLIPS SPRITE CODE
+                //Checks if player is on the right of the enemy
+                if ((player.transform.position.x > this.transform.position.x))
+                {
+                    facingLeft = false;
+                }
+                //Else if player is on the left side of the enemy
+                else
+                {
+                    facingLeft = true;
+                }
 
-            //Checks if player is on the right of the enemy
-            if ((player.transform.position.x > this.transform.position.x))
-            {
-                facingRight = true;
-            }
-            //Else if player is on the left side of the enemy
-            else
-            {
-                facingRight = false;
+                //If player is on the right of the enemy (facingLeft == true) and the enemy has not flipped yet.
+                if (facingLeft && !hasFlipped)
+                {
+                    //Flip enemy to the right
+                    this.transform.localScale *= new Vector2(-1, 1);
+                    //Recognize that the enemy has flipped
+                    hasFlipped = true;
+                }
+
+                //If the player has fliped to the right (meaning they are currently facing right) and the player is on the left side of the enemy
+                if (hasFlipped && !facingLeft)
+                {
+                    //Flip enemy to the left
+                    this.transform.localScale *= new Vector2(-1, 1);
+                    //Recognize the enemy is now facing their default direction
+                    hasFlipped = false;
+                }
+
+                //MOVEMENT CODE
+                if (enemyAnimator.GetBool("isWalking"))
+                {
+                    if (!facingLeft)
+                    {
+                        fallForce = myPhysics.velocity.y;
+                        myPhysics.velocity = new Vector2(speed, fallForce);
+                    }
+                    if (facingLeft){
+                
+                        fallForce = myPhysics.velocity.y;
+                        myPhysics.velocity = new Vector2(-1 * speed, fallForce);
+                    }
+                }
             }
 
-            //If player is on the right of the enemy (facingRight == true) and the enemy has not flipped yet.
-            if (facingRight && !hasFlipped)
+            //Allows Gremlin to come out of puddle
+            if ((player.transform.position.x - this.transform.position.x) >= 5)
             {
-                //Flip enemy to the right
-                this.transform.localScale *= new Vector2(-1, 1);
-                //Recognize that the enemy has flipped
-                hasFlipped = true;
+                enemyAnimator.SetBool("farToTheRight", true);
             }
 
-            //If the player has fliped to the right (meaning they are currently facing right) and the player is on the left side of the enemy
-            if (hasFlipped && !facingRight)
-            {
-                //Flip enemy to the left
-                this.transform.localScale *= new Vector2(-1, 1);
-                //Recognize the enemy is now facing their default direction
-                hasFlipped = false;
-            }
+
         }
     }
 
@@ -90,7 +125,7 @@ public class GooGremlinScript : MonoBehaviour
 
             //Plays damage taking animation
             enemyAnimator.SetBool("dmgTaken", true);
-            hurtSound.Play();
+            //hurtSound.Play();
             Debug.Log("Enemy health after hit: " + enemyHealth);
         }
 
@@ -99,7 +134,7 @@ public class GooGremlinScript : MonoBehaviour
         if (enemyHealth <= 0)
         {
             enemyAnimator.SetBool("healthIsZero", true);
-            dieSound.Play();
+            //dieSound.Play();
         }
     }
 }
