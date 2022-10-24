@@ -103,7 +103,7 @@ public class MovementScript : MonoBehaviour
                     myPhysics.AddForce(jumpForce, ForceMode2D.Impulse);
                 }*/
                 protagAnimator.Play("Cuddlesworth_jump");
-                jumpSound.Play();
+                //jumpSound.Play();
                 canJump = false;
             }
             if (Input.GetKeyDown(KeyCode.J))

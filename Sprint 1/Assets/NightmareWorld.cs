@@ -10,6 +10,7 @@ public class NightmareWorld : MonoBehaviour
     private GameObject evilTiles;
     public bool didGlitch;
     public bool isNightmareScene;
+    private int glitchTime;
 
     // Start is called before the first frame update
     void Start()
@@ -20,56 +21,72 @@ public class NightmareWorld : MonoBehaviour
         didGlitch = false;
         endNightmareMode();
         isNightmareScene = false;
+        glitchTime = 65;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    StartCoroutine(glitchTimedCounter());
-        //}
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine(glitchTimedCounter());
+        }
 
-        //if (Input.GetKeyDown(KeyCode.E))
-        //{
-        //    setNightmareMode();
-        //}
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            setNightmareMode();
+        }
 
-        //if (Input.GetKeyDown(KeyCode.Q))
-        //{
-        //    endNightmareMode();
-        //}
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            endNightmareMode();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Mushroom"))
-        {
-            //Debug.Log("hit mushroom");
-            if (!didGlitch)
-            {
-                StartCoroutine(glitchTimedCounter());
-                didGlitch = true;
-            }
-        }
+        //if (other.gameObject.CompareTag("Mushroom"))
+        //{
+        //    //Debug.Log("hit mushroom");
+        //    if (!didGlitch)
+        //    {
+        //        StartCoroutine(glitchTimedCounter());
+        //        didGlitch = true;
+        //    }
+        //}
 
         if (other.gameObject.CompareTag("NightmareLine"))
         {
-            if (!isNightmareScene)
+            if (!didGlitch)
+            {
+                StartCoroutine(glitchTimedCounter());
+                Destroy(other.gameObject);
+                didGlitch = true;
+
+            }
+            else if (!isNightmareScene)
             {
                 setNightmareMode();
+            }
+            else
+            {
+                Debug.Log("Error setting nightmare mode");
             }
         }
     }
 
     public IEnumerator glitchTimedCounter()
     {
-        Debug.Log("start nightmare world");
+        //Debug.Log("start nightmare world");
         setNightmareMode();
-        yield return new WaitForSeconds(1);
-        //yield return null;
-        Debug.Log("end nightmare world");
+        //yield return new WaitForSeconds(1);
+        for (int i=0; i<glitchTime; ++i){ yield return null; }
         endNightmareMode();
+        for (int i = 0; i < glitchTime; ++i) { yield return null; }
+        setNightmareMode();
+        for (int i = 0; i < (glitchTime * 3); ++i) { yield return null; }        
+        endNightmareMode();
+        //Debug.Log("end nightmare world");
     }
 
     void setNightmareMode()
