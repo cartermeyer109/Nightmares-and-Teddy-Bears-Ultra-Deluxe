@@ -86,6 +86,10 @@ public class NightmareWorld : MonoBehaviour
         setNightmareMode();
         for (int i = 0; i < (glitchTime * 3); ++i) { yield return null; }        
         endNightmareMode();
+        for (int i = 0; i < glitchTime; ++i) { yield return null; }
+        setNightmareMode();
+        for (int i = 0; i < glitchTime; ++i) { yield return null; }
+        endNightmareMode();
         //Debug.Log("end nightmare world");
     }
 
