@@ -14,7 +14,6 @@ public class NightmareWorld : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         evilBackground = GameObject.Find("evilBackground");
         evilBackObj = GameObject.Find("EvilBackground");
         evilTiles = GameObject.Find("EvilTiles");
