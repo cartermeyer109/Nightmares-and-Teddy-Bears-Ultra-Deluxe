@@ -7,8 +7,8 @@ public class gremlinWalk : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.SetBool("hasAwoken", true);
         animator.SetBool("isWalking", true);
+        animator.SetBool("hasAwoken", true);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

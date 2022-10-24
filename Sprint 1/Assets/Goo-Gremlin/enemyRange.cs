@@ -24,22 +24,25 @@ public class enemyRange : MonoBehaviour
     void Update()
     {
         //Makes sure a "player" exists
-        if (GameObject.FindGameObjectWithTag("Player") != null)
+        if (enemyAnimator.GetBool("hasAwoken"))
         {
-            //This checks distance between the this enemy and the player
-            //I have it set to 2 difference x, and 3 difference y. But I don't know the
-            //dimensions of the player we're using or if we are going to scale them.
-            //(My GooGremlin is currently set to a scale of 5)
-            if (Mathf.Abs(player.transform.position.x - this.transform.position.x) <= 2 &&
-                Mathf.Abs(player.transform.position.y - this.transform.position.y) <= 3)
+            if (GameObject.FindGameObjectWithTag("Player") != null)
             {
-                //This basically checks that at least one second has passed between attacks
-                //so the enemy doesn't attack constatnly. I chose one second because thats
-                //how long one loop of the idle animation is
-                if ((Time.time - attackTime) > 2)
+                //This checks distance between the this enemy and the player
+                //I have it set to 2 difference x, and 3 difference y. But I don't know the
+                //dimensions of the player we're using or if we are going to scale them.
+                //(My GooGremlin is currently set to a scale of 5)
+                if (Mathf.Abs(player.transform.position.x - this.transform.position.x) <= 1.5 &&
+                    Mathf.Abs(player.transform.position.y - this.transform.position.y) <= 3)
                 {
-                    enemyAnimator.SetBool("attacked", true);
-                    attackTime = Time.time;
+                    //This basically checks that at least one second has passed between attacks
+                    //so the enemy doesn't attack constatnly. I chose one second because thats
+                    //how long one loop of the idle animation is
+                    if ((Time.time - attackTime) > 2)
+                    {
+                        enemyAnimator.SetBool("attacked", true);
+                        attackTime = Time.time;
+                    }
                 }
             }
         }
