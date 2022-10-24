@@ -39,7 +39,7 @@ public class GooGremlinScript : MonoBehaviour
 
         myPhysics = GetComponent<Rigidbody2D>();
 
-        speed = 2.5f;
+        speed = 4f;
         fallForce = 0f;
 
         //dieSoundObject = GameObject.Find("SlimeDeathMonster");
@@ -56,7 +56,8 @@ public class GooGremlinScript : MonoBehaviour
 
         if (player != null)
         {
-            if (enemyAnimator.GetBool("hasAwoken")) {
+            if (enemyAnimator.GetBool("hasAwoken"))
+            {
                 //FLIPS SPRITE CODE
                 //Checks if player is on the right of the enemy
                 if ((player.transform.position.x > this.transform.position.x))
@@ -87,7 +88,16 @@ public class GooGremlinScript : MonoBehaviour
                     hasFlipped = false;
                 }
 
-                //MOVEMENT CODE
+                //Normal MOVEMENT CODE
+                /*if (Mathf.Abs(player.transform.position.x - this.transform.position.x) <= 5 &&
+               Mathf.Abs(player.transform.position.y - this.transform.position.y) <= 3)
+                {
+                    enemyAnimator.SetBool("canWalk", true);
+                }
+                else
+                {
+                    enemyAnimator.SetBool("canWalk", false);
+                }
                 if (enemyAnimator.GetBool("isWalking"))
                 {
                     if (!facingLeft)
@@ -95,12 +105,47 @@ public class GooGremlinScript : MonoBehaviour
                         fallForce = myPhysics.velocity.y;
                         myPhysics.velocity = new Vector2(speed, fallForce);
                     }
-                    if (facingLeft){
-                
+                    else if (facingLeft)
+                    {
                         fallForce = myPhysics.velocity.y;
                         myPhysics.velocity = new Vector2(-1 * speed, fallForce);
+
+                    }
+                }*/
+
+                //Beginner Gremlin Movement Code
+                enemyAnimator.SetBool("canWalk", true);
+                if (enemyAnimator.GetBool("isWalking"))
+                {
+                    if (!facingLeft)
+                    {
+                        fallForce = myPhysics.velocity.y;
+                        myPhysics.velocity = new Vector2(speed, fallForce);
+                    }
+                    else if (facingLeft)
+                    {
+                        fallForce = myPhysics.velocity.y;
+                        myPhysics.velocity = new Vector2(-1 * speed, fallForce);
+
                     }
                 }
+                if (Mathf.Abs(player.transform.position.x - this.transform.position.x) <= 3)
+                {
+                    speed = 1.5f;
+                }
+                
+                if (Mathf.Abs(player.transform.position.x - this.transform.position.x) >= 6)
+                {
+                    speed = 5.5f;
+                }
+
+
+                //If protag is at x=57 make normal
+                //From 30 to 57
+                //player.transform.position.x
+
+                //Scale distance from player with players distance from cutscene point
+                //Im thinking have it chase after you and if you walk back it continues walking forward at a slow pase and will attack. If you walk forward into a certain range then it will continue its closeness to you.
             }
 
             //Allows Gremlin to come out of puddle
