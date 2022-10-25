@@ -134,7 +134,7 @@ public class GooGremlinScript : MonoBehaviour
                     speed = 1.5f;
                 }
                 
-                if (Mathf.Abs(player.transform.position.x - this.transform.position.x) >= 6)
+                if (Mathf.Abs(player.transform.position.x - this.transform.position.x) >= 5.5)
                 {
                     speed = 5.5f;
                 }
@@ -142,14 +142,22 @@ public class GooGremlinScript : MonoBehaviour
 
                 //If protag is at x=57 make normal
                 //From 30 to 57
-                //player.transform.position.x
+                //56 - 57
+                //25 - 30
+
+                //this.transform.position = new Vector2(player.transform.position.x - 5, -0.2352908f);
+                //this.transform.position = new Vector2(player.transform.position.x - 1, -0.2352908f);
+
+
+
+
 
                 //Scale distance from player with players distance from cutscene point
                 //Im thinking have it chase after you and if you walk back it continues walking forward at a slow pase and will attack. If you walk forward into a certain range then it will continue its closeness to you.
             }
 
             //Allows Gremlin to come out of puddle
-            if ((player.transform.position.x - this.transform.position.x) >= 5)
+            if ((player.transform.position.x - this.transform.position.x) >= 9)
             {
                 enemyAnimator.SetBool("farToTheRight", true);
             }

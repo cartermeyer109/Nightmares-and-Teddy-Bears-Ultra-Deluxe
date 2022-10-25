@@ -62,7 +62,7 @@ public class MovementScript : MonoBehaviour
 
     void Update()
     {
-        if (this != null)
+        if (this != null && !protagAnimator.GetBool("cutsceneIdle"))
         {
             if ((Input.GetKey(KeyCode.D) /*|| Input.GetKey(KeyCode.RightArrow)*/) ^ (Input.GetKey(KeyCode.A) /*|| Input.GetKey(KeyCode.LeftArrow)*/))
             {

@@ -35,7 +35,7 @@ public class enemyRange : MonoBehaviour
                 if (Mathf.Abs(player.transform.position.x - this.transform.position.x) <= 1.5 &&
                     Mathf.Abs(player.transform.position.y - this.transform.position.y) <= 3)
                 {
-                    //This basically checks that at least one second has passed between attacks
+                    //This basically checks that at least 2 second has passed between attacks
                     //so the enemy doesn't attack constatnly. I chose one second because thats
                     //how long one loop of the idle animation is
                     if ((Time.time - attackTime) > 2)
