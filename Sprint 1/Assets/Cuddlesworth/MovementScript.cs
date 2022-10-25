@@ -8,7 +8,7 @@ public class MovementScript : MonoBehaviour
     public int playerHealth;
 
     Vector3 moveRight, moveLeft;
-    Vector2 jumpForce;
+    public Vector2 jumpForce;
     Rigidbody2D myPhysics;
 
     float fallForce;
@@ -50,7 +50,7 @@ public class MovementScript : MonoBehaviour
 
         speed = 2.5f;
         fallForce = 0f;
-        jumpForce = new Vector2(0, 28); //(0,22);
+        //jumpForce = new Vector2(0, 28); //(0,22);
 
         meleeSoundObject = GameObject.Find("MeleeSound");
         jumpSoundObject = GameObject.Find("JumpSound");

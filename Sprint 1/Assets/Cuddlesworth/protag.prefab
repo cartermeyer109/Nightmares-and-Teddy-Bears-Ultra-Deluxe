@@ -515,10 +515,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: 0
+  jumpForce: {x: 0, y: 28}
   theProjectileHolder: {fileID: 0}
   spawnSpot: {fileID: 0}
-  meleeSoundObject: {fileID: 0}
-  jumpSoundObject: {fileID: 0}
   meleeSound: {fileID: 0}
   jumpSound: {fileID: 0}
 --- !u!81 &658614360768737034
