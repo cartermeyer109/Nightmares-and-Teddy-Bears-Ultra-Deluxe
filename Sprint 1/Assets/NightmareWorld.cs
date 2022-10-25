@@ -21,7 +21,7 @@ public class NightmareWorld : MonoBehaviour
         didGlitch = false;
         endNightmareMode();
         isNightmareScene = false;
-        glitchTime = 65;
+        glitchTime = 75;
     }
 
     // Update is called once per frame
@@ -64,9 +64,9 @@ public class NightmareWorld : MonoBehaviour
                 didGlitch = true;
 
             }
-            else if (!isNightmareScene)
+            else if (!isNightmareScene && didGlitch)
             {
-                setNightmareMode();
+                nighmareWorldTransition();
             }
             else
             {
@@ -77,16 +77,26 @@ public class NightmareWorld : MonoBehaviour
 
     public IEnumerator glitchTimedCounter()
     {
-        //Debug.Log("start nightmare world");
         setNightmareMode();
-        //yield return new WaitForSeconds(1);
-        for (int i=0; i<glitchTime; ++i){ yield return null; }
+        for (int i = 0; i < glitchTime; ++i) { yield return null; }
         endNightmareMode();
         for (int i = 0; i < glitchTime; ++i) { yield return null; }
         setNightmareMode();
-        for (int i = 0; i < (glitchTime * 3); ++i) { yield return null; }        
+        yield return new WaitForSeconds(1);
         endNightmareMode();
-        //Debug.Log("end nightmare world");
+        for (int i = 0; i < glitchTime; ++i) { yield return null; }
+        setNightmareMode();
+        for (int i = 0; i < glitchTime; ++i) { yield return null; }
+        endNightmareMode();
+    }
+
+    public IEnumerator nighmareWorldTransition()
+    {
+        setNightmareMode();
+        for (int i = 0; i < (glitchTime * 2); ++i) { yield return null; }
+        endNightmareMode();
+        for (int i = 0; i < (glitchTime * 2); ++i) { yield return null; }
+        setNightmareMode();
     }
 
     void setNightmareMode()
