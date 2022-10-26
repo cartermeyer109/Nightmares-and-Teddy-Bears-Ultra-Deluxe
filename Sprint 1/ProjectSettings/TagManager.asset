@@ -12,6 +12,8 @@ TagManager:
   - Mushroom
   - NightmareLine
   - Black Bars
+  - Tutorial Text
+  - Hopscotch
   layers:
   - Default
   - TransparentFX
