@@ -11,8 +11,10 @@ public class AttackScript : MonoBehaviour
 
     void Start()
     {
-        enemy = GameObject.FindGameObjectWithTag("Enemy");//TODO: replace with actual tag name
-        Debug.Log("Found " + enemy.name);
+        if (GameObject.FindGameObjectsWithTag("Enemy") != null)
+        {
+            enemy = GameObject.FindGameObjectWithTag("Enemy");//TODO: replace with actual tag name
+        }
     }
 
     void Update()
@@ -22,12 +24,14 @@ public class AttackScript : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        
-        if (collision.gameObject.CompareTag("Enemy"))
-        {//uncomment this when you have the enemy script
-            Debug.Log("Player attack hit");
-            myEnemyScript = collision.gameObject.GetComponent<GooGremlinScript>();
-            myEnemyScript.takeDamage();
+        if (enemy != null)
+        {
+            if (collision.gameObject.CompareTag("Enemy"))
+            {//uncomment this when you have the enemy script
+                Debug.Log("Player attack hit");
+                myEnemyScript = collision.gameObject.GetComponent<GooGremlinScript>();
+                myEnemyScript.takeDamage();
+            }
         }
     }
 }
