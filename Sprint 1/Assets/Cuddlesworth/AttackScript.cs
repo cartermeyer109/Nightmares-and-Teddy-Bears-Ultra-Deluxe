@@ -28,7 +28,7 @@ public class AttackScript : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Enemy"))
             {//uncomment this when you have the enemy script
-                Debug.Log("Player attack hit");
+                //Debug.Log("Player attack hit");
                 myEnemyScript = collision.gameObject.GetComponent<GooGremlinScript>();
                 myEnemyScript.takeDamage();
             }

@@ -70,11 +70,13 @@ public class NightmareWorld : MonoBehaviour
             }
             else
             {
-                Debug.Log("Error setting nightmare mode");
+                //Debug.Log("Error setting nightmare mode");
             }
         }
     }
 
+    //switches between the nightmare mode and dream world at timed intervals
+    //depending on the frames to give a glitch like effect
     public IEnumerator glitchTimedCounter()
     {
         setNightmareMode();
@@ -90,6 +92,7 @@ public class NightmareWorld : MonoBehaviour
         endNightmareMode();
     }
 
+    //switches a little back and forth and ending in the nightmare mode
     public IEnumerator nighmareWorldTransition()
     {
         setNightmareMode();

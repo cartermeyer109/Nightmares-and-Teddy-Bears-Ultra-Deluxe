@@ -97,7 +97,7 @@ public class cameraScript : MonoBehaviour
             {
                 cutsceneStartTime2 = Time.time;
                 cutsceneActivated2 = true;
-                Debug.Log("Time logged");
+                //Debug.Log("Time logged");
             }
             
             if (Time.time - cutsceneStartTime2 < .6 && cutsceneActivated2 || tutorialText.activeSelf && cutsceneActivated2)
