@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/natesSampleScene.unity
+    path: Assets/Scenes/TutorialLevel.unity
     guid: 7be5a8186770af14897ded573221401e
   - enabled: 1
     path: Assets/Scenes/Hopscotch Shop.unity
