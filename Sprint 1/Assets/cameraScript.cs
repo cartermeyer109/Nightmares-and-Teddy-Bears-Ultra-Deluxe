@@ -6,7 +6,9 @@ public class cameraScript : MonoBehaviour
 {
     GameObject player;
     public GameObject gremlin;
+    GameObject blackBarsHolder;
     Animator protagAnimator;
+    Animator blackBarsAnimator;
 
     bool cutsceneActivated = false;
     bool cutsceneOver = true;
@@ -17,7 +19,10 @@ public class cameraScript : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         gremlin = GameObject.FindGameObjectWithTag("Enemy");
+        blackBarsHolder = GameObject.FindGameObjectWithTag("Black Bars");
+        blackBarsAnimator = blackBarsHolder.GetComponent<Animator>();
         protagAnimator = player.GetComponent<Animator>();
+        blackBarsHolder.SetActive(false);
         gremlin.SetActive(false);
 
 
@@ -30,17 +35,18 @@ public class cameraScript : MonoBehaviour
         {
             this.transform.position = new Vector3(player.transform.position.x, 1, -10);
         }
-        if (player.transform.position.x >= 32 && !cutsceneActivated)
+        if (player.transform.position.x >= 35 && !cutsceneActivated)
         {
             cutsceneStartTime = Time.time;
             cutsceneActivated = true;
         }
-        if (Time.time - cutsceneStartTime < 4.5 && cutsceneActivated)
+        if (Time.time - cutsceneStartTime < 4 && cutsceneActivated)
         {
             cutsceneOver = false;
+            blackBarsHolder.SetActive(true);
             protagAnimator.SetBool("cutsceneIdle", true);
-            player.transform.position = new Vector2(32, -0.986007f);
-            this.transform.position = new Vector3(32, 1, -10);
+            player.transform.position = new Vector2(35, -0.986007f);
+            this.transform.position = new Vector3(35, 1, -10);
 
             if (Time.time-cutsceneStartTime >= 1)
             {
@@ -51,6 +57,7 @@ public class cameraScript : MonoBehaviour
         {
             protagAnimator.SetBool("cutsceneIdle", false);
             cutsceneOver = true;
+            blackBarsAnimator.SetBool("hideBars", true);
         }
     }
 }

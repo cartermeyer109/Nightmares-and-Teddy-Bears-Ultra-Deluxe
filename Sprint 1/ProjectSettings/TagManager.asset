@@ -11,6 +11,7 @@ TagManager:
   - Enemy
   - Mushroom
   - NightmareLine
+  - Black Bars
   layers:
   - Default
   - TransparentFX

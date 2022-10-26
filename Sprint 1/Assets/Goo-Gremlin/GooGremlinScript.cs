@@ -12,11 +12,11 @@ public class GooGremlinScript : MonoBehaviour
     private int enemyHealth;
     GameObject player;
 
-    private GameObject dieSoundObject;
+   // private GameObject dieSoundObject;
     private GameObject hurtSoundObject;
 
-    public AudioSource dieSound;
-    public AudioSource hurtSound;
+   // public AudioSource dieSound;
+    //public AudioSource hurtSound;
 
     Rigidbody2D myPhysics;
 
@@ -42,11 +42,11 @@ public class GooGremlinScript : MonoBehaviour
         speed = 4f;
         fallForce = 0f;
 
-        dieSoundObject = GameObject.Find("SlimeDeathMonster");
-        hurtSoundObject = GameObject.Find("BloodyImpact");
+       // dieSoundObject = GameObject.Find("SlimeDeathMonster");
+        //hurtSoundObject = GameObject.Find("BloodyImpact");
 
-        dieSound = dieSoundObject.GetComponent<AudioSource>();
-        hurtSound = hurtSoundObject.GetComponent<AudioSource>();
+       // dieSound = dieSoundObject.GetComponent<AudioSource>();
+        //hurtSound = hurtSoundObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -178,7 +178,7 @@ public class GooGremlinScript : MonoBehaviour
 
             //Plays damage taking animation
             enemyAnimator.SetBool("dmgTaken", true);
-            hurtSound.Play();
+            //hurtSound.Play();
             Debug.Log("Enemy health after hit: " + enemyHealth);
         }
 
@@ -187,7 +187,7 @@ public class GooGremlinScript : MonoBehaviour
         if (enemyHealth <= 0)
         {
             enemyAnimator.SetBool("healthIsZero", true);
-            dieSound.Play();
+            //dieSound.Play();
         }
     }
 }
