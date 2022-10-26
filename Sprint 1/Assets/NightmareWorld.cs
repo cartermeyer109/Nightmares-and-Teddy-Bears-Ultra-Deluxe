@@ -66,7 +66,7 @@ public class NightmareWorld : MonoBehaviour
             }
             else if (!isNightmareScene && didGlitch)
             {
-                nighmareWorldTransition();
+                StartCoroutine(nighmareWorldTransition());
             }
             else
             {
