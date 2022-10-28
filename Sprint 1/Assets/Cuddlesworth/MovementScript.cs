@@ -33,7 +33,7 @@ public class MovementScript : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("Starting...");
+        //Debug.Log("Starting...");
         playerHealth = 99;
         courage = 0;
         fear = 0;

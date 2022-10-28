@@ -171,7 +171,7 @@ public class GooGremlinScript : MonoBehaviour
 
         if (enemyHealth > 0)
         {
-            Debug.Log("Enemy health before hit: " + enemyHealth);
+            //Debug.Log("Enemy health before hit: " + enemyHealth);
 
             //Lowers enemy health
             enemyHealth--;
@@ -179,7 +179,7 @@ public class GooGremlinScript : MonoBehaviour
             //Plays damage taking animation
             enemyAnimator.SetBool("dmgTaken", true);
             //hurtSound.Play();
-            Debug.Log("Enemy health after hit: " + enemyHealth);
+            //Debug.Log("Enemy health after hit: " + enemyHealth);
         }
 
         //Kills enemy if they have no health

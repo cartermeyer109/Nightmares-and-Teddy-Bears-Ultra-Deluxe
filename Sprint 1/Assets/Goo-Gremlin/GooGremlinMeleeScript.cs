@@ -16,7 +16,7 @@ public class GooGremlinMeleeScript : MonoBehaviour
     {
         //If you dont have the tag "Player" on the player object then you will need to change this to work
         player = GameObject.FindGameObjectWithTag("Player");
-        Debug.Log("We found a game object with a name of " + player.name);
+        //Debug.Log("We found a game object with a name of " + player.name);
 
     }
 
@@ -30,7 +30,7 @@ public class GooGremlinMeleeScript : MonoBehaviour
         //if the object we collided with is the player
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("gremlin Attack hit");
+            //Debug.Log("gremlin Attack hit");
             //Destroy(collision.gameObject);
 
             //Use the takeDamage(); function that they player has to lower the players health.
