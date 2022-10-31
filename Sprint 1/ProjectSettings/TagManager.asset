@@ -20,6 +20,7 @@ TagManager:
   - Sign3
   - Thank You
   - Text Holder
+  - Lock
   layers:
   - Default
   - TransparentFX

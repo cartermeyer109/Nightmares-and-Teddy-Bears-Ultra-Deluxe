@@ -8,6 +8,8 @@ public class cameraScript : MonoBehaviour
 {
     //GameObject runTextHolder;
     //public TextMeshPro runText;
+    GameObject padlock;
+    Animator lockAnimator;
 
     GameObject tutorialText;
     GameObject thankYouText;
@@ -44,9 +46,12 @@ public class cameraScript : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {        
+    {
         //runTextHolder = GameObject.FindGameObjectWithTag("RunText");
         //runTextHolder.SetActive(false);
+        padlock = GameObject.FindGameObjectWithTag("Lock");
+        lockAnimator = padlock.GetComponent<Animator>();
+
         thankYouText = GameObject.FindGameObjectWithTag("Thank You");
         thankYouText.SetActive(false);
 
@@ -138,10 +143,10 @@ public class cameraScript : MonoBehaviour
                 player.transform.position = new Vector2(56, player.transform.position.y);
                 this.transform.position = new Vector3(56, 1, -10);
 
-                if (Time.time - cutsceneStartTime2 > .5)
-                {
+                //if (Time.time - cutsceneStartTime2 > .5)
+                //{
                     tutorialText.SetActive(true);
-                }
+                //}
 
             }
             else
@@ -163,6 +168,8 @@ public class cameraScript : MonoBehaviour
                     thankYouText.SetActive(true);
                     cutsceneActivated3 = true;
                     protagPositionCS3 = player.transform.position.x;
+                    //BOOL CHANGE
+                    lockAnimator.SetBool("enemyBeat", true);
 
                 }
                 if (thankYouText.activeSelf)
