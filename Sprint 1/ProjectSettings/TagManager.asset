@@ -18,6 +18,8 @@ TagManager:
   - Sign2
   - RunText
   - Sign3
+  - Thank You
+  - Text Holder
   layers:
   - Default
   - TransparentFX

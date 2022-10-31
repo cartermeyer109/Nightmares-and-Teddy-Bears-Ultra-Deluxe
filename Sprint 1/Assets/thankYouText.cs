@@ -4,8 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-public class tutorialText : MonoBehaviour
+public class thankYouText : MonoBehaviour
 {
     public Text textbox;
     public TextMeshProUGUI enter;
@@ -16,7 +15,7 @@ public class tutorialText : MonoBehaviour
     void Start()
     {
         this.enter.fontMaterial.SetFloat(ShaderUtilities.ID_FaceDilate, -1f);
-        textbox.text = "HEY YOU, DOWN THERE!!!";
+        textbox.text = "Nice job!";
         textNum = 0;
         timeButtonHit = Time.time;
 
@@ -26,20 +25,21 @@ public class tutorialText : MonoBehaviour
     void Update()
     {
         //Code going through dialogue
-        if (Input.GetKeyDown(KeyCode.Return) && textNum == 0) {
-            textbox.text = "DO YOU THINK YOU CAN KILL THAT GUY!!!";
+        if (Input.GetKeyDown(KeyCode.Return) && textNum == 0)
+        {
+            textbox.text = "Thank you for killing that monster.";
             textNum = 1;
             timeButtonHit = Time.time;
         }
         if (Input.GetKeyDown(KeyCode.Return) && textNum == 1 && Time.time - timeButtonHit > 1)
         {
-            textbox.text = "He's been hassling me all day, honestly.";
+            textbox.text = "My shop is now open to you";
             textNum = 2;
             timeButtonHit = Time.time;
         }
         if (Input.GetKeyDown(KeyCode.Return) && textNum == 2 && Time.time - timeButtonHit > 1)
         {
-            textbox.text = "Use J to attack!!!!!!";
+            textbox.text = "Jump down into the burrow to your right";
             textNum = 3;
             timeButtonHit = Time.time;
         }
@@ -47,7 +47,6 @@ public class tutorialText : MonoBehaviour
         {
             textbox.text = "";
             transform.parent.gameObject.SetActive(false);
-
         }
 
         //"Press Enter" text code

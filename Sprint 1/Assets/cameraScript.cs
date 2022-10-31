@@ -10,10 +10,12 @@ public class cameraScript : MonoBehaviour
     //public TextMeshPro runText;
 
     GameObject tutorialText;
+    GameObject thankYouText;
 
     //Player Fields
     GameObject player;
     Animator protagAnimator;
+    float protagPositionCS3;
 
     //Goo Gremlin Fields
     GameObject gremlin;
@@ -34,12 +36,19 @@ public class cameraScript : MonoBehaviour
     bool cutsceneOver2 = true;
     float cutsceneStartTime2 = 0f;
 
+    bool cutsceneActivated3 = false;
+    bool cutsceneOver3 = true;
+    float cutsceneStartTime3 = 0f;
+
+
 
     // Start is called before the first frame update
     void Start()
-    {
+    {        
         //runTextHolder = GameObject.FindGameObjectWithTag("RunText");
         //runTextHolder.SetActive(false);
+        thankYouText = GameObject.FindGameObjectWithTag("Thank You");
+        thankYouText.SetActive(false);
 
         tutorialText = GameObject.FindGameObjectWithTag("Tutorial Text");
         tutorialText.SetActive(false);
@@ -122,7 +131,7 @@ public class cameraScript : MonoBehaviour
             {
 
                 cutsceneOver2 = false;
-                blackBarsAnimator.SetBool("hideBars", false);
+                //blackBarsAnimator.SetBool("hideBars", false);
                 protagAnimator.SetBool("cutsceneIdle", true);
                 enemyAnimator.SetBool("cutsceneIdle", true);
                 gremlin.transform.position = new Vector2(gremPositionCS2, gremlin.transform.position.y);
@@ -139,11 +148,37 @@ public class cameraScript : MonoBehaviour
             {
                 protagAnimator.SetBool("cutsceneIdle", false);
                 cutsceneOver2 = true;
-                blackBarsAnimator.SetBool("hideBars", true);
+                //blackBarsAnimator.SetBool("hideBars", true);
                 if (gremlin != null)
                 {
                     enemyAnimator.SetBool("cutsceneIdle", false);
                 }
+            }
+
+            //CUTSCENE THREE
+            if (cutsceneOver2)
+            {
+                if (gremlin == null && !cutsceneActivated3)
+                {
+                    thankYouText.SetActive(true);
+                    cutsceneActivated3 = true;
+                    protagPositionCS3 = player.transform.position.x;
+
+                }
+                if (thankYouText.activeSelf)
+                {
+                    //blackBarsAnimator.SetBool("hideBars", false);
+                    protagAnimator.SetBool("cutsceneIdle", true);
+                    player.transform.position = new Vector2(protagPositionCS3, player.transform.position.y);
+                    this.transform.position = new Vector3(protagPositionCS3, 1, -10);
+                }
+                else if (cutsceneActivated3)
+                {
+                    protagAnimator.SetBool("cutsceneIdle", false);
+                    cutsceneOver2 = true;
+                    //blackBarsAnimator.SetBool("hideBars", true);
+                }
+
             }
         }
     }
