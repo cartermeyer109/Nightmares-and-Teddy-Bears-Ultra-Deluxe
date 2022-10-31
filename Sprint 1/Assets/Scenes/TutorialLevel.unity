@@ -8986,7 +8986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4214800327517488323, guid: 46ad27810eb758145954f187bb5831b4, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4214800327517488326, guid: 46ad27810eb758145954f187bb5831b4, type: 3}
       propertyPath: jumpSound
