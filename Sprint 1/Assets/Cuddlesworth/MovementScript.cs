@@ -48,7 +48,7 @@ public class MovementScript : MonoBehaviour
         myPhysics = GetComponent<Rigidbody2D>();
         protagAnimator = GetComponent<Animator>();
 
-        speed = 2.5f;
+        speed = 3f;
         fallForce = 0f;
         //jumpForce = new Vector2(0, 28); //(0,22);
 

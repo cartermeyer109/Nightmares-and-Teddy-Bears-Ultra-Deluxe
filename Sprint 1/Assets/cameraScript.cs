@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class cameraScript : MonoBehaviour
 {
+    //GameObject runTextHolder;
+    //public TextMeshPro runText;
 
     GameObject tutorialText;
 
@@ -13,8 +16,9 @@ public class cameraScript : MonoBehaviour
     Animator protagAnimator;
 
     //Goo Gremlin Fields
-    public GameObject gremlin;
+    GameObject gremlin;
     Animator enemyAnimator;
+    float gremPositionCS2;
 
     //Black Bar Fields
     GameObject blackBarsHolder;
@@ -34,6 +38,9 @@ public class cameraScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //runTextHolder = GameObject.FindGameObjectWithTag("RunText");
+        //runTextHolder.SetActive(false);
+
         tutorialText = GameObject.FindGameObjectWithTag("Tutorial Text");
         tutorialText.SetActive(false);
 
@@ -68,7 +75,7 @@ public class cameraScript : MonoBehaviour
             cutsceneActivated = true;
         }
 
-        if (Time.time - cutsceneStartTime < 4 && cutsceneActivated)
+        if (Time.time - cutsceneStartTime < 5 && cutsceneActivated)
         {
             cutsceneOver = false;
             blackBarsHolder.SetActive(true);
@@ -76,12 +83,21 @@ public class cameraScript : MonoBehaviour
             player.transform.position = new Vector2(35, player.transform.position.y);
             this.transform.position = new Vector3(35, 1, -10);
 
-            if (Time.time - cutsceneStartTime >= 1)
+            if (Time.time - cutsceneStartTime >= 1 && Time.time - cutsceneStartTime < 4.5)
             {
                 gremlin.SetActive(true);
+                enemyAnimator.SetBool("cutsceneIdle", true);
             }
-        }
+            else if (Time.time - cutsceneStartTime >= 4.5)
+            {
+                enemyAnimator.SetBool("cutsceneIdle", false);
+            }
 
+            /*if (Time.time - cutsceneStartTime >= 3)
+            {
+                runTextHolder.SetActive(true);
+            }*/
+        }
         else
         {
             protagAnimator.SetBool("cutsceneIdle", false);
@@ -97,15 +113,19 @@ public class cameraScript : MonoBehaviour
             {
                 cutsceneStartTime2 = Time.time;
                 cutsceneActivated2 = true;
+                gremPositionCS2 = gremlin.transform.position.x;
+                //runTextHolder.SetActive(false);
                 //Debug.Log("Time logged");
             }
-            
+
             if (Time.time - cutsceneStartTime2 < .6 && cutsceneActivated2 || tutorialText.activeSelf && cutsceneActivated2)
             {
+
                 cutsceneOver2 = false;
                 blackBarsAnimator.SetBool("hideBars", false);
                 protagAnimator.SetBool("cutsceneIdle", true);
                 enemyAnimator.SetBool("cutsceneIdle", true);
+                gremlin.transform.position = new Vector2(gremPositionCS2, gremlin.transform.position.y);
                 player.transform.position = new Vector2(56, player.transform.position.y);
                 this.transform.position = new Vector3(56, 1, -10);
 

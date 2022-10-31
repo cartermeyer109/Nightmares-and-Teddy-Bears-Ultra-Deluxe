@@ -11,10 +11,7 @@ public class AttackScript : MonoBehaviour
 
     void Start()
     {
-        if (GameObject.FindGameObjectsWithTag("Enemy") != null)
-        {
             enemy = GameObject.FindGameObjectWithTag("Enemy");//TODO: replace with actual tag name
-        }
     }
 
     void Update()

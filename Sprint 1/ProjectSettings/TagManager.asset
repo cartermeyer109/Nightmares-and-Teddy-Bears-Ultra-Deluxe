@@ -14,6 +14,10 @@ TagManager:
   - Black Bars
   - Tutorial Text
   - Hopscotch
+  - Sign1
+  - Sign2
+  - RunText
+  - Sign3
   layers:
   - Default
   - TransparentFX

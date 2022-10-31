@@ -1,32 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 
 public class tutorialText : MonoBehaviour
 {
-    GameObject hopScotch;
-    Animator hopscotchAnimator;
     public Text textbox;
+    public TextMeshProUGUI enter;
     public int textNum;
     public float timeButtonHit = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
+        this.enter.fontMaterial.SetFloat(ShaderUtilities.ID_FaceDilate, -1f);
         textbox.text = "HEY YOU, DOWN THERE!!!";
         textNum = 0;
         timeButtonHit = Time.time;
-        hopScotch = GameObject.FindGameObjectWithTag("Hopscotch");
-        hopscotchAnimator = hopScotch.GetComponent<Animator>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        hopscotchAnimator.SetBool("textboxUp", true);
         if (Input.GetKeyDown(KeyCode.Return) && textNum == 0) {
             textbox.text = "DO YOU THINK YOU CAN KILL THAT GUY!!!";
             textNum = 1;
@@ -34,7 +32,7 @@ public class tutorialText : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Return) && textNum == 1 && Time.time - timeButtonHit > 1)
         {
-            textbox.text = "He's been hassling me all day, honestly";
+            textbox.text = "He's been hassling me all day, honestly.";
             textNum = 2;
             timeButtonHit = Time.time;
         }
@@ -47,8 +45,24 @@ public class tutorialText : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return) && textNum == 3 && Time.time - timeButtonHit > 1)
         {
             textbox.text = "";
-            hopscotchAnimator.SetBool("textboxUp", false);
             transform.parent.gameObject.SetActive(false);
+        }
+
+
+        if (Time.time - timeButtonHit > 1)
+        {
+            if (Time.time - timeButtonHit < 2)
+            {
+                this.enter.fontMaterial.SetFloat(ShaderUtilities.ID_FaceDilate, -1 + (Time.time - timeButtonHit - 1));
+            }
+            else
+            {
+                this.enter.fontMaterial.SetFloat(ShaderUtilities.ID_FaceDilate, 0);
+            }
+        }
+        else
+        {
+            this.enter.fontMaterial.SetFloat(ShaderUtilities.ID_FaceDilate, -1);
         }
     }
 }

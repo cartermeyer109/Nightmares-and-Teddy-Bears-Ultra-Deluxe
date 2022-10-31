@@ -136,7 +136,7 @@ public class GooGremlinScript : MonoBehaviour
                 
                 if (Mathf.Abs(player.transform.position.x - this.transform.position.x) >= 5.5)
                 {
-                    speed = 5.5f;
+                    speed = 7f;
                 }
 
 
