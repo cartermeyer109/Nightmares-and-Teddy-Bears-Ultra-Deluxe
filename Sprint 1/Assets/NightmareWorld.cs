@@ -91,10 +91,11 @@ public class NightmareWorld : MonoBehaviour
         }
     }
 
-    //switches between the nightmare mode and dream world at timed intervals
-    //depending on the frames to give a glitch like effect
+    //switches between the nightmare mode and dream world at timed intervals depending on the frames to give a glitch like effect
+    //also pauses music during the glitch timer, can be changed to play the music for that mode with each change, but ends up sounding choppy
     public IEnumerator glitchTimedCounter()
     {
+        DreamMusic.Pause();
         setNightmareMode();
         for (int i = 0; i < glitchTime; ++i) { yield return null; }
         endNightmareMode();
@@ -106,6 +107,7 @@ public class NightmareWorld : MonoBehaviour
         setNightmareMode();
         for (int i = 0; i < glitchTime; ++i) { yield return null; }
         endNightmareMode();
+        DreamMusic.Play();
     }
 
     //switches a little back and forth and ending in the nightmare mode
@@ -116,27 +118,28 @@ public class NightmareWorld : MonoBehaviour
         endNightmareMode();
         for (int i = 0; i < (glitchTime * 2); ++i) { yield return null; }
         setNightmareMode();
+        DreamMusic.Stop();
+        NightmareMusic.Play();
     }
 
-    public void setNightmareMode()
+    void setNightmareMode()
     {
         evilBackground.SetActive(true);
         evilBackObj.SetActive(true);
         evilTiles.SetActive(true);
         isNightmareScene = true;
-        DreamMusic.Pause();
-        NightmareMusic.Play();
+
+        //DreamMusic.Pause();
     }
 
-    public void endNightmareMode()
+    void endNightmareMode()
     {
         evilBackground.SetActive(false);
         evilBackObj.SetActive(false);
         evilTiles.SetActive(false);
         isNightmareScene = false;
         
-        NightmareMusic.Pause();
-        DreamMusic.Play();
+        //DreamMusic.Play();
     }
 
 }
