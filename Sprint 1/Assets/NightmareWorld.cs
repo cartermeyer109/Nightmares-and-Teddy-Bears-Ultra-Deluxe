@@ -12,6 +12,12 @@ public class NightmareWorld : MonoBehaviour
     public bool isNightmareScene;
     private int glitchTime;
 
+    private GameObject DreamMusicObject;
+    private GameObject NightmareMusicObject;
+
+    private AudioSource DreamMusic;
+    private AudioSource NightmareMusic;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,28 +25,38 @@ public class NightmareWorld : MonoBehaviour
         evilBackObj = GameObject.Find("EvilBackground");
         evilTiles = GameObject.Find("EvilTiles");
         didGlitch = false;
-        endNightmareMode();
+        
         isNightmareScene = false;
         glitchTime = 75;
+
+        DreamMusicObject = GameObject.Find("DreamMusic");
+        NightmareMusicObject = GameObject.Find("NightmareMusic");
+
+        DreamMusic = DreamMusicObject.GetComponent<AudioSource>();
+        NightmareMusic = NightmareMusicObject.GetComponent<AudioSource>();
+        
+        endNightmareMode();
+        DreamMusic.Play();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    StartCoroutine(glitchTimedCounter());
-        //}
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine(glitchTimedCounter());
+        }
 
-        //if (Input.GetKeyDown(KeyCode.E))
-        //{
-        //    setNightmareMode();
-        //}
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            setNightmareMode();
+        }
 
-        //if (Input.GetKeyDown(KeyCode.Q))
-        //{
-        //    endNightmareMode();
-        //}
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            endNightmareMode();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -102,20 +118,25 @@ public class NightmareWorld : MonoBehaviour
         setNightmareMode();
     }
 
-    void setNightmareMode()
+    public void setNightmareMode()
     {
         evilBackground.SetActive(true);
         evilBackObj.SetActive(true);
         evilTiles.SetActive(true);
         isNightmareScene = true;
+        DreamMusic.Pause();
+        NightmareMusic.Play();
     }
 
-    void endNightmareMode()
+    public void endNightmareMode()
     {
         evilBackground.SetActive(false);
         evilBackObj.SetActive(false);
         evilTiles.SetActive(false);
         isNightmareScene = false;
+        
+        NightmareMusic.Pause();
+        DreamMusic.Play();
     }
 
 }
