@@ -96,6 +96,7 @@ public class NightmareWorld : MonoBehaviour
     public IEnumerator glitchTimedCounter()
     {
         DreamMusic.Pause();
+        yield return null;
         setNightmareMode();
         for (int i = 0; i < glitchTime; ++i) { yield return null; }
         endNightmareMode();
@@ -113,12 +114,12 @@ public class NightmareWorld : MonoBehaviour
     //switches a little back and forth and ending in the nightmare mode
     public IEnumerator nighmareWorldTransition()
     {
+        DreamMusic.Stop();
         setNightmareMode();
         for (int i = 0; i < (glitchTime * 2); ++i) { yield return null; }
         endNightmareMode();
         for (int i = 0; i < (glitchTime * 2); ++i) { yield return null; }
         setNightmareMode();
-        DreamMusic.Stop();
         NightmareMusic.Play();
     }
 
