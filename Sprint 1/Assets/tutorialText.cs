@@ -27,7 +27,7 @@ public class tutorialText : MonoBehaviour
     {
         //Code going through dialogue
         if (Input.GetKeyDown(KeyCode.Return) && textNum == 0) {
-            textbox.text = "DO YOU THINK YOU CAN KILL THAT GUY!!!";
+            textbox.text = "DO YOU THINK YOU CAN KILL THAT GUY!?";
             textNum = 1;
             timeButtonHit = Time.time;
         }
@@ -45,10 +45,12 @@ public class tutorialText : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Return) && textNum == 3 && Time.time - timeButtonHit > 1)
         {
+            //transform.parent.gameObject.position = -1100;
             textbox.text = "";
             transform.parent.gameObject.SetActive(false);
 
         }
+
 
         //"Press Enter" text code
         if (Time.time - timeButtonHit > 1)
