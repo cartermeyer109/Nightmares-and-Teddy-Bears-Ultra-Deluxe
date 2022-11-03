@@ -27,8 +27,8 @@ public class MovementScript : MonoBehaviour
     private GameObject meleeSoundObject;
     private GameObject jumpSoundObject;
 
-    public AudioSource meleeSound;
-    public AudioSource jumpSound;
+    private AudioSource meleeSound;
+    private AudioSource jumpSound;
 
 
     void Start()

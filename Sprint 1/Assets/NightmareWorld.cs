@@ -12,6 +12,12 @@ public class NightmareWorld : MonoBehaviour
     public bool isNightmareScene;
     private int glitchTime;
 
+    private GameObject DreamMusicObject;
+    private GameObject NightmareMusicObject;
+
+    private AudioSource DreamMusic;
+    private AudioSource NightmareMusic;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,28 +25,38 @@ public class NightmareWorld : MonoBehaviour
         evilBackObj = GameObject.Find("EvilBackground");
         evilTiles = GameObject.Find("EvilTiles");
         didGlitch = false;
-        endNightmareMode();
+        
         isNightmareScene = false;
         glitchTime = 75;
+
+        DreamMusicObject = GameObject.Find("DreamMusic");
+        NightmareMusicObject = GameObject.Find("NightmareMusic");
+
+        DreamMusic = DreamMusicObject.GetComponent<AudioSource>();
+        NightmareMusic = NightmareMusicObject.GetComponent<AudioSource>();
+        
+        endNightmareMode();
+        DreamMusic.Play();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    StartCoroutine(glitchTimedCounter());
-        //}
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine(glitchTimedCounter());
+        }
 
-        //if (Input.GetKeyDown(KeyCode.E))
-        //{
-        //    setNightmareMode();
-        //}
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            setNightmareMode();
+        }
 
-        //if (Input.GetKeyDown(KeyCode.Q))
-        //{
-        //    endNightmareMode();
-        //}
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            endNightmareMode();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -75,10 +91,11 @@ public class NightmareWorld : MonoBehaviour
         }
     }
 
-    //switches between the nightmare mode and dream world at timed intervals
-    //depending on the frames to give a glitch like effect
+    //switches between the nightmare mode and dream world at timed intervals depending on the frames to give a glitch like effect
+    //also pauses music during the glitch timer, can be changed to play the music for that mode with each change, but ends up sounding choppy
     public IEnumerator glitchTimedCounter()
     {
+        DreamMusic.Pause();
         setNightmareMode();
         for (int i = 0; i < glitchTime; ++i) { yield return null; }
         endNightmareMode();
@@ -90,6 +107,7 @@ public class NightmareWorld : MonoBehaviour
         setNightmareMode();
         for (int i = 0; i < glitchTime; ++i) { yield return null; }
         endNightmareMode();
+        DreamMusic.Play();
     }
 
     //switches a little back and forth and ending in the nightmare mode
@@ -100,6 +118,8 @@ public class NightmareWorld : MonoBehaviour
         endNightmareMode();
         for (int i = 0; i < (glitchTime * 2); ++i) { yield return null; }
         setNightmareMode();
+        DreamMusic.Stop();
+        NightmareMusic.Play();
     }
 
     void setNightmareMode()
@@ -108,6 +128,8 @@ public class NightmareWorld : MonoBehaviour
         evilBackObj.SetActive(true);
         evilTiles.SetActive(true);
         isNightmareScene = true;
+
+        //DreamMusic.Pause();
     }
 
     void endNightmareMode()
@@ -116,6 +138,8 @@ public class NightmareWorld : MonoBehaviour
         evilBackObj.SetActive(false);
         evilTiles.SetActive(false);
         isNightmareScene = false;
+        
+        //DreamMusic.Play();
     }
 
 }
