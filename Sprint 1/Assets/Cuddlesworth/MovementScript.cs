@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class MovementScript : MonoBehaviour
@@ -130,6 +131,10 @@ public class MovementScript : MonoBehaviour
 
             }
         }
+        else
+        {
+
+        }
     }
 
     public void OnCollisionEnter2D(Collision2D thingProtagHit)
@@ -146,8 +151,19 @@ public class MovementScript : MonoBehaviour
         {
             Debug.Log("Cuddlesworth ran into " + thingProtagHit.gameObject.name);
             Destroy(this.gameObject);
+            SceneManager.LoadScene("GameOver");
         }
 
+    }
+
+    //experiment to make protag not wall(and celing) jump
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("ground")){
+            canJump = true;
+            protagAnimator.Play("Cuddlesworth_land");
+            //Debug.Log("grass");
+        }
     }
 
     public void takeDamage()
@@ -167,6 +183,7 @@ public class MovementScript : MonoBehaviour
         if (playerHealth <= 0)
         {
             Destroy(this.gameObject);
+
         }
     }
 }

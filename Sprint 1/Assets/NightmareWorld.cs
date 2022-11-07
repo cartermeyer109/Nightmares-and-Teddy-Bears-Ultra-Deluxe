@@ -43,20 +43,20 @@ public class NightmareWorld : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            StartCoroutine(glitchTimedCounter());
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    StartCoroutine(glitchTimedCounter());
+        //}
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            setNightmareMode();
-        }
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+        //    setNightmareMode();
+        //}
 
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            endNightmareMode();
-        }
+        //if (Input.GetKeyDown(KeyCode.Q))
+        //{
+        //    endNightmareMode();
+        //}
     }
 
     private void OnTriggerEnter2D(Collider2D other)

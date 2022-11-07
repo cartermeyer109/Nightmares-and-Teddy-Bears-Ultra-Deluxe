@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 658614360768737034}
   m_Layer: 0
   m_Name: protag
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -516,6 +516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: 0
   jumpForce: {x: 0, y: 28}
+  speed: 0
   theProjectileHolder: {fileID: 0}
   spawnSpot: {fileID: 0}
 --- !u!81 &658614360768737034

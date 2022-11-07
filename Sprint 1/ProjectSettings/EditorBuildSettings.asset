@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/TutorialLevel.unity
     guid: 7be5a8186770af14897ded573221401e
   - enabled: 1
     path: Assets/Scenes/Hopscotch Shop.unity
     guid: 392401ead3ecd404b97c5f00f1cadaa5
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 56258f177f14784419314df3816fc88a
   m_configObjects: {}
