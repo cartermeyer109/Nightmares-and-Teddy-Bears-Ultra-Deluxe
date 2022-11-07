@@ -21,6 +21,7 @@ TagManager:
   - Thank You
   - Text Holder
   - Lock
+  - Door
   layers:
   - Default
   - TransparentFX

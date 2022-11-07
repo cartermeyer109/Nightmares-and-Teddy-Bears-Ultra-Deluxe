@@ -12,11 +12,11 @@ public class NightmareWorld : MonoBehaviour
     public bool isNightmareScene;
     private int glitchTime;
 
-    private GameObject DreamMusicObject;
-    private GameObject NightmareMusicObject;
+    //private GameObject DreamMusicObject;
+    //private GameObject NightmareMusicObject;
 
-    private AudioSource DreamMusic;
-    private AudioSource NightmareMusic;
+    //private AudioSource DreamMusic;
+    //private AudioSource NightmareMusic;
 
     // Start is called before the first frame update
     void Start()
@@ -29,14 +29,14 @@ public class NightmareWorld : MonoBehaviour
         isNightmareScene = false;
         glitchTime = 75;
 
-        DreamMusicObject = GameObject.Find("DreamMusic");
-        NightmareMusicObject = GameObject.Find("NightmareMusic");
+        //DreamMusicObject = GameObject.Find("DreamMusic");
+        //NightmareMusicObject = GameObject.Find("NightmareMusic");
 
-        DreamMusic = DreamMusicObject.GetComponent<AudioSource>();
-        NightmareMusic = NightmareMusicObject.GetComponent<AudioSource>();
+        //DreamMusic = DreamMusicObject.GetComponent<AudioSource>();
+        //NightmareMusic = NightmareMusicObject.GetComponent<AudioSource>();
         
         endNightmareMode();
-        DreamMusic.Play();
+        //DreamMusic.Play();
 
     }
 
@@ -95,7 +95,7 @@ public class NightmareWorld : MonoBehaviour
     //also pauses music during the glitch timer, can be changed to play the music for that mode with each change, but ends up sounding choppy
     public IEnumerator glitchTimedCounter()
     {
-        DreamMusic.Pause();
+        //DreamMusic.Pause();
         setNightmareMode();
         for (int i = 0; i < glitchTime; ++i) { yield return null; }
         endNightmareMode();
@@ -107,7 +107,7 @@ public class NightmareWorld : MonoBehaviour
         setNightmareMode();
         for (int i = 0; i < glitchTime; ++i) { yield return null; }
         endNightmareMode();
-        DreamMusic.Play();
+        //DreamMusic.Play();
     }
 
     //switches a little back and forth and ending in the nightmare mode
@@ -118,8 +118,8 @@ public class NightmareWorld : MonoBehaviour
         endNightmareMode();
         for (int i = 0; i < (glitchTime * 2); ++i) { yield return null; }
         setNightmareMode();
-        DreamMusic.Stop();
-        NightmareMusic.Play();
+        //DreamMusic.Stop();
+        //NightmareMusic.Play();
     }
 
     void setNightmareMode()
