@@ -12,7 +12,7 @@ public class MovementScript : MonoBehaviour
     Rigidbody2D myPhysics;
 
     float fallForce;
-    float speed;
+    public float speed;
     bool canJump;
     bool facingRight;
     bool hasFlipped;
