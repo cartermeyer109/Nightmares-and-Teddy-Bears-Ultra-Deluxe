@@ -42,7 +42,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fd2f29aecf8473b4d86a6ea2b889890c, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -169,7 +169,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e50a8e0361177224bbaac9e9e440020c, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -518,8 +518,6 @@ MonoBehaviour:
   jumpForce: {x: 0, y: 28}
   theProjectileHolder: {fileID: 0}
   spawnSpot: {fileID: 0}
-  meleeSound: {fileID: 0}
-  jumpSound: {fileID: 0}
 --- !u!81 &658614360768737034
 AudioListener:
   m_ObjectHideFlags: 0
