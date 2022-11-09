@@ -1,61 +1,61 @@
 fileFormatVersion: 2
-guid: a71b0a7532d3a9f4f9c509723839ef7a
+guid: 8c1ff7f99fbdd2a428d295e014d4100f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7486751418451411122
-    second: Cuddlesworth-Idle-sprites_0
+      213: -2578134303626881842
+    second: Cuddlesworth-NoNeedleIdle-sprites_0
   - first:
-      213: -4712877417095353919
-    second: Cuddlesworth-Idle-sprites_1
+      213: -8190907120927189520
+    second: Cuddlesworth-NoNeedleIdle-sprites_1
   - first:
-      213: -2823689689613969926
-    second: Cuddlesworth-Idle-sprites_2
+      213: 5122398373046060942
+    second: Cuddlesworth-NoNeedleIdle-sprites_2
   - first:
-      213: -2999817870529766854
-    second: Cuddlesworth-Idle-sprites_3
+      213: -9081013200660974849
+    second: Cuddlesworth-NoNeedleIdle-sprites_3
   - first:
-      213: -4831268720571085857
-    second: Cuddlesworth-Idle-sprites_4
+      213: -7448054592291415771
+    second: Cuddlesworth-NoNeedleIdle-sprites_4
   - first:
-      213: 7961718580583049745
-    second: Cuddlesworth-Idle-sprites_5
+      213: -2303229014254538404
+    second: Cuddlesworth-NoNeedleIdle-sprites_5
   - first:
-      213: 1383371710945837903
-    second: Cuddlesworth-Idle-sprites_6
+      213: 7540198500089210234
+    second: Cuddlesworth-NoNeedleIdle-sprites_6
   - first:
-      213: 3967846804929926502
-    second: Cuddlesworth-Idle-sprites_7
+      213: 6139465020062052946
+    second: Cuddlesworth-NoNeedleIdle-sprites_7
   - first:
-      213: 6797281075782479463
-    second: Cuddlesworth-Idle-sprites_8
+      213: 852132272742372369
+    second: Cuddlesworth-NoNeedleIdle-sprites_8
   - first:
-      213: -1456905448105481816
-    second: Cuddlesworth-Idle-sprites_9
+      213: -1896478564064410123
+    second: Cuddlesworth-NoNeedleIdle-sprites_9
   - first:
-      213: 5030244343511377902
-    second: Cuddlesworth-Idle-sprites_10
+      213: -1264980204633784453
+    second: Cuddlesworth-NoNeedleIdle-sprites_10
   - first:
-      213: 7165308519072419417
-    second: Cuddlesworth-Idle-sprites_11
+      213: 7852652228781309695
+    second: Cuddlesworth-NoNeedleIdle-sprites_11
   - first:
-      213: -5250655957792094258
-    second: Cuddlesworth-Idle-sprites_12
+      213: -8740058394512089375
+    second: Cuddlesworth-NoNeedleIdle-sprites_12
   - first:
-      213: -2889452406717062068
-    second: Cuddlesworth-Idle-sprites_13
+      213: -2492814756189641853
+    second: Cuddlesworth-NoNeedleIdle-sprites_13
   - first:
-      213: 2107121643871648923
-    second: Cuddlesworth-Idle-sprites_14
+      213: 7244665879674073283
+    second: Cuddlesworth-NoNeedleIdle-sprites_14
   - first:
-      213: -5805923987098643390
-    second: Cuddlesworth-Idle-sprites_15
+      213: -5566053974391441495
+    second: Cuddlesworth-NoNeedleIdle-sprites_15
   - first:
-      213: 1694343568905694272
-    second: Cuddlesworth-Idle-sprites_16
+      213: 5050589987834883506
+    second: Cuddlesworth-NoNeedleIdle-sprites_16
   - first:
-      213: 7824620176020020809
-    second: Cuddlesworth-Idle-sprites_17
+      213: -428246753980242115
+    second: Cuddlesworth-NoNeedleIdle-sprites_17
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -145,12 +145,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cuddlesworth-Idle-sprites_0
+      name: Cuddlesworth-NoNeedleIdle-sprites_0
       rect:
         serializedVersion: 2
         x: 18
         y: 320
-        width: 45
+        width: 42
         height: 62
       alignment: 9
       pivot: {x: 0.55, y: 0}
@@ -159,82 +159,82 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b0c272afb846e760800000000000000
-      internalID: 7486751418451411122
+      spriteID: ec41219a280a83cd0800000000000000
+      internalID: -2578134303626881842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-Idle-sprites_1
+      name: Cuddlesworth-NoNeedleIdle-sprites_1
       rect:
         serializedVersion: 2
         x: 104
         y: 320
-        width: 51
+        width: 47
         height: 63
       alignment: 9
-      pivot: {x: 0.6, y: 0}
+      pivot: {x: 0.65, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c9221485fe789eb0800000000000000
-      internalID: -4712877417095353919
+      spriteID: 0f5daecee5d045e80800000000000000
+      internalID: -8190907120927189520
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-Idle-sprites_2
+      name: Cuddlesworth-NoNeedleIdle-sprites_2
       rect:
         serializedVersion: 2
         x: 198
         y: 320
-        width: 49
+        width: 46
         height: 62
       alignment: 9
-      pivot: {x: 0.6, y: 0}
+      pivot: {x: 0.62, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af550a6103d30d8d0800000000000000
-      internalID: -2823689689613969926
+      spriteID: e87037f3e2a661740800000000000000
+      internalID: 5122398373046060942
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-Idle-sprites_3
+      name: Cuddlesworth-NoNeedleIdle-sprites_3
       rect:
         serializedVersion: 2
         x: 297
         y: 320
-        width: 42
+        width: 38
         height: 61
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3a543c5a818e56d0800000000000000
-      internalID: -2999817870529766854
+      spriteID: ff238f57b92c9f180800000000000000
+      internalID: -9081013200660974849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-Idle-sprites_4
+      name: Cuddlesworth-NoNeedleIdle-sprites_4
       rect:
         serializedVersion: 2
         x: 22
         y: 240
-        width: 41
+        width: 36
         height: 61
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -243,19 +243,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdb87ef12b2e3fcb0800000000000000
-      internalID: -4831268720571085857
+      spriteID: 529d0ce4fc133a890800000000000000
+      internalID: -7448054592291415771
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-Idle-sprites_5
+      name: Cuddlesworth-NoNeedleIdle-sprites_5
       rect:
         serializedVersion: 2
         x: 118
         y: 240
-        width: 37
+        width: 31
         height: 61
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -264,19 +264,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11aa745bdd4bd7e60800000000000000
-      internalID: 7961718580583049745
+      spriteID: c513cf02a694900e0800000000000000
+      internalID: -2303229014254538404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-Idle-sprites_6
+      name: Cuddlesworth-NoNeedleIdle-sprites_6
       rect:
         serializedVersion: 2
         x: 210
         y: 240
-        width: 37
+        width: 31
         height: 62
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -285,19 +285,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f43404fdd39b23310800000000000000
-      internalID: 1383371710945837903
+      spriteID: a7520cd069a24a860800000000000000
+      internalID: 7540198500089210234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-Idle-sprites_7
+      name: Cuddlesworth-NoNeedleIdle-sprites_7
       rect:
         serializedVersion: 2
         x: 302
         y: 240
-        width: 37
+        width: 31
         height: 63
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -306,19 +306,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 665540385af901730800000000000000
-      internalID: 3967846804929926502
+      spriteID: 2523cbf48e2c33550800000000000000
+      internalID: 6139465020062052946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-Idle-sprites_8
+      name: Cuddlesworth-NoNeedleIdle-sprites_8
       rect:
         serializedVersion: 2
         x: 26
         y: 160
-        width: 37
+        width: 31
         height: 62
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -327,19 +327,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76eef78ff1bc45e50800000000000000
-      internalID: 6797281075782479463
+      spriteID: 114947a89c163db00800000000000000
+      internalID: 852132272742372369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-Idle-sprites_9
+      name: Cuddlesworth-NoNeedleIdle-sprites_9
       rect:
         serializedVersion: 2
         x: 118
         y: 160
-        width: 37
+        width: 31
         height: 63
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -348,40 +348,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a96756c63808cbe0800000000000000
-      internalID: -1456905448105481816
+      spriteID: 5f54cc04bca5ea5e0800000000000000
+      internalID: -1896478564064410123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-Idle-sprites_10
+      name: Cuddlesworth-NoNeedleIdle-sprites_10
       rect:
         serializedVersion: 2
         x: 210
         y: 160
-        width: 37
+        width: 31
         height: 62
-      alignment: 9
+      alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee7e96c34940fc540800000000000000
-      internalID: 5030244343511377902
+      spriteID: b7ff6eeb433e17ee0800000000000000
+      internalID: -1264980204633784453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-Idle-sprites_11
+      name: Cuddlesworth-NoNeedleIdle-sprites_11
       rect:
         serializedVersion: 2
         x: 302
         y: 160
-        width: 37
+        width: 31
         height: 61
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -390,19 +390,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95e4469722a407360800000000000000
-      internalID: 7165308519072419417
+      spriteID: ffe7031d8993afc60800000000000000
+      internalID: 7852652228781309695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-Idle-sprites_12
+      name: Cuddlesworth-NoNeedleIdle-sprites_12
       rect:
         serializedVersion: 2
         x: 26
         y: 80
-        width: 37
+        width: 31
         height: 62
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -411,19 +411,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec7830eb93ce127b0800000000000000
-      internalID: -5250655957792094258
+      spriteID: 1ee9fee623315b680800000000000000
+      internalID: -8740058394512089375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-Idle-sprites_13
+      name: Cuddlesworth-NoNeedleIdle-sprites_13
       rect:
         serializedVersion: 2
         x: 118
         y: 80
-        width: 37
+        width: 31
         height: 63
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -432,19 +432,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c446b36585a96e7d0800000000000000
-      internalID: -2889452406717062068
+      spriteID: 383e67ecf2eb76dd0800000000000000
+      internalID: -2492814756189641853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-Idle-sprites_14
+      name: Cuddlesworth-NoNeedleIdle-sprites_14
       rect:
         serializedVersion: 2
         x: 210
         y: 80
-        width: 37
+        width: 31
         height: 62
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -453,19 +453,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9cb18998fffd3d10800000000000000
-      internalID: 2107121643871648923
+      spriteID: 3c0bd52db393a8460800000000000000
+      internalID: 7244665879674073283
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-Idle-sprites_15
+      name: Cuddlesworth-NoNeedleIdle-sprites_15
       rect:
         serializedVersion: 2
         x: 302
         y: 80
-        width: 37
+        width: 31
         height: 61
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -474,19 +474,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 244d01415e63d6fa0800000000000000
-      internalID: -5805923987098643390
+      spriteID: 9a73fb7866761c2b0800000000000000
+      internalID: -5566053974391441495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-Idle-sprites_16
+      name: Cuddlesworth-NoNeedleIdle-sprites_16
       rect:
         serializedVersion: 2
         x: 26
         y: 0
-        width: 37
+        width: 31
         height: 61
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -495,19 +495,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04c6718bf74838710800000000000000
-      internalID: 1694343568905694272
+      spriteID: 2bdea03b5dc471640800000000000000
+      internalID: 5050589987834883506
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cuddlesworth-Idle-sprites_17
+      name: Cuddlesworth-NoNeedleIdle-sprites_17
       rect:
         serializedVersion: 2
         x: 118
         y: 0
-        width: 37
+        width: 33
         height: 61
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -516,8 +516,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94e170ee792a69c60800000000000000
-      internalID: 7824620176020020809
+      spriteID: d372bc0a8df8e0af0800000000000000
+      internalID: -428246753980242115
       vertices: []
       indices: 
       edges: []

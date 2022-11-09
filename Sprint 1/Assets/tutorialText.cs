@@ -12,9 +12,17 @@ public class tutorialText : MonoBehaviour
     public int textNum;
     public float timeButtonHit = 0f;
 
+    public RectTransform textTransformer;
+
+    public GameObject player;
+    public Animator protagAnim;
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        protagAnim = player.GetComponent<Animator>();
+
+        textTransformer = transform.parent.gameObject.GetComponent<RectTransform>();
         this.enter.fontMaterial.SetFloat(ShaderUtilities.ID_FaceDilate, -1f);
         textbox.text = "HEY YOU, DOWN THERE!!!";
         textNum = 0;
@@ -39,17 +47,31 @@ public class tutorialText : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Return) && textNum == 2 && Time.time - timeButtonHit > 1)
         {
-            textbox.text = "Use J to attack!!!!!!";
+            textbox.text = "Take this needle!!!!!!";
             textNum = 3;
             timeButtonHit = Time.time;
         }
         if (Input.GetKeyDown(KeyCode.Return) && textNum == 3 && Time.time - timeButtonHit > 1)
         {
-            //transform.parent.gameObject.position = -1100;
+            protagAnim.SetBool("NeedleObtained", true);
+            textTransformer.anchoredPosition = new Vector3(-61.00611f, -1080, -18936.94f);
+            textbox.text = "You have obtained a Needle";
+            textNum = 4;
+            timeButtonHit = Time.time;
+        }
+        if (Input.GetKeyDown(KeyCode.Return) && textNum == 4 && Time.time - timeButtonHit > 1)
+        {
+            textbox.text = "Use J to Attack";
+            textNum = 5;
+            timeButtonHit = Time.time;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Return) && textNum == 5 && Time.time - timeButtonHit > 1)
+        {
             textbox.text = "";
             transform.parent.gameObject.SetActive(false);
-
         }
+
 
 
         //"Press Enter" text code

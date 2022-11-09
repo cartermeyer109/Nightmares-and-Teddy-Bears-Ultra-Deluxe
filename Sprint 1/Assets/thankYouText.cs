@@ -25,7 +25,7 @@ public class thankYouText : MonoBehaviour
     float camStartX;
 
     bool transitionCam = false;
-    bool doorCanOpen = false;
+    //bool doorCanOpen = false;
 
 
     // Start is called before the first frame update
@@ -88,13 +88,13 @@ public class thankYouText : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Return) && textNum == 2 && Time.time - timeButtonHit > 2.25)
+        if (Input.GetKeyDown(KeyCode.Return) && textNum == 2 && Time.time - timeButtonHit > 3)
         {
             textbox.text = "Jump down into the burrow to my right";
             textNum = 3;
             timeButtonHit = Time.time;
             transitionCam = false;
-            doorCanOpen = true;
+            //doorCanOpen = true;
             door.GetComponent<doorOpeningScript>().enabled = false;
             doorAnimator.SetBool("doorCanOpen", true);
         }

@@ -25,7 +25,7 @@ public class doorOpeningScript : MonoBehaviour
     {
         if (padlock == null && thankYouText == null)
         {
-            if (player.transform.position.x >= this.transform.position.x - 5.5 && player.transform.position.x <= this.transform.position.x + 5.5)
+            if (player.transform.position.x >= this.transform.position.x - 6 && player.transform.position.x <= this.transform.position.x + 6)
             {
                 animator.SetBool("doorCanOpen", true);
             }

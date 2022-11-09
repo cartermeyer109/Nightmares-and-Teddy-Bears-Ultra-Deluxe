@@ -14,6 +14,7 @@ public class cameraScript : MonoBehaviour
     //Player Fields
     GameObject player;
     Animator protagAnimator;
+    Rigidbody2D protagPhysics;
     float protagPositionCS3;
 
     //Goo Gremlin Fields
@@ -52,6 +53,7 @@ public class cameraScript : MonoBehaviour
         //Player initiations
         player = GameObject.FindGameObjectWithTag("Player");
         protagAnimator = player.GetComponent<Animator>();
+        protagPhysics = player.GetComponent<Rigidbody2D>();
 
         //Gremlin initiations
         gremlin = GameObject.FindGameObjectWithTag("Enemy");
@@ -69,6 +71,15 @@ public class cameraScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Solves an issue where protagAnim's "goingdown" variable wont turn off during cutscenes
+        if (protagPhysics.velocity.y < -0.5)
+        {
+            protagAnimator.SetBool("GoingDown", true);
+        }
+        else
+        {
+            protagAnimator.SetBool("GoingDown", false);
+        }
 
         //DEFAULT STUFF
         //Set camera to normal if the cutscene is not on
@@ -169,6 +180,10 @@ public class cameraScript : MonoBehaviour
         //If the second custscene hasn't activated yet, but the player is in the second cutscene area
         if (player.transform.position.x >= 56 && !cutsceneOn2)
         {
+            //Turning it off to not cause issues
+            if (blackBarsHolder != null) {
+                blackBarsHolder.SetActive(false);
+            }
 
             //Mark the current position of the gremlin
             gremPositionCS2 = gremlin.transform.position.x;

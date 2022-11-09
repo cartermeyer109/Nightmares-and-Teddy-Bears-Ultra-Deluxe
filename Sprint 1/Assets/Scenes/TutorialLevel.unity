@@ -6023,7 +6023,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingOrder: -9
   m_Sprite: {fileID: 8287873616420496286, guid: bbee56a55ee885e4ca3c474c2c85471e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6660,7 +6660,7 @@ GameObject:
   - component: {fileID: 384859980}
   m_Layer: 0
   m_Name: EvilTiles
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8598,7 +8598,7 @@ GameObject:
   - component: {fileID: 932933218}
   m_Layer: 0
   m_Name: NormalTiles
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8980,11 +8980,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4214800327517488320, guid: 46ad27810eb758145954f187bb5831b4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.35
+      value: -8.6
       objectReference: {fileID: 0}
     - target: {fileID: 4214800327517488320, guid: 46ad27810eb758145954f187bb5831b4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.58
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 4214800327517488320, guid: 46ad27810eb758145954f187bb5831b4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9052,7 +9052,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4214800327517488327, guid: 46ad27810eb758145954f187bb5831b4, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
-      value: 0.5
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 4214800327517488327, guid: 46ad27810eb758145954f187bb5831b4, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
@@ -9060,11 +9060,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4214800327517488327, guid: 46ad27810eb758145954f187bb5831b4, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.51
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 4214800327517488327, guid: 46ad27810eb758145954f187bb5831b4, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.63
+      value: 0.62
       objectReference: {fileID: 0}
     - target: {fileID: 4214800327517488333, guid: 46ad27810eb758145954f187bb5831b4, type: 3}
       propertyPath: m_Name
@@ -9469,7 +9469,7 @@ GameObject:
   - component: {fileID: 1121730337}
   m_Layer: 0
   m_Name: Grid
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10702,7 +10702,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1164114379}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.8942, y: 2.4267144, z: 10.94}
+  m_LocalPosition: {x: 44.8942, y: 4.41, z: 10.94}
   m_LocalScale: {x: 1.2133566, y: 1.2133566, z: 1.2133566}
   m_Children: []
   m_Father: {fileID: 253625240}
@@ -16537,15 +16537,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1358982542
-Transform:
+--- !u!224 &1358982542
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1358982541}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -61.00611, y: -194.2092, z: -18936.938}
+  m_LocalPosition: {x: 0, y: 0, z: -18936.938}
   m_LocalScale: {x: 2.7586207, y: 2.7586207, z: 2.7586207}
   m_Children:
   - {fileID: 8136737}
@@ -16556,6 +16556,11 @@ Transform:
   m_Father: {fileID: 474954851}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -61.00611, y: -194.2092}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &1375257389 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 6093023337595253279, guid: 46ad27810eb758145954f187bb5831b4, type: 3}
@@ -16844,6 +16849,9 @@ MonoBehaviour:
   enter: {fileID: 346921120}
   textNum: 0
   timeButtonHit: 0
+  textTransformer: {fileID: 0}
+  player: {fileID: 0}
+  protagAnim: {fileID: 0}
 --- !u!114 &1418324869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20385,7 +20393,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingOrder: -7
   m_Sprite: {fileID: -5983690678585336006, guid: 0ec79b7c3010719449d3577c37ef94e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -21444,7 +21452,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887710816}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.894203, y: 2.426715, z: 10.94}
+  m_LocalPosition: {x: 44.894203, y: 4.41, z: 10.94}
   m_LocalScale: {x: 1.2133566, y: 1.2133566, z: 1.2133566}
   m_Children: []
   m_Father: {fileID: 2061754765}
@@ -21965,7 +21973,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: DO YOU THINK YOU CAN KILL THAT GUY!!!
+  m_Text: My Social Security Number is -
 --- !u!222 &2091733564
 CanvasRenderer:
   m_ObjectHideFlags: 0
