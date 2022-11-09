@@ -5,13 +5,13 @@ using UnityEngine;
 public class AttackScript : MonoBehaviour
 {
     //uncomment this when you have the enemy script
-    GooGremlinScript myEnemyScript;
-    //TODO: replace with actual script name
-    GameObject enemy;
+    GooGremlinScript myGremlinScript;
+    ShadowImp myImpScript;
+    GameObject[] enemy;
 
     void Start()
     {
-            enemy = GameObject.FindGameObjectWithTag("Enemy");//TODO: replace with actual tag name
+            enemy = GameObject.FindGameObjectsWithTag("Enemy");
     }
 
     void Update()
@@ -26,9 +26,16 @@ public class AttackScript : MonoBehaviour
             if (collision.gameObject.CompareTag("Enemy"))
             {//uncomment this when you have the enemy script
                 //Debug.Log("Player attack hit");
-                myEnemyScript = collision.gameObject.GetComponent<GooGremlinScript>();
-                myEnemyScript.takeDamage();
+                myGremlinScript = collision.gameObject.GetComponent<GooGremlinScript>();
+                myGremlinScript.takeDamage();
             }
+            if (collision.gameObject.CompareTag("Imp"))
+            {//uncomment this when you have the enemy script
+                //Debug.Log("Player attack hit");
+                myImpScript = collision.gameObject.GetComponent<ShadowImp>();
+                myImpScript.takeDamage();
+            }
+
         }
     }
 }

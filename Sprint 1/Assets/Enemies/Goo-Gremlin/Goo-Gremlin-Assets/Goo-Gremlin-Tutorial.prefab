@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 5017589789840747858}
   - component: {fileID: 5017589789840747859}
   m_Layer: 0
-  m_Name: Goo-Gremlin (1)
+  m_Name: Goo-Gremlin-Tutorial
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -422,8 +422,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7eda39f6aec65040be974661f70feb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dieSound: {fileID: 1090027667371718468}
-  hurtSound: {fileID: 7994702551076526903}
   facingLeft: 0
   hasFlipped: 0
   dynamicFlipping: 0
