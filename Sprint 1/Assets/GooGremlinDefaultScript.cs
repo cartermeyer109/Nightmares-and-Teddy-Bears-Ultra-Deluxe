@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GooGremlinScript : MonoBehaviour
+public class GooGremlinDefaultScript : MonoBehaviour
 {
     //Hello
     //Fields
@@ -10,11 +10,11 @@ public class GooGremlinScript : MonoBehaviour
     private int enemyHealth;
     GameObject player;
 
-    private GameObject dieSoundObject;
-    private GameObject hurtSoundObject;
+    //private GameObject dieSoundObject;
+    //private GameObject hurtSoundObject;
 
-    private AudioSource dieSound;
-    private AudioSource hurtSound;
+    //private AudioSource dieSound;
+    //private AudioSource hurtSound;
 
     Rigidbody2D myPhysics;
 
@@ -37,14 +37,14 @@ public class GooGremlinScript : MonoBehaviour
 
         myPhysics = GetComponent<Rigidbody2D>();
 
-        speed = 4f;
+        speed = 2f;
         fallForce = 0f;
 
-        dieSoundObject = GameObject.Find("DieSound");
-        hurtSoundObject = GameObject.Find("HurtSound");
+        //dieSoundObject = GameObject.Find("DieSound");
+        //hurtSoundObject = GameObject.Find("HurtSound");
 
-        dieSound = dieSoundObject.GetComponent<AudioSource>();
-        hurtSound = hurtSoundObject.GetComponent<AudioSource>();
+        //dieSound = dieSoundObject.GetComponent<AudioSource>();
+        //hurtSound = hurtSoundObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -127,37 +127,12 @@ public class GooGremlinScript : MonoBehaviour
 
                     }
                 }
-                if (Mathf.Abs(player.transform.position.x - this.transform.position.x) <= 3)
-                {
-                    speed = 1.5f;
-                }
-                
-                if (Mathf.Abs(player.transform.position.x - this.transform.position.x) >= 5.5)
-                {
-                    speed = 7f;
-                }
-
-
-                //If protag is at x=57 make normal
-                //From 30 to 57
-                //56 - 57
-                //25 - 30
-
-                //this.transform.position = new Vector2(player.transform.position.x - 5, -0.2352908f);
-                //this.transform.position = new Vector2(player.transform.position.x - 1, -0.2352908f);
-
-
-
-
-
-                //Scale distance from player with players distance from cutscene point
-                //Im thinking have it chase after you and if you walk back it continues walking forward at a slow pase and will attack. If you walk forward into a certain range then it will continue its closeness to you.
             }
 
             //Allows Gremlin to come out of puddle
-            if ((player.transform.position.x - this.transform.position.x) >= 9)
+            if (Mathf.Abs(player.transform.position.x - this.transform.position.x) <= 3)
             {
-                enemyAnimator.SetBool("farToTheRight", true);
+                enemyAnimator.SetBool("inRange", true);
             }
 
 
@@ -176,7 +151,7 @@ public class GooGremlinScript : MonoBehaviour
 
             //Plays damage taking animation
             enemyAnimator.SetBool("dmgTaken", true);
-            hurtSound.Play();
+            //hurtSound.Play();
             //Debug.Log("Enemy health after hit: " + enemyHealth);
         }
 
@@ -185,7 +160,7 @@ public class GooGremlinScript : MonoBehaviour
         if (enemyHealth <= 0)
         {
             enemyAnimator.SetBool("healthIsZero", true);
-            dieSound.Play();
+            //dieSound.Play();
         }
     }
 }

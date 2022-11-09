@@ -82,7 +82,7 @@ public class cameraScript : MonoBehaviour
         }
 
         //DEFAULT STUFF
-        //Set camera to normal if the cutscene is not on
+        //Set camera to normal if a cutscene is not on
         if (!cutsceneOn && !cutsceneOn2 && !cutsceneOn3)
         {
             //Camera follows player but has a fixed y axis
@@ -99,6 +99,7 @@ public class cameraScript : MonoBehaviour
 
         }
 
+        //Goes down through th eorder of cutscenes
         if (!cutsceneCompleted)
         {
             cutsceneOne();

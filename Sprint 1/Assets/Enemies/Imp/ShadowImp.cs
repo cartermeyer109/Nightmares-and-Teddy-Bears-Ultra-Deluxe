@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ShadowImp : MonoBehaviour
-{//GooGremlinScript right now just contains a take damage function to lower health,
- // and a flipper in the update function to slip the sprite and hitbox depending on the players location
-
-    //Hello
+{
     //Fields
     Animator enemyAnimator;
     private int enemyHealth;
