@@ -14,12 +14,11 @@ public class MovementScript : MonoBehaviour
 
     float fallForce;
     public float speed;
+    bool canJump;
     bool facingRight;
     bool hasFlipped;
     int courage;
     int fear;
-
-    bool collideActive;
 
     Animator protagAnimator;
     public GameObject theProjectileHolder;
@@ -40,6 +39,7 @@ public class MovementScript : MonoBehaviour
         courage = 0;
         fear = 0;
 
+        canJump = false;
         facingRight = true;
         hasFlipped = false;
 
@@ -49,7 +49,7 @@ public class MovementScript : MonoBehaviour
         myPhysics = GetComponent<Rigidbody2D>();
         protagAnimator = GetComponent<Animator>();
 
-        speed = 3.5f;
+        speed = 3f;
         fallForce = 0f;
         //jumpForce = new Vector2(0, 28); //(0,22);
 
@@ -72,19 +72,15 @@ public class MovementScript : MonoBehaviour
                     fallForce = myPhysics.velocity.y;
                     myPhysics.velocity = new Vector2(speed, fallForce);
                     facingRight = true;
-                    protagAnimator.SetBool("ADPressed", true);
+                    if (canJump) protagAnimator.Play("Cuddlesworth_run");
                 }
                 if (Input.GetKey(KeyCode.A) /*|| Input.GetKey(KeyCode.LeftArrow)*/)
                 {
                     fallForce = myPhysics.velocity.y;
                     myPhysics.velocity = new Vector2(-1 * speed, fallForce);
                     facingRight = false;
-                    protagAnimator.SetBool("ADPressed", true);
+                    if (canJump) protagAnimator.Play("Cuddlesworth_run");
                 }
-            }
-            else
-            {
-                protagAnimator.SetBool("ADPressed", false);
             }
 
             if (!facingRight && !hasFlipped)
@@ -99,29 +95,24 @@ public class MovementScript : MonoBehaviour
                 hasFlipped = false;
             }
 
-            //Could create a canJump Boolean that would allow for jumping in mid air if you havent used a jump yet.
-            if ((Input.GetKeyDown(KeyCode.W) /*|| Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow)*/) && protagAnimator.GetBool("GroundTapped"))
+            if ((Input.GetKeyDown(KeyCode.W) /*|| Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow)*/) && canJump)
             {
-                protagAnimator.SetBool("WPressed", true);
+                canJump = false;
                 myPhysics.AddForce(jumpForce, ForceMode2D.Impulse);
-                protagAnimator.SetBool("GroundTapped", false);
-
                 /*if (myPhysics.velocity.y < 10) //code to allow small jumps; needs fixing
                 {
                     myPhysics.AddForce(jumpForce, ForceMode2D.Impulse);
                 }*/
+                protagAnimator.Play("Cuddlesworth_jump");
                 //uncomment below when we have a jump sound that makes sense.
                 //jumpSound.Play();
+                canJump = false;
             }
             if (Input.GetKeyDown(KeyCode.J))
             {
                 //Debug.Log("Attack");
-                protagAnimator.SetBool("JPressed", true);
+                protagAnimator.Play("protag_attack_anim");
                 meleeSound.Play();
-            }
-            else
-            {
-                protagAnimator.SetBool("JPressed", false);
             }
             if (Input.GetKey(KeyCode.K))
             {
@@ -131,14 +122,13 @@ public class MovementScript : MonoBehaviour
             {
                 //fear mode
             }
-
-            if (myPhysics.velocity.y < -0.5)
+            if (facingRight)
             {
-                protagAnimator.SetBool("GoingDown", true);
+
             }
             else
             {
-                protagAnimator.SetBool("GoingDown", false);
+
             }
         }
         else
@@ -149,15 +139,13 @@ public class MovementScript : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D thingProtagHit)
     {
-        Debug.Log("Cuddlesworth ran into " + thingProtagHit.gameObject.name);
-
         if (thingProtagHit.gameObject.CompareTag("ground")) //TODO: also check that you are colliding with the TOP of the ground tile...
         {
             //Debug.Log("Cuddlesworth ran into " + thingProtagHit.gameObject.name);
-            protagAnimator.SetBool("GroundTapped", true);
+            protagAnimator.Play("Cuddlesworth_land");
+            canJump = true;
         }
-
-
+        //ALSO TODO: make canJump false if protag is not touching anything!
 
         if (thingProtagHit.gameObject.CompareTag("Void"))
         {
@@ -168,30 +156,6 @@ public class MovementScript : MonoBehaviour
 
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public void OnCollisionExit2D(Collision2D thingProtagHit)
-    {
-        Debug.Log("Cuddlesworth stopped touching " + thingProtagHit.gameObject.name);
-
-        if (thingProtagHit.gameObject.CompareTag("ground")) //TODO: also check that you are colliding with the TOP of the ground tile...
-        {
-            //Debug.Log("Cuddlesworth ran into " + thingProtagHit.gameObject.name);
-            protagAnimator.SetBool("GroundTapped", false);
-        }
-
-    }
-
-
-=======
-=======
->>>>>>> 01d996071b81e9e0fa533b94848c64dd0e156c92
-=======
->>>>>>> 01d996071b81e9e0fa533b94848c64dd0e156c92
-=======
->>>>>>> 01d996071b81e9e0fa533b94848c64dd0e156c92
     //experiment to make protag not wall(and celing) jump
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -202,16 +166,6 @@ public class MovementScript : MonoBehaviour
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 01d996071b81e9e0fa533b94848c64dd0e156c92
-=======
->>>>>>> 01d996071b81e9e0fa533b94848c64dd0e156c92
-=======
->>>>>>> 01d996071b81e9e0fa533b94848c64dd0e156c92
-=======
->>>>>>> 01d996071b81e9e0fa533b94848c64dd0e156c92
     public void takeDamage()
     { //To be called in other scripts when something hits this enemy
 
@@ -222,7 +176,7 @@ public class MovementScript : MonoBehaviour
         playerHealth--;
 
         //Plays damage taking animation
-        protagAnimator.SetBool("TookDamage", true);
+        protagAnimator.Play("Cuddlesworth_DmgTaken");
         Debug.Log("Player health after hit: " + playerHealth);
 
         //Kills enemy if they have no health
