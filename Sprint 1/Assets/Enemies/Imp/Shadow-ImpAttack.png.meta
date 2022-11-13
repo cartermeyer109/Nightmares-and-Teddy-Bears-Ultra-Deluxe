@@ -32,6 +32,18 @@ TextureImporter:
   - first:
       213: 741046560564264453
     second: Shadow-ImpAttack_17
+  - first:
+      213: -7418885091799542656
+    second: Shadow-ImpAttack_3
+  - first:
+      213: -5179691944007392504
+    second: Shadow-ImpAttack_7
+  - first:
+      213: 5869225094542139710
+    second: Shadow-ImpAttack_8
+  - first:
+      213: 7035078664048514689
+    second: Shadow-ImpAttack_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -124,10 +136,10 @@ TextureImporter:
       name: Shadow-ImpAttack_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 202
-        width: 51
-        height: 53
+        x: 0
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,10 +157,10 @@ TextureImporter:
       name: Shadow-ImpAttack_1
       rect:
         serializedVersion: 2
-        x: 67
-        y: 202
-        width: 57
-        height: 53
+        x: 64
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,10 +178,10 @@ TextureImporter:
       name: Shadow-ImpAttack_2
       rect:
         serializedVersion: 2
-        x: 132
-        y: 202
-        width: 58
-        height: 53
+        x: 128
+        y: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,10 +199,10 @@ TextureImporter:
       name: Shadow-ImpAttack_4
       rect:
         serializedVersion: 2
-        x: 10
-        y: 135
-        width: 51
-        height: 57
+        x: 64
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,10 +220,10 @@ TextureImporter:
       name: Shadow-ImpAttack_5
       rect:
         serializedVersion: 2
-        x: 72
-        y: 133
-        width: 52
-        height: 59
+        x: 128
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,10 +241,10 @@ TextureImporter:
       name: Shadow-ImpAttack_6
       rect:
         serializedVersion: 2
-        x: 132
-        y: 130
-        width: 58
-        height: 62
+        x: 0
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,13 +259,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow-ImpAttack_13
+      name: Shadow-ImpAttack_3
       rect:
         serializedVersion: 2
-        x: 4
-        y: 66
-        width: 52
-        height: 61
+        x: 0
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,20 +273,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7244b4aa2cd3223e0800000000000000
-      internalID: -2080032171601738713
+      spriteID: 084d8d1e053da0990800000000000000
+      internalID: -7418885091799542656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow-ImpAttack_14
+      name: Shadow-ImpAttack_7
       rect:
         serializedVersion: 2
-        x: 72
-        y: 67
-        width: 48
-        height: 61
+        x: 64
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,20 +294,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eddabc5de23e197a0800000000000000
-      internalID: -6372062207457645090
+      spriteID: 803ac7fbe990e18b0800000000000000
+      internalID: -5179691944007392504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow-ImpAttack_15
+      name: Shadow-ImpAttack_8
       rect:
         serializedVersion: 2
-        x: 133
-        y: 66
-        width: 51
-        height: 61
+        x: 128
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,20 +315,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 535282fd7a6975260800000000000000
-      internalID: 7086298186438419765
+      spriteID: e312ef2802da37150800000000000000
+      internalID: 5869225094542139710
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow-ImpAttack_17
+      name: Shadow-ImpAttack_9
       rect:
         serializedVersion: 2
-        x: 5
-        y: 7
-        width: 50
-        height: 56
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,8 +336,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50e357cabe9b84a00800000000000000
-      internalID: 741046560564264453
+      spriteID: 1869a8185ce91a160800000000000000
+      internalID: 7035078664048514689
       vertices: []
       indices: 
       edges: []

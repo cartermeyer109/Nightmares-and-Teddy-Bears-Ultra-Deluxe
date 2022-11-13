@@ -1,34 +1,37 @@
 fileFormatVersion: 2
-guid: defa9a61bf6ace94d955472628e69ff6
+guid: 9153ba86c2de0a94dacc5868647c8340
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7152376312166488822
-    second: Shadow-ImpIdle_0
+      213: 7482159909766303004
+    second: Imp-ProjectileImpact_0
   - first:
-      213: -470442914038505214
-    second: Shadow-ImpIdle_1
+      213: -7344291669601163157
+    second: Imp-ProjectileImpact_1
   - first:
-      213: 8486721565266061181
-    second: Shadow-ImpIdle_2
+      213: 8694082527603630479
+    second: Imp-ProjectileImpact_2
   - first:
-      213: 2830695209622141885
-    second: Shadow-ImpIdle_3
+      213: 4080759936183001073
+    second: Imp-ProjectileImpact_3
   - first:
-      213: -2803307134094488308
-    second: Shadow-ImpIdle_4
+      213: 8130887072787711302
+    second: Imp-ProjectileImpact_4
   - first:
-      213: 3688374494242074500
-    second: Shadow-ImpIdle_5
+      213: -1964749246011384115
+    second: Imp-ProjectileImpact_5
   - first:
-      213: -6691916835252851122
-    second: Shadow-ImpIdle_6
+      213: -7516445091561855498
+    second: Imp-ProjectileImpact_6
   - first:
-      213: 2615303830897525355
-    second: Shadow-ImpIdle_7
+      213: 9116495179616803643
+    second: Imp-ProjectileImpact_7
   - first:
-      213: -5737312309397035887
-    second: Shadow-ImpIdle_8
+      213: 8545830713532068761
+    second: Imp-ProjectileImpact_8
+  - first:
+      213: 4242371356758742897
+    second: Imp-ProjectileImpact_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -73,7 +76,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -118,13 +121,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shadow-ImpIdle_0
+      name: Imp-ProjectileImpact_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
-        width: 64
-        height: 64
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +135,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6fa1a9a6c58524360800000000000000
-      internalID: 7152376312166488822
+      spriteID: c1d0a46bbc8f5d760800000000000000
+      internalID: 7482159909766303004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow-ImpIdle_1
+      name: Imp-ProjectileImpact_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b68ef8263a5d31a90800000000000000
+      internalID: -7344291669601163157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp-ProjectileImpact_2
       rect:
         serializedVersion: 2
         x: 64
-        y: 128
-        width: 64
-        height: 64
+        y: 96
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 201a2a589a6a879f0800000000000000
-      internalID: -470442914038505214
+      spriteID: f81aeb1eef597a870800000000000000
+      internalID: 8694082527603630479
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow-ImpIdle_3
+      name: Imp-ProjectileImpact_3
       rect:
         serializedVersion: 2
         x: 0
         y: 64
-        width: 64
-        height: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +198,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbb7de4ab46a84720800000000000000
-      internalID: 2830695209622141885
+      spriteID: 1ff55d98a85c1a830800000000000000
+      internalID: 4080759936183001073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow-ImpIdle_5
+      name: Imp-ProjectileImpact_4
       rect:
         serializedVersion: 2
-        x: 128
+        x: 32
         y: 64
-        width: 64
-        height: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +219,104 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48fe8e78f0dbf2330800000000000000
-      internalID: 3688374494242074500
+      spriteID: 645c352a6b6b6d070800000000000000
+      internalID: 8130887072787711302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shadow-ImpIdle_6
+      name: Imp-ProjectileImpact_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dce56ce68fecbb4e0800000000000000
+      internalID: -1964749246011384115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp-ProjectileImpact_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f52ab7530930b790800000000000000
+      internalID: -7516445091561855498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp-ProjectileImpact_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3bde99801c448e70800000000000000
+      internalID: 9116495179616803643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp-ProjectileImpact_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 993b3b691c3e89670800000000000000
+      internalID: 8545830713532068761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Imp-ProjectileImpact_9
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,92 +324,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4e2c48f7198123a0800000000000000
-      internalID: -6691916835252851122
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shadow-ImpIdle_8
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 194e9e82ad8f060b0800000000000000
-      internalID: -5737312309397035887
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shadow-ImpIdle_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d77a45d8c44e6c570800000000000000
-      internalID: 8486721565266061181
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shadow-ImpIdle_4
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c0dcafb9307a819d0800000000000000
-      internalID: -2803307134094488308
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shadow-ImpIdle_7
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b628d5c4afc6b4420800000000000000
-      internalID: 2615303830897525355
+      spriteID: 17795ec954eefda30800000000000000
+      internalID: 4242371356758742897
       vertices: []
       indices: 
       edges: []

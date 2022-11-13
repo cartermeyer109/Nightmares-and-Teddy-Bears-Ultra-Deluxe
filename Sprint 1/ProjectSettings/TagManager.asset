@@ -23,6 +23,8 @@ TagManager:
   - Lock
   - Door
   - Imp
+  - EnemyDF
+  - ImpProj
   layers:
   - Default
   - TransparentFX

@@ -157,7 +157,7 @@ public class GooGremlinScript : MonoBehaviour
             //Allows Gremlin to come out of puddle
             if ((player.transform.position.x - this.transform.position.x) >= 9)
             {
-                enemyAnimator.SetBool("farToTheRight", true);
+                enemyAnimator.SetBool("inRange", true);
             }
 
 

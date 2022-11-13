@@ -20,6 +20,15 @@ TextureImporter:
   - first:
       213: 4734729907456724011
     second: Imp-Projectile_9
+  - first:
+      213: 9114084402102158115
+    second: Imp-Projectile_1
+  - first:
+      213: -2035179062082403093
+    second: Imp-Projectile_2
+  - first:
+      213: -5657281955221914723
+    second: Imp-Projectile_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -64,7 +73,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,12 +121,12 @@ TextureImporter:
       name: Imp-Projectile_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 67
-        width: 26
-        height: 26
-      alignment: 9
-      pivot: {x: 0.2770347, y: 0.19002387}
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -133,12 +142,12 @@ TextureImporter:
       name: Imp-Projectile_3
       rect:
         serializedVersion: 2
-        x: 34
-        y: 67
-        width: 28
-        height: 28
-      alignment: 9
-      pivot: {x: 0.25256267, y: 0.17681667}
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,12 +163,12 @@ TextureImporter:
       name: Imp-Projectile_4
       rect:
         serializedVersion: 2
-        x: 3
-        y: 35
-        width: 28
-        height: 28
-      alignment: 9
-      pivot: {x: 0.21216474, y: 0.17176697}
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -172,64 +181,64 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Imp-Projectile_6
+      name: Imp-Projectile_1
       rect:
         serializedVersion: 2
-        x: 35
-        y: 35
-        width: 25
-        height: 28
-      alignment: 9
-      pivot: {x: 0.24549301, y: 0.17681667}
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4617139215b1af4a0800000000000000
-      internalID: -6558899871914299036
+      spriteID: 3234a38a97bbb7e70800000000000000
+      internalID: 9114084402102158115
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Imp-Projectile_7
+      name: Imp-Projectile_2
       rect:
         serializedVersion: 2
-        x: 3
-        y: 3
-        width: 28
-        height: 28
-      alignment: 9
-      pivot: {x: 0.21721448, y: 0.17681661}
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ce4b5c12d0d02810800000000000000
-      internalID: 1738619057002467011
+      spriteID: be404460d6791c3e0800000000000000
+      internalID: -2035179062082403093
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Imp-Projectile_9
+      name: Imp-Projectile_5
       rect:
         serializedVersion: 2
-        x: 34
-        y: 3
-        width: 27
-        height: 25
-      alignment: 9
-      pivot: {x: 0.25910866, y: 0.19459161}
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2c4061e3c325b140800000000000000
-      internalID: 4734729907456724011
+      spriteID: d9b35c8090c4d71b0800000000000000
+      internalID: -5657281955221914723
       vertices: []
       indices: 
       edges: []

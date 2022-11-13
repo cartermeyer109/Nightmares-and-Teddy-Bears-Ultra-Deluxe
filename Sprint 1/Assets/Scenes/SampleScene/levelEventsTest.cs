@@ -23,9 +23,9 @@ public class levelEventsTest : MonoBehaviour
         protagPhysics = player.GetComponent<Rigidbody2D>();
 
         //Gremlin initiations
-        gremlin = GameObject.FindGameObjectWithTag("Enemy");
-        enemyAnimator = gremlin.GetComponent<Animator>();
-        gremlin.SetActive(false);
+        //gremlin = GameObject.FindGameObjectWithTag("EnemyDF");
+        //enemyAnimator = gremlin.GetComponent<Animator>();
+        //gremlin.SetActive(false);
 
     }
 
@@ -33,9 +33,9 @@ public class levelEventsTest : MonoBehaviour
     void Update()
     {
         //goo gremlin is at x == 5 in this example (Im doing a range of +3/-3)
-        if (player.transform.position.x >= 2 && player.transform.position.x <= 8)
-        {
-            gremlin.SetActive(true);
-        }
+        //if (player.transform.position.x >= 2 && player.transform.position.x <= 8)
+        //{
+        //    gremlin.SetActive(true);
+        //}
     }
 }

@@ -14,7 +14,6 @@ public class ShadowImp : MonoBehaviour
 
     //private AudioSource dieSound;
     //private AudioSource hurtSound;
-
     Rigidbody2D myPhysics;
 
     float fallForce;
@@ -87,12 +86,12 @@ public class ShadowImp : MonoBehaviour
             //There is no dealing with animator booleans because there is no different between idle and wa;lomg
             if (Mathf.Abs(player.transform.position.x - this.transform.position.x) <= 8)
             {
-                if (!facingLeft && player.transform.position.x - this.transform.position.x > 3 )
+                if (!facingLeft && player.transform.position.x - this.transform.position.x > 4.5 )
                 {
                     fallForce = myPhysics.velocity.y;
                     myPhysics.velocity = new Vector2(speed, fallForce);
                 }
-                else if (facingLeft && player.transform.position.x - this.transform.position.x < -3)
+                else if (facingLeft && player.transform.position.x - this.transform.position.x < -4.5)
                 {
                     fallForce = myPhysics.velocity.y;
                     myPhysics.velocity = new Vector2(-1 * speed, fallForce);

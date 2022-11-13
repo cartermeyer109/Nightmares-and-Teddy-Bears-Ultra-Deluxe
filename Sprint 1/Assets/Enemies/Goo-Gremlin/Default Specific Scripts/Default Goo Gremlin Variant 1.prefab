@@ -24,7 +24,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5017589789840747856, guid: 2c593c603b7a1a241b475c35c83536f1, type: 3}
       propertyPath: m_Mass
-      value: 2
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5017589789840747861, guid: 2c593c603b7a1a241b475c35c83536f1, type: 3}
       propertyPath: m_RootOrder
@@ -72,7 +72,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5017589789840747868, guid: 2c593c603b7a1a241b475c35c83536f1, type: 3}
       propertyPath: m_Name
-      value: Default Goo Gremlin Variant
+      value: Default Goo Gremlin Variant 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5017589789840747858, guid: 2c593c603b7a1a241b475c35c83536f1, type: 3}
