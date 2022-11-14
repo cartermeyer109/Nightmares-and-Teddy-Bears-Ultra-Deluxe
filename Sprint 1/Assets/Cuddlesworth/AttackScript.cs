@@ -40,6 +40,6 @@ public class AttackScript : MonoBehaviour
             myImpScript = collision.gameObject.GetComponent<ShadowImp>();
             myImpScript.takeDamage();
         }
-
+        Debug.Log("Attack Collision Happened");
     }
 }

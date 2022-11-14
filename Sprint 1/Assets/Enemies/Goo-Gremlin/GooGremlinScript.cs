@@ -86,9 +86,8 @@ public class GooGremlinScript : MonoBehaviour
                     hasFlipped = false;
                 }
 
-                //Normal MOVEMENT CODE
-                /*if (Mathf.Abs(player.transform.position.x - this.transform.position.x) <= 5 &&
-               Mathf.Abs(player.transform.position.y - this.transform.position.y) <= 3)
+                //Beginner Gremlin Movement Code
+                if (Mathf.Abs(player.transform.position.x - this.transform.position.x) > 1)
                 {
                     enemyAnimator.SetBool("canWalk", true);
                 }
@@ -96,23 +95,7 @@ public class GooGremlinScript : MonoBehaviour
                 {
                     enemyAnimator.SetBool("canWalk", false);
                 }
-                if (enemyAnimator.GetBool("isWalking"))
-                {
-                    if (!facingLeft)
-                    {
-                        fallForce = myPhysics.velocity.y;
-                        myPhysics.velocity = new Vector2(speed, fallForce);
-                    }
-                    else if (facingLeft)
-                    {
-                        fallForce = myPhysics.velocity.y;
-                        myPhysics.velocity = new Vector2(-1 * speed, fallForce);
 
-                    }
-                }*/
-
-                //Beginner Gremlin Movement Code
-                enemyAnimator.SetBool("canWalk", true);
                 if (enemyAnimator.GetBool("isWalking"))
                 {
                     if (!facingLeft)

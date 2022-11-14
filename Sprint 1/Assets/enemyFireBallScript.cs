@@ -50,7 +50,7 @@ public class enemyFireBallScript : MonoBehaviour
             {
                 playerScript.takeDamage();
             }
-            Debug.Log("Collision Detected with" + other.name);
+            //Debug.Log("Collision Detected with" + other.name);
             rb.velocity = new Vector3(0, 0, 0);
             animator.SetBool("Destroyed", true);
 

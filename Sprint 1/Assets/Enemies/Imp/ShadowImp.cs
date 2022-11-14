@@ -27,7 +27,7 @@ public class ShadowImp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemyHealth = 4;
+        enemyHealth = 2;
 
         //If you dont have the tag "Player" on the player object then you will need to change this to work
         player = GameObject.FindGameObjectWithTag("Player");
@@ -35,7 +35,7 @@ public class ShadowImp : MonoBehaviour
 
         myPhysics = GetComponent<Rigidbody2D>();
 
-        speed = 1f;
+        speed = 1.5f;
         fallForce = 0f;
 
         //dieSoundObject = GameObject.Find("DieSound");
@@ -84,7 +84,7 @@ public class ShadowImp : MonoBehaviour
 
             //ShadowImp Pomvement
             //There is no dealing with animator booleans because there is no different between idle and wa;lomg
-            if (Mathf.Abs(player.transform.position.x - this.transform.position.x) <= 8)
+            if (Mathf.Abs(player.transform.position.x - this.transform.position.x) <= 8 && Mathf.Abs(player.transform.position.y - this.transform.position.y) <= 8)
             {
                 if (!facingLeft && player.transform.position.x - this.transform.position.x > 4.5 )
                 {
@@ -102,6 +102,11 @@ public class ShadowImp : MonoBehaviour
                     fallForce = myPhysics.velocity.y;
                     myPhysics.velocity = new Vector2(0, fallForce);
                 }
+            }
+            else
+            {
+                fallForce = myPhysics.velocity.y;
+                myPhysics.velocity = new Vector2(0, fallForce);
             }
         }
     }

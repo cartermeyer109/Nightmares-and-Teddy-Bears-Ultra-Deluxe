@@ -33,7 +33,7 @@ public class enemyRange : MonoBehaviour
                 //dimensions of the player we're using or if we are going to scale them.
                 //(My GooGremlin is currently set to a scale of 5)
                 if (Mathf.Abs(player.transform.position.x - this.transform.position.x) <= 1.5 &&
-                    Mathf.Abs(player.transform.position.y - this.transform.position.y) <= 3)
+                    Mathf.Abs(player.transform.position.y - this.transform.position.y) <= 2)
                 {
                     //This basically checks that at least 2 second has passed between attacks
                     //so the enemy doesn't attack constatnly. I chose one second because thats

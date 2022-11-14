@@ -35,7 +35,7 @@ public class MovementScript : MonoBehaviour
     void Start()
     {
         //Debug.Log("Starting...");
-        playerHealth = 99;
+        playerHealth = 6;
         courage = 0;
         fear = 0;
 

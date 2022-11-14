@@ -86,51 +86,43 @@ public class GooGremlinDefaultScript : MonoBehaviour
                     hasFlipped = false;
                 }
 
-                //Normal MOVEMENT CODE
-                /*if (Mathf.Abs(player.transform.position.x - this.transform.position.x) <= 5 &&
-               Mathf.Abs(player.transform.position.y - this.transform.position.y) <= 3)
+               
+
+                //Beginner Gremlin Movement Code
+                if (Mathf.Abs(player.transform.position.x - this.transform.position.x) < 8 && Mathf.Abs(player.transform.position.y - this.transform.position.y) < 3)
                 {
-                    enemyAnimator.SetBool("canWalk", true);
+                    if (Mathf.Abs(player.transform.position.x - this.transform.position.x) > 1)
+                    {
+                        enemyAnimator.SetBool("canWalk", true);
+                    }
+                    else
+                    {
+                        enemyAnimator.SetBool("canWalk", false);
+                    }
+
+                    if (enemyAnimator.GetBool("isWalking"))
+                    {
+                        if (!facingLeft)
+                        {
+                            fallForce = myPhysics.velocity.y;
+                            myPhysics.velocity = new Vector2(speed, fallForce);
+                        }
+                        else if (facingLeft)
+                        {
+                            fallForce = myPhysics.velocity.y;
+                            myPhysics.velocity = new Vector2(-1 * speed, fallForce);
+
+                        }
+                    }
                 }
                 else
                 {
                     enemyAnimator.SetBool("canWalk", false);
                 }
-                if (enemyAnimator.GetBool("isWalking"))
-                {
-                    if (!facingLeft)
-                    {
-                        fallForce = myPhysics.velocity.y;
-                        myPhysics.velocity = new Vector2(speed, fallForce);
-                    }
-                    else if (facingLeft)
-                    {
-                        fallForce = myPhysics.velocity.y;
-                        myPhysics.velocity = new Vector2(-1 * speed, fallForce);
-
-                    }
-                }*/
-
-                //Beginner Gremlin Movement Code
-                enemyAnimator.SetBool("canWalk", true);
-                if (enemyAnimator.GetBool("isWalking"))
-                {
-                    if (!facingLeft)
-                    {
-                        fallForce = myPhysics.velocity.y;
-                        myPhysics.velocity = new Vector2(speed, fallForce);
-                    }
-                    else if (facingLeft)
-                    {
-                        fallForce = myPhysics.velocity.y;
-                        myPhysics.velocity = new Vector2(-1 * speed, fallForce);
-
-                    }
-                }
             }
 
             //Allows Gremlin to come out of puddle
-            if (Mathf.Abs(player.transform.position.x - this.transform.position.x) <= 3)
+            if (Mathf.Abs(player.transform.position.x - this.transform.position.x) <= 6)
             {
                 enemyAnimator.SetBool("inRange", true);
             }

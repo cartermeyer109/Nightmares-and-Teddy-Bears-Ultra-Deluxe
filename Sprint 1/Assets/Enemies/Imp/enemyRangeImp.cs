@@ -36,7 +36,7 @@ public class enemyRangeImp : MonoBehaviour
     void Update()
     {
         float distance = Mathf.Abs(transform.position.x - player.transform.position.x);
-        Debug.Log("Timer = " + timer);
+        //Debug.Log("Timer = " + timer);
 
         timer += Time.deltaTime;
 
