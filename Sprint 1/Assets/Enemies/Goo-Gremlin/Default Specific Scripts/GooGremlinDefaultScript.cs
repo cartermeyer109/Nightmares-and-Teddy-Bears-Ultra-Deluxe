@@ -10,11 +10,11 @@ public class GooGremlinDefaultScript : MonoBehaviour
     private int enemyHealth;
     GameObject player;
 
-    //private GameObject dieSoundObject;
-    //private GameObject hurtSoundObject;
+    private GameObject dieSoundObject;
+    private GameObject hurtSoundObject;
 
-    //private AudioSource dieSound;
-    //private AudioSource hurtSound;
+    private AudioSource dieSound;
+    private AudioSource hurtSound;
 
     Rigidbody2D myPhysics;
 
@@ -37,14 +37,16 @@ public class GooGremlinDefaultScript : MonoBehaviour
 
         myPhysics = GetComponent<Rigidbody2D>();
 
-        speed = 2f;
+        speed = 3.5f;
         fallForce = 0f;
 
-        //dieSoundObject = GameObject.Find("DieSound");
-        //hurtSoundObject = GameObject.Find("HurtSound");
+        dieSoundObject = this.gameObject.transform.GetChild(2).gameObject;
+        //GameObject.Find("DieSound");
+        hurtSoundObject = this.gameObject.transform.GetChild(1).gameObject;
+        //GameObject.Find("HurtSound");
 
-        //dieSound = dieSoundObject.GetComponent<AudioSource>();
-        //hurtSound = hurtSoundObject.GetComponent<AudioSource>();
+        dieSound = dieSoundObject.GetComponent<AudioSource>();
+        hurtSound = hurtSoundObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -136,14 +138,13 @@ public class GooGremlinDefaultScript : MonoBehaviour
 
         if (enemyHealth > 0)
         {
+             hurtSound.Play();
             //Debug.Log("Enemy health before hit: " + enemyHealth);
-
             //Lowers enemy health
             enemyHealth--;
 
             //Plays damage taking animation
             enemyAnimator.SetBool("dmgTaken", true);
-            //hurtSound.Play();
             //Debug.Log("Enemy health after hit: " + enemyHealth);
         }
 
@@ -151,8 +152,8 @@ public class GooGremlinDefaultScript : MonoBehaviour
 
         if (enemyHealth <= 0)
         {
+            dieSound.Play();
             enemyAnimator.SetBool("healthIsZero", true);
-            //dieSound.Play();
         }
     }
 }

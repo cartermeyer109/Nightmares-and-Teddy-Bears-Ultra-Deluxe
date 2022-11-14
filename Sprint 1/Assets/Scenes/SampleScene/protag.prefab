@@ -130,6 +130,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4214800327517488321, guid: 46ad27810eb758145954f187bb5831b4, type: 3}
+      propertyPath: m_Mass
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214800327517488321, guid: 46ad27810eb758145954f187bb5831b4, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: fcf1cd4e5152be44097f1247ad87fff8, type: 2}
+    - target: {fileID: 4214800327517488321, guid: 46ad27810eb758145954f187bb5831b4, type: 3}
+      propertyPath: m_GravityScale
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4214800327517488322, guid: 46ad27810eb758145954f187bb5831b4, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
@@ -137,6 +149,18 @@ PrefabInstance:
     - target: {fileID: 4214800327517488323, guid: 46ad27810eb758145954f187bb5831b4, type: 3}
       propertyPath: m_SortingOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214800327517488326, guid: 46ad27810eb758145954f187bb5831b4, type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214800327517488326, guid: 46ad27810eb758145954f187bb5831b4, type: 3}
+      propertyPath: jumpTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214800327517488326, guid: 46ad27810eb758145954f187bb5831b4, type: 3}
+      propertyPath: jumpForce
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4214800327517488327, guid: 46ad27810eb758145954f187bb5831b4, type: 3}
       propertyPath: m_Size.x

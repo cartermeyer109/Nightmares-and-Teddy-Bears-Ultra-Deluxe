@@ -35,20 +35,21 @@ public class enemyRangeImp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distance = Mathf.Abs(transform.position.x - player.transform.position.x);
-        //Debug.Log("Timer = " + timer);
-
-        timer += Time.deltaTime;
-
 
         //Makes sure a "player" exists
         if (GameObject.FindGameObjectWithTag("Player") != null)
         {
+            float distancex = Mathf.Abs(transform.position.x - player.transform.position.x);
+            float distancey = Mathf.Abs(transform.position.y - player.transform.position.y);
+            //Debug.Log("Timer = " + timer);
+
+            timer += Time.deltaTime;
+
             //This checks distance between the this enemy and the player
             //I have it set to 2 difference x, and 3 difference y. But I don't know the
             //dimensions of the player we're using or if we are going to scale them.
             //(My GooGremlin is currently set to a scale of 5)
-            if (distance <= 4.5)
+            if (distancex <= 4.5 && distancey <= 8)
             {
                 if (timer >= 2.5)
                 {

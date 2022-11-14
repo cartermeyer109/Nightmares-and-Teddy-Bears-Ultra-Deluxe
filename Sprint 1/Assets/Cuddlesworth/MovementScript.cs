@@ -6,25 +6,34 @@ using UnityEngine.SceneManagement;
 
 public class MovementScript : MonoBehaviour
 {
-    public int playerHealth;
 
     Vector3 moveRight, moveLeft;
-    public Vector2 jumpForce;
+
+    //Stuff im using RN
     Rigidbody2D myPhysics;
+    public float speed;
+    private float moveInput;
+    private bool isGrounded;
+    public float jumpForce;
+    private float jumpTimeCounter;
+    public float jumpTime;
+    private bool isJumping;
+
 
     float fallForce;
-    public float speed;
     bool canJump;
     bool facingRight;
     bool hasFlipped;
+
+    //Player 
+    Animator protagAnimator;
+
+    //Stats
     int courage;
     int fear;
+    public int playerHealth;
 
-    Animator protagAnimator;
-    public GameObject theProjectileHolder;
-    private GameObject currentProjectile;
-    public Transform spawnSpot;
-
+    //Audio
     private GameObject meleeSoundObject;
     private GameObject jumpSoundObject;
 
@@ -34,6 +43,9 @@ public class MovementScript : MonoBehaviour
 
     void Start()
     {
+        //jumpForce = 10;
+        //jumpTime = 0.3f;
+
         //Debug.Log("Starting...");
         playerHealth = 6;
         courage = 0;
@@ -48,7 +60,7 @@ public class MovementScript : MonoBehaviour
         myPhysics = GetComponent<Rigidbody2D>();
         protagAnimator = GetComponent<Animator>();
 
-        speed = 3.5f;
+        //speed = 3.75f;
         fallForce = 0f;
         //jumpForce = new Vector2(0, 28); //(0,22);
 
@@ -60,20 +72,66 @@ public class MovementScript : MonoBehaviour
 
     }
 
+    private void FixedUpdate()
+    {
+        moveInput = Input.GetAxisRaw("Horizontal");
+        myPhysics.velocity = new Vector2(moveInput * speed, myPhysics.velocity.y);
+    }
     void Update()
     {
         if (this != null && !protagAnimator.GetBool("cutsceneIdle"))
         {
-            if ((Input.GetKey(KeyCode.D) /*|| Input.GetKey(KeyCode.RightArrow)*/) ^ (Input.GetKey(KeyCode.A) /*|| Input.GetKey(KeyCode.LeftArrow)*/))
+            if(moveInput > 0)
             {
-                if (Input.GetKey(KeyCode.D) /*|| Input.GetKey(KeyCode.RightArrow)*/)
+                transform.eulerAngles = new Vector3(0, 0, 0);
+                protagAnimator.SetBool("ADPressed", true);
+            }
+            else if (moveInput < 0)
+            {
+                transform.eulerAngles = new Vector3(0, 180, 0);
+                protagAnimator.SetBool("ADPressed", true);
+            }
+            else
+            {
+                protagAnimator.SetBool("ADPressed", false);
+            }
+
+            if (isGrounded == true && Input.GetKeyDown(KeyCode.W))
+            {
+                protagAnimator.SetBool("WPressed", true);
+                protagAnimator.SetBool("GroundTapped", false);
+                isJumping = true;
+                jumpTimeCounter = jumpTime;
+                myPhysics.velocity = Vector2.up * jumpForce;
+            }
+            if (Input.GetKey(KeyCode.W) && isJumping == true)
+            {
+                if(jumpTimeCounter > 0)
+                {
+                    myPhysics.velocity = Vector2.up * jumpForce;
+                    jumpTimeCounter -= Time.deltaTime;
+                }
+                else
+                {
+                    isJumping = false;
+                }
+            }
+            if(Input.GetKeyUp(KeyCode.W))
+            {
+                isJumping = false;
+            }     
+            //***********************************************************************************
+            //THE OLD MOVEMENT CODE
+            /*if ((Input.GetKey(KeyCode.D) *//*|| Input.GetKey(KeyCode.RightArrow)*//*) ^ (Input.GetKey(KeyCode.A) *//*|| Input.GetKey(KeyCode.LeftArrow)*//*))
+            {
+                if (Input.GetKey(KeyCode.D) *//*|| Input.GetKey(KeyCode.RightArrow)*//*)
                 {
                     fallForce = myPhysics.velocity.y;
                     myPhysics.velocity = new Vector2(speed, fallForce);
                     facingRight = true;
                     protagAnimator.SetBool("ADPressed", true);
                 }
-                if (Input.GetKey(KeyCode.A) /*|| Input.GetKey(KeyCode.LeftArrow)*/)
+                if (Input.GetKey(KeyCode.A) *//*|| Input.GetKey(KeyCode.LeftArrow)*//*)
                 {
                     fallForce = myPhysics.velocity.y;
                     myPhysics.velocity = new Vector2(-1 * speed, fallForce);
@@ -98,25 +156,29 @@ public class MovementScript : MonoBehaviour
                 hasFlipped = false;
             }
 
-            if ((Input.GetKeyDown(KeyCode.W) /*|| Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow)*/) && protagAnimator.GetBool("GroundTapped"))
+            if ((Input.GetKeyDown(KeyCode.W) *//*|| Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow)*//*) && protagAnimator.GetBool("GroundTapped"))
             {
                 protagAnimator.SetBool("WPressed", true);
                 myPhysics.AddForce(jumpForce, ForceMode2D.Impulse);
                 protagAnimator.SetBool("GroundTapped", false);
 
-                /*if (myPhysics.velocity.y < 10) //code to allow small jumps; needs fixing
+                *//*if (myPhysics.velocity.y < 10) //code to allow small jumps; needs fixing
                 {
                     myPhysics.AddForce(jumpForce, ForceMode2D.Impulse);
-                }*/
+                }*//*
                 //uncomment below when we have a jump sound that makes sense.
                 //jumpSound.Play();
             }
+            */
+            //*****************************************************************************************
+
             if (Input.GetKeyDown(KeyCode.J))
             {
                 //Debug.Log("Attack");
                 protagAnimator.SetBool("JPressed", true);
                 meleeSound.Play();
             }
+            
             if (Input.GetKey(KeyCode.K))
             {
                 //do stuff (light/courage magic)
@@ -125,7 +187,8 @@ public class MovementScript : MonoBehaviour
             {
                 //fear mode
             }
-
+            
+            
             if (myPhysics.velocity.y < -0.5)
             {
                 protagAnimator.SetBool("GoingDown", true);
@@ -144,6 +207,7 @@ public class MovementScript : MonoBehaviour
         {
             //Debug.Log("Cuddlesworth ran into " + thingProtagHit.gameObject.name);
             protagAnimator.SetBool("GroundTapped", true);
+            isGrounded = true;
         }
 
         //ALSO TODO: make canJump false if protag is not touching anything!
@@ -165,6 +229,7 @@ public class MovementScript : MonoBehaviour
         {
             //Debug.Log("Cuddlesworth ran into " + thingProtagHit.gameObject.name);
             protagAnimator.SetBool("GroundTapped", false);
+            isGrounded = false;
         }
 
     }
@@ -196,6 +261,7 @@ public class MovementScript : MonoBehaviour
         //Kills enemy if they have no health
         if (playerHealth <= 0)
         {
+            SceneManager.LoadScene("GameOver");
             Destroy(this.gameObject);
         }
     }

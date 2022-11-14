@@ -9,11 +9,11 @@ public class ShadowImp : MonoBehaviour
     private int enemyHealth;
     GameObject player;
 
-    //private GameObject dieSoundObject;
-    //private GameObject hurtSoundObject;
+    private GameObject dieSoundObject;
+    private GameObject hurtSoundObject;
 
-    //private AudioSource dieSound;
-    //private AudioSource hurtSound;
+    private AudioSource dieSound;
+    private AudioSource hurtSound;
     Rigidbody2D myPhysics;
 
     float fallForce;
@@ -38,11 +38,13 @@ public class ShadowImp : MonoBehaviour
         speed = 1.5f;
         fallForce = 0f;
 
-        //dieSoundObject = GameObject.Find("DieSound");
-        //hurtSoundObject = GameObject.Find("HurtSound");
+        dieSoundObject = this.gameObject.transform.GetChild(2).gameObject;
+        //GameObject.Find("DieSound");
+        hurtSoundObject = this.gameObject.transform.GetChild(1).gameObject;
+        //GameObject.Find("HurtSound");
 
-        //dieSound = dieSoundObject.GetComponent<AudioSource>();
-        //hurtSound = hurtSoundObject.GetComponent<AudioSource>();
+        dieSound = dieSoundObject.GetComponent<AudioSource>();
+        hurtSound = hurtSoundObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -123,7 +125,7 @@ public class ShadowImp : MonoBehaviour
 
             //Plays damage taking animation
             enemyAnimator.SetBool("DmgTaken", true);
-            //hurtSound.Play();
+            hurtSound.Play();
             //Debug.Log("Enemy health after hit: " + enemyHealth);
         }
 
@@ -132,7 +134,7 @@ public class ShadowImp : MonoBehaviour
         if (enemyHealth <= 0)
         {
             enemyAnimator.SetBool("HealthIsZero", true);
-            //dieSound.Play();
+            dieSound.Play();
         }
     }
 }

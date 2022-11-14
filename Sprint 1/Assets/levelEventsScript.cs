@@ -33,7 +33,7 @@ public class levelEventsScript : MonoBehaviour
     {
         for (int i = 0; i < gremlin.Length; i++)
         {
-            if (gremlin[i] != null)
+            if (gremlin[i] != null && player != null)
             {
                 if (Mathf.Abs(player.transform.position.x - gremlin[i].transform.position.x) <= 6 && Mathf.Abs(player.transform.position.y - gremlin[i].transform.position.y) <= 5)
                 {
