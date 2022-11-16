@@ -16,10 +16,10 @@ public class CameraFollowPlayer : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
 
-        startLine = 0;
-        endLine = 156;
-        floor = 0;
-        celing = 4;
+        //startLine = 0;
+        //endLine = 156;
+        //floor = 0;
+        //celing = 4;
     }
 
     // Update is called once per frame
