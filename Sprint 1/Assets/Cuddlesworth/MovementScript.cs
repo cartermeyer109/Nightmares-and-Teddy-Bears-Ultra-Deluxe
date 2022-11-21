@@ -201,7 +201,7 @@ public class MovementScript : MonoBehaviour
     }
     public void OnCollisionEnter2D(Collision2D thingProtagHit)
     {
-        Debug.Log("Cuddlesworth ran into " + thingProtagHit.gameObject.name);
+        //Debug.Log("Cuddlesworth ran into " + thingProtagHit.gameObject.name);
 
         if (thingProtagHit.gameObject.CompareTag("ground")) //TODO: also check that you are colliding with the TOP of the ground tile...
         {
