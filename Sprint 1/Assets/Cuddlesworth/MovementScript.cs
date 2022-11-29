@@ -29,8 +29,8 @@ public class MovementScript : MonoBehaviour
     Animator protagAnimator;
 
     //Stats
-    int courage;
-    int fear;
+    public static int courage;
+    public static int fear = 400;
     public int playerHealth;
 
     //Audio
@@ -40,6 +40,13 @@ public class MovementScript : MonoBehaviour
     private AudioSource meleeSound;
     private AudioSource jumpSound;
 
+    //INVENTORY
+    private static int maxHealth = 6; 
+    private static bool goldenNeedle = false;
+    private static bool projAttack = false;
+    private static bool gpAttack = false;
+
+
 
     void Start()
     {
@@ -47,7 +54,7 @@ public class MovementScript : MonoBehaviour
         //jumpTime = 0.3f;
 
         //Debug.Log("Starting...");
-        playerHealth = 6;
+        playerHealth = maxHealth;
         courage = 0;
         fear = 0;
 
@@ -69,6 +76,8 @@ public class MovementScript : MonoBehaviour
 
         meleeSound = meleeSoundObject.GetComponent<AudioSource>();
         jumpSound = jumpSoundObject.GetComponent<AudioSource>();
+
+        fear = 400;
 
     }
 
@@ -265,4 +274,57 @@ public class MovementScript : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    public int getMaxHealth()
+    {
+        return maxHealth;
+    }
+
+    public bool getGoldenNeedle()
+    {
+        return goldenNeedle;
+    }
+
+    public bool getProjAttack()
+    {
+        return projAttack;
+    }
+
+    public bool getGPAttack()
+    {
+        return gpAttack;
+    }
+
+    public int getFear()
+    {
+        return fear;
+    }
+
+    public void setFear(int f)
+    {
+        fear = f;
+    }
+
+    public void setMaxHealth(int i)
+    {
+        maxHealth = i;
+    }
+
+    public void setGoldenNeedle(bool i)
+    {
+        goldenNeedle = i;
+    }
+
+    public void setProjAttack(bool i)
+    {
+        projAttack = i;
+    }
+
+    public void setGPAttack(bool i)
+    {
+        gpAttack = i;
+    }
+
+
 }
+

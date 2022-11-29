@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/TutorialLevel.unity
     guid: 7be5a8186770af14897ded573221401e
   - enabled: 1
-    path: Assets/Scenes/Hopscotch Shop.unity
+    path: Assets/Scenes/Hopscotch Shop/Hopscotch Shop.unity
     guid: 392401ead3ecd404b97c5f00f1cadaa5
   - enabled: 1
     path: Assets/Scenes/Level2.unity
