@@ -25,6 +25,7 @@ TagManager:
   - Imp
   - EnemyDF
   - ImpProj
+  - Rope
   layers:
   - Default
   - TransparentFX
