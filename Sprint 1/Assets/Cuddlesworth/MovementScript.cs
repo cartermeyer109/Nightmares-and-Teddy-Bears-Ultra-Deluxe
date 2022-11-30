@@ -19,8 +19,6 @@ public class MovementScript : MonoBehaviour
     public float jumpTime;
     private bool isJumping;
 
-    GameObject startObject;
-
 
     float fallForce;
     bool canJump;
@@ -73,9 +71,6 @@ public class MovementScript : MonoBehaviour
         fallForce = 0f;
         //jumpForce = new Vector2(0, 28); //(0,22);
 
-        startObject = GameObject.Find("StartObject");
-
-        //audio
         meleeSoundObject = GameObject.Find("MeleeSound");
         jumpSoundObject = GameObject.Find("JumpSound");
 
@@ -215,7 +210,7 @@ public class MovementScript : MonoBehaviour
     }
     public void OnCollisionEnter2D(Collision2D thingProtagHit)
     {
-        //Debug.Log("Cuddlesworth ran into " + thingProtagHit.gameObject.name);
+        Debug.Log("Cuddlesworth ran into " + thingProtagHit.gameObject.name);
 
         if (thingProtagHit.gameObject.CompareTag("ground")) //TODO: also check that you are colliding with the TOP of the ground tile...
         {
@@ -228,18 +223,16 @@ public class MovementScript : MonoBehaviour
 
         if (thingProtagHit.gameObject.CompareTag("Void"))
         {
-            //Debug.Log("Cuddlesworth ran into " + thingProtagHit.gameObject.name);
-            this.transform.position = new Vector3(thingProtagHit.gameObject.transform.position.x, thingProtagHit.gameObject.transform.position.y, 0);
-            this.takeDamage();
-            //Destroy(this.gameObject);
-            //SceneManager.LoadScene("GameOver");
+            Debug.Log("Cuddlesworth ran into " + thingProtagHit.gameObject.name);
+            Destroy(this.gameObject);
+            SceneManager.LoadScene("GameOver");
         }
 
     }
 
     public void OnCollisionExit2D(Collision2D thingProtagHit)
     {
-        //Debug.Log("Cuddlesworth stopped touching " + thingProtagHit.gameObject.name);
+        Debug.Log("Cuddlesworth stopped touching " + thingProtagHit.gameObject.name);
 
         if (thingProtagHit.gameObject.CompareTag("ground")) //TODO: also check that you are colliding with the TOP of the ground tile...
         {
