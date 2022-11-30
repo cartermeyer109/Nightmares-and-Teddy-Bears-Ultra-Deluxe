@@ -31,7 +31,7 @@ public class ShopProtagScript : MonoBehaviour
         {
             //Debuging only
             LevelTracker.nextLevel();
-            Debug.Log("Next Level");
+            Debug.Log("current level is set to " + LevelTracker.getLevel());
         }
     }
 }
