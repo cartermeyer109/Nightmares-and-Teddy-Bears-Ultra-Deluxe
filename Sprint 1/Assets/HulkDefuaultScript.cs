@@ -29,6 +29,7 @@ public class HulkDefuaultScript : MonoBehaviour
     public bool facingLeft = true;
     public bool hasFlipped = false;
     public bool dynamicFlipping = false;
+    private float walkingXPos;
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +53,8 @@ public class HulkDefuaultScript : MonoBehaviour
         dieSound = dieSoundObject.GetComponent<AudioSource>();
         hurtSound = hurtSoundObject.GetComponent<AudioSource>();
 
+        walkingXPos = transform.position.x;
+
     }
 
     // Update is called once per frame
@@ -59,7 +62,7 @@ public class HulkDefuaultScript : MonoBehaviour
     {
         // This entire update function is kinda complicated but it effectively makes it
         //so that the enemy is ALWAYS facing in the direction of the player
-        if (player != null)
+        if (player != null && !enemyAnimator.GetBool("isAttacking"))
         {
             //FLIPS SPRITE CODE
             //Checks if player is on the right of the enemy
@@ -94,8 +97,10 @@ public class HulkDefuaultScript : MonoBehaviour
 
 
             //Beginner Gremlin Movement Code
+            //If you are in this range the enemy can walk
             if (Mathf.Abs(player.transform.position.x - this.transform.position.x) < 8 && Mathf.Abs(player.transform.position.y - this.transform.position.y) < 3)
             {
+                //If you are OUTSIDE this range than the enemy can walk
                 if (Mathf.Abs(player.transform.position.x - this.transform.position.x) > 2.5)
                 {
                     enemyAnimator.SetBool("canWalk", true);
@@ -104,25 +109,30 @@ public class HulkDefuaultScript : MonoBehaviour
                 {
                     enemyAnimator.SetBool("canWalk", false);
                 }
-
-                if (enemyAnimator.GetBool("isWalking"))
-                {
-                    if (!facingLeft)
-                    {
-                        fallForce = myPhysics.velocity.y;
-                        myPhysics.velocity = new Vector2(speed, fallForce);
-                    }
-                    else if (facingLeft)
-                    {
-                        fallForce = myPhysics.velocity.y;
-                        myPhysics.velocity = new Vector2(-1 * speed, fallForce);
-
-                    }
-                }
             }
             else
             {
                 enemyAnimator.SetBool("canWalk", false);
+            }
+
+            if (enemyAnimator.GetBool("isWalking"))
+            {
+                if (!facingLeft)
+                {
+                    fallForce = myPhysics.velocity.y;
+                    myPhysics.velocity = new Vector2(speed, fallForce);
+                }
+                else if (facingLeft)
+                {
+                    fallForce = myPhysics.velocity.y;
+                    myPhysics.velocity = new Vector2(-1 * speed, fallForce);
+
+                }
+                walkingXPos = transform.position.x;
+            }
+            else
+            {
+                myPhysics.velocity = Vector3.zero;
             }
         }
     }

@@ -182,7 +182,7 @@ public class shopManagerScript : MonoBehaviour
                 //PUT SWITCH CASE HERE WITH NEW ITEMS EVERYTIME WE ADD ONE
                 switch (Items[slotSelected].getItemCode())
                 {
-                    case 1:
+                    case 0:
                         playerStats.setMaxHealth(playerStats.getMaxHealth() + 2);
                         Items[slotSelected].setItemPrice((playerStats.getMaxHealth() - 4) * 100);
                         if (playerStats.getMaxHealth() == 12)
@@ -190,15 +190,15 @@ public class shopManagerScript : MonoBehaviour
                             removeItem(slotSelected);
                         }
                         break;
-                    case 2:
+                    case 1:
                         playerStats.setGoldenNeedle(true);
                         removeItem(slotSelected);
                         break;
-                    case 3:
+                    case 2:
                         playerStats.setProjAttack(true);
                         removeItem(slotSelected);
                         break;
-                    case 4:
+                    case 3:
                         playerStats.setGPAttack(true);
                         removeItem(slotSelected);
                         break;

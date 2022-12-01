@@ -25,7 +25,6 @@ public class GooGremlinDefaultScript : MonoBehaviour
     public bool facingLeft;
     public bool hasFlipped = false;
     public bool dynamicFlipping = false;
-
     // Start is called before the first frame update
     void Start()
     {
