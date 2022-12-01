@@ -27,33 +27,29 @@ public class HealthUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerScript.playerHealth == 6)
+        switch (playerScript.playerHealth)
         {
-            spriteRenderer.sprite = h6Sprite;
-        }
-        if (playerScript.playerHealth == 5)
-        {
-            spriteRenderer.sprite = h5Sprite;
-        }
-        if (playerScript.playerHealth == 4)
-        {
-            spriteRenderer.sprite = h4Sprite;
-        }
-        if (playerScript.playerHealth == 3)
-        {
-            spriteRenderer.sprite = h3Sprite;
-        }
-        if (playerScript.playerHealth == 2)
-        {
-            spriteRenderer.sprite = h2Sprite;
-        }
-        if (playerScript.playerHealth == 1)
-        {
-            spriteRenderer.sprite = h1Sprite;
-        }
-        if (playerScript.playerHealth == 0)
-        {
-            spriteRenderer.sprite = h0Sprite;
+            case 0:
+                spriteRenderer.sprite = h0Sprite;
+                break;
+            case 1:
+                spriteRenderer.sprite = h1Sprite;
+                break;
+            case 2:
+                spriteRenderer.sprite = h2Sprite;
+                break;
+            case 3:
+                spriteRenderer.sprite = h3Sprite;
+                break;
+            case 4:
+                spriteRenderer.sprite = h4Sprite;
+                break;
+            case 5:
+                spriteRenderer.sprite = h5Sprite;
+                break;
+            case 6:
+                spriteRenderer.sprite = h6Sprite;
+                break;
         }
     }
 }

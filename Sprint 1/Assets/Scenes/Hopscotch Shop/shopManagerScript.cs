@@ -89,48 +89,7 @@ public class shopManagerScript : MonoBehaviour
         highlightSpot = new Vector3(-45.52f, 16.93f, 0);
         buyTextHighlighter = transform.GetChild(3).gameObject;
 
-        //Individually goes through each stat to see if it should be included in the shop/array 
-        //I didn't know a better way to do this because you have to check each player stat individually.
-        if (playerStats.getMaxHealth() == 12)
-        {
-            heartItem.Deactivate();
-        }
-        else
-        {
-            Items[itemsSize] = heartItem;
-            itemsSize++;
-        }
-
-        if (playerStats.getGoldenNeedle())
-        {
-            needleItem.Deactivate();
-        }
-        else
-        {
-            Items[itemsSize] = needleItem;
-            itemsSize++;
-        }
-
-        if (playerStats.getProjAttack())
-        {
-            projAttackItem.Deactivate();
-        }
-        else
-        {
-            Items[itemsSize] = projAttackItem;
-            itemsSize++;
-        }
-
-        if (playerStats.getGPAttack())
-        {
-            gpAttackItem.Deactivate();
-        }
-        else
-        {
-            Items[itemsSize] = gpAttackItem;
-            itemsSize++;
-        }
-
+        readPlayerStats();
     }
 
     // Update is called once per frame
@@ -205,7 +164,7 @@ public class shopManagerScript : MonoBehaviour
             itemHighlighter.SetActive(true);
         }
 
-        //If the menu every drops below 0 (such as -1), turn off the meny after doing some final stuff
+        //If the menu ever drops below 0 (such as -1), turn off the meny after doing some final stuff
         if (menuProgress < 0)
         {
             menuProgress = 0;
@@ -269,6 +228,7 @@ public class shopManagerScript : MonoBehaviour
     }
     void removeItem(int i)
     {
+        //This works directly with the array declared in start
         Items[i].Deactivate();
         for (int j = i; j < itemsSize - 1; j++)
         {
@@ -276,5 +236,51 @@ public class shopManagerScript : MonoBehaviour
         }
         Items[itemsSize - 1] = null;
         itemsSize--;
+    }
+
+    void readPlayerStats()
+    {
+        //Individually goes through each stat to see if it should be included in the shop/array 
+        //I didn't know a better way to do this because you have to check each player stat individually.
+        if (playerStats.getMaxHealth() == 12)
+        {
+            heartItem.Deactivate();
+        }
+        else
+        {
+            Items[itemsSize] = heartItem;
+            itemsSize++;
+        }
+
+        if (playerStats.getGoldenNeedle())
+        {
+            needleItem.Deactivate();
+        }
+        else
+        {
+            Items[itemsSize] = needleItem;
+            itemsSize++;
+        }
+
+        if (playerStats.getProjAttack())
+        {
+            projAttackItem.Deactivate();
+        }
+        else
+        {
+            Items[itemsSize] = projAttackItem;
+            itemsSize++;
+        }
+
+        if (playerStats.getGPAttack())
+        {
+            gpAttackItem.Deactivate();
+        }
+        else
+        {
+            Items[itemsSize] = gpAttackItem;
+            itemsSize++;
+        }
+
     }
 }

@@ -53,7 +53,6 @@ public class GooGremlinDefaultScript : MonoBehaviour
     void Update()
     {// This entire update function is kinda complicated but it effectively makes it
      //so that the enemy is ALWAYS facing in the direction of the player
-
         if (player != null)
         {
             if (enemyAnimator.GetBool("hasAwoken"))
