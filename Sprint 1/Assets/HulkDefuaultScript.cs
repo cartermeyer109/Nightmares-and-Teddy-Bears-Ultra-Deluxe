@@ -113,8 +113,8 @@ public class HulkDefuaultScript : MonoBehaviour
 
             if (enemyAnimator.GetBool("isWalking"))
             {
-                myPhysics.constraints = RigidbodyConstraints2D.None;
-
+/*                myPhysics.constraints = RigidbodyConstraints2D.None;
+*/
                 if (!facingLeft)
                 {
                     fallForce = myPhysics.velocity.y;
@@ -127,16 +127,16 @@ public class HulkDefuaultScript : MonoBehaviour
 
                 }
             }
-            else
+/*            else
             {
                 myPhysics.constraints = RigidbodyConstraints2D.FreezePositionX;
             }
-
-            if (enemyAnimator.GetBool   ("isAttacking"))
+*/
+/*            if (enemyAnimator.GetBool   ("isAttacking"))
             {
                 myPhysics.constraints = RigidbodyConstraints2D.FreezePositionX;
             }
-        }
+*/        }
     }
 
     public void OnCollisionEnter2D(Collision2D thingHit)
