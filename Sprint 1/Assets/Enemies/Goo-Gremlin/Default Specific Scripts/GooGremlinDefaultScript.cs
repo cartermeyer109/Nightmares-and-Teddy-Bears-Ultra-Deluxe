@@ -9,6 +9,7 @@ public class GooGremlinDefaultScript : MonoBehaviour
     Animator enemyAnimator;
     private int enemyHealth;
     GameObject player;
+    MovementScript playerScript;
 
     private GameObject dieSoundObject;
     private GameObject hurtSoundObject;
@@ -19,12 +20,11 @@ public class GooGremlinDefaultScript : MonoBehaviour
     Rigidbody2D myPhysics;
 
     float fallForce;
-    float speed;
+    public float speed;
 
     //To be used in updating (flipping code)
-    public bool facingLeft;
+    public bool facingLeft = true;
     public bool hasFlipped = false;
-    public bool dynamicFlipping = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +36,7 @@ public class GooGremlinDefaultScript : MonoBehaviour
 
         myPhysics = GetComponent<Rigidbody2D>();
 
-        speed = 3.5f;
+        //speed = 3.5f;
         fallForce = 0f;
 
         dieSoundObject = this.gameObject.transform.GetChild(2).gameObject;
@@ -69,24 +69,24 @@ public class GooGremlinDefaultScript : MonoBehaviour
                 }
 
                 //If player is on the right of the enemy (facingLeft == true) and the enemy has not flipped yet.
-                if (facingLeft && !hasFlipped)
+                if (facingLeft && hasFlipped)
                 {
                     //Flip enemy to the right
                     this.transform.localScale *= new Vector2(-1, 1);
                     //Recognize that the enemy has flipped
-                    hasFlipped = true;
+                    hasFlipped = false;
                 }
 
                 //If the player has fliped to the right (meaning they are currently facing right) and the player is on the left side of the enemy
-                if (hasFlipped && !facingLeft)
+                if (!hasFlipped && !facingLeft)
                 {
                     //Flip enemy to the left
                     this.transform.localScale *= new Vector2(-1, 1);
                     //Recognize the enemy is now facing their default direction
-                    hasFlipped = false;
+                    hasFlipped = true;
                 }
 
-               
+
 
                 //Beginner Gremlin Movement Code
                 if (Mathf.Abs(player.transform.position.x - this.transform.position.x) < 8 && Mathf.Abs(player.transform.position.y - this.transform.position.y) < 3)
@@ -139,7 +139,35 @@ public class GooGremlinDefaultScript : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
+        if (player != null)
+        {
+            if (thingHit.gameObject.CompareTag("Player"))
+            {
+                playerScript = playerScript = thingHit.gameObject.GetComponent<MovementScript>();
+                playerScript.takeDamage();
+                Vector2 direction = thingHit.GetContact(0).normal;
+                if (direction.x == 1)
+                {
+                    playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
+                    Debug.Log("left");
+                }
+                if (direction.x == -1)
+                {
+                    playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
+                    Debug.Log("right ");
+                }
+                if (direction.y == 1)
+                {
+                    playerScript.myPhysics.AddForce(new Vector2(0, -10), ForceMode2D.Impulse);
+                    Debug.Log("down");
+                }
+                if (direction.y == -1)
+                {
+                    playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
+                    Debug.Log("up");
+                }
+            }
+        }
     }
 
     public void takeDamage()

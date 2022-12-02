@@ -715,7 +715,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8973792581182849057, guid: ed1e8922b3b86944b912af91c457b708, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8973792581182849057, guid: ed1e8922b3b86944b912af91c457b708, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3976,9 +3976,31 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths: []
+  m_ColliderPaths:
+  - m_Collider: {fileID: 763225053}
+    m_ColliderPaths:
+    - - X: -145000100
+        Y: -44999959
+      - X: -145000100
+        Y: -55000041
+      - X: -145000041
+        Y: -55000100
+      - X: 1624999977
+        Y: -55000100
+      - X: 1625000036
+        Y: -55000041
+      - X: 1625000036
+        Y: -44999959
+      - X: 1624999977
+        Y: -44999900
+      - X: -145000041
+        Y: -44999900
   m_CompositePaths:
-    m_Paths: []
+    m_Paths:
+    - - {x: 162.49997, y: -5.50001}
+      - {x: 162.49997, y: -4.49999}
+      - {x: -14.50001, y: -4.5000253}
+      - {x: -14.499974, y: -5.50001}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!50 &763225052
@@ -4014,7 +4036,7 @@ TilemapCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
@@ -7570,17 +7592,45 @@ PrefabInstance:
       propertyPath: m_Name
       value: protag Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 855710918021234376, guid: 795557c33366b2b4b8e232888f58a5c0, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2545433
+      objectReference: {fileID: 0}
+    - target: {fileID: 855710918021234376, guid: 795557c33366b2b4b8e232888f58a5c0, type: 3}
+      propertyPath: m_Size.y
+      value: 0.61349607
+      objectReference: {fileID: 0}
+    - target: {fileID: 855710918021234376, guid: 795557c33366b2b4b8e232888f58a5c0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 855710918021234376, guid: 795557c33366b2b4b8e232888f58a5c0, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: c41c81f8d1c79664c90c96a92b3e178c, type: 2}
+    - target: {fileID: 855710918021234376, guid: 795557c33366b2b4b8e232888f58a5c0, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.04302764
+      objectReference: {fileID: 0}
+    - target: {fileID: 855710918021234376, guid: 795557c33366b2b4b8e232888f58a5c0, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.3088044
+      objectReference: {fileID: 0}
+    - target: {fileID: 855710918021234382, guid: 795557c33366b2b4b8e232888f58a5c0, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: c41c81f8d1c79664c90c96a92b3e178c, type: 2}
     - target: {fileID: 855710918021234383, guid: 795557c33366b2b4b8e232888f58a5c0, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 855710918021234383, guid: 795557c33366b2b4b8e232888f58a5c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 162.84578
+      value: -7.1
       objectReference: {fileID: 0}
     - target: {fileID: 855710918021234383, guid: 795557c33366b2b4b8e232888f58a5c0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.0369902
+      value: -3.7
       objectReference: {fileID: 0}
     - target: {fileID: 855710918021234383, guid: 795557c33366b2b4b8e232888f58a5c0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7614,7 +7664,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 855710918391226693, guid: 795557c33366b2b4b8e232888f58a5c0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7372149060343856297, guid: 795557c33366b2b4b8e232888f58a5c0, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2520132
+      objectReference: {fileID: 0}
+    - target: {fileID: 7372149060343856297, guid: 795557c33366b2b4b8e232888f58a5c0, type: 3}
+      propertyPath: m_Size.y
+      value: 0.61536384
+      objectReference: {fileID: 0}
+    - target: {fileID: 7372149060343856297, guid: 795557c33366b2b4b8e232888f58a5c0, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0433712
+      objectReference: {fileID: 0}
+    - target: {fileID: 7372149060343856297, guid: 795557c33366b2b4b8e232888f58a5c0, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.30873656
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5866167706587910472, guid: 795557c33366b2b4b8e232888f58a5c0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 795557c33366b2b4b8e232888f58a5c0, type: 3}
 --- !u!4 &1804315980 stripped
 Transform:

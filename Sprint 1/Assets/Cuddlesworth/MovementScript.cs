@@ -10,7 +10,7 @@ public class MovementScript : MonoBehaviour
     Vector3 moveRight, moveLeft;
 
     //Stuff im using RN
-    Rigidbody2D myPhysics;
+    public Rigidbody2D myPhysics;
     public float speed;
     private float moveInput;
     private bool isGrounded;

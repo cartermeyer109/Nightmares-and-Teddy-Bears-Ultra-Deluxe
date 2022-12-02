@@ -25,7 +25,7 @@ public class GooGremlinMeleeScript : MonoBehaviour
     {
         
     }
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         //if the object we collided with is the player
         if (collision.gameObject.CompareTag("Player"))
@@ -38,5 +38,4 @@ public class GooGremlinMeleeScript : MonoBehaviour
             playerScript.takeDamage();
         }
     }
-
 }
