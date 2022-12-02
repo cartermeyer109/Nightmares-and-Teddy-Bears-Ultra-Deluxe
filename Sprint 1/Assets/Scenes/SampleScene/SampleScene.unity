@@ -3903,9 +3903,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2148789328468724707, guid: bf7ed07825933b948a5480e540ef1e60, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2148789328468724709, guid: bf7ed07825933b948a5480e540ef1e60, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2148789328468724713, guid: bf7ed07825933b948a5480e540ef1e60, type: 3}
       propertyPath: m_Name
       value: Hulk
+      objectReference: {fileID: 0}
+    - target: {fileID: 2148789328513573714, guid: bf7ed07825933b948a5480e540ef1e60, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -3933,7 +3945,6 @@ MonoBehaviour:
   speed: 1.5
   facingLeft: 0
   hasFlipped: 0
-  dynamicFlipping: 0
 --- !u!114 &1918315827
 MonoBehaviour:
   m_ObjectHideFlags: 0

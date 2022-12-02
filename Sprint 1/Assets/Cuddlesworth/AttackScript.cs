@@ -21,7 +21,7 @@ public class AttackScript : MonoBehaviour
         
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {//uncomment this when you have the enemy script
@@ -47,7 +47,6 @@ public class AttackScript : MonoBehaviour
             myHulkDefaultScript = collision.gameObject.GetComponent<HulkDefuaultScript>();
             myHulkDefaultScript.takeDamage();
         }
-
         Debug.Log("Attack Collision Happened");
     }
 }
