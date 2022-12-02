@@ -8,6 +8,7 @@ public class AttackScript : MonoBehaviour
     GooGremlinScript myGremlinScript;
     ShadowImp myImpScript;
     GooGremlinDefaultScript myGremlinDefaultScript;
+    HulkDefuaultScript myHulkDefaultScript;
     //GameObject[] enemy;
 
     void Start()
@@ -40,6 +41,13 @@ public class AttackScript : MonoBehaviour
             myImpScript = collision.gameObject.GetComponent<ShadowImp>();
             myImpScript.takeDamage();
         }
+        if (collision.gameObject.CompareTag("Hulk"))
+        {//uncomment this when you have the enemy script
+            //Debug.Log("Player attack hit");
+            myHulkDefaultScript = collision.gameObject.GetComponent<HulkDefuaultScript>();
+            myHulkDefaultScript.takeDamage();
+        }
+
         Debug.Log("Attack Collision Happened");
     }
 }

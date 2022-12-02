@@ -28,8 +28,6 @@ public class HulkDefuaultScript : MonoBehaviour
     //To be used in updating (flipping code)
     public bool facingLeft = true;
     public bool hasFlipped = false;
-    public bool dynamicFlipping = false;
-    private float walkingXPos;
 
     // Start is called before the first frame update
     void Start()
@@ -52,8 +50,6 @@ public class HulkDefuaultScript : MonoBehaviour
 
         dieSound = dieSoundObject.GetComponent<AudioSource>();
         hurtSound = hurtSoundObject.GetComponent<AudioSource>();
-
-        walkingXPos = transform.position.x;
 
     }
 
@@ -117,6 +113,8 @@ public class HulkDefuaultScript : MonoBehaviour
 
             if (enemyAnimator.GetBool("isWalking"))
             {
+                myPhysics.constraints = RigidbodyConstraints2D.None;
+
                 if (!facingLeft)
                 {
                     fallForce = myPhysics.velocity.y;
@@ -128,11 +126,15 @@ public class HulkDefuaultScript : MonoBehaviour
                     myPhysics.velocity = new Vector2(-1 * speed, fallForce);
 
                 }
-                walkingXPos = transform.position.x;
             }
             else
             {
-                myPhysics.velocity = Vector3.zero;
+                myPhysics.constraints = RigidbodyConstraints2D.FreezePositionX;
+            }
+
+            if (enemyAnimator.GetBool   ("isAttacking"))
+            {
+                myPhysics.constraints = RigidbodyConstraints2D.FreezePositionX;
             }
         }
     }

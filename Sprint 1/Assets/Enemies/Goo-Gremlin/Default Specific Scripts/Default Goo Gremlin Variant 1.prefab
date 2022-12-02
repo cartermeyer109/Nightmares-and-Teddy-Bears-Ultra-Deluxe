@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4b160f6b005c794e83cb3adf0d5ced0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2.25
   facingLeft: 0
   hasFlipped: 0
   dynamicFlipping: 0

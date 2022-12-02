@@ -19,7 +19,7 @@ public class GooGremlinDefaultScript : MonoBehaviour
     Rigidbody2D myPhysics;
 
     float fallForce;
-    float speed;
+    public float speed;
 
     //To be used in updating (flipping code)
     public bool facingLeft;
@@ -36,7 +36,7 @@ public class GooGremlinDefaultScript : MonoBehaviour
 
         myPhysics = GetComponent<Rigidbody2D>();
 
-        speed = 3.5f;
+        //speed = 3.5f;
         fallForce = 0f;
 
         dieSoundObject = this.gameObject.transform.GetChild(2).gameObject;
