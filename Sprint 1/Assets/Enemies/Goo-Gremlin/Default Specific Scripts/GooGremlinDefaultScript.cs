@@ -134,7 +134,6 @@ public class GooGremlinDefaultScript : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D thingHit)
     {
-        
         if (thingHit.gameObject.CompareTag("Void"))
         {
             Destroy(this.gameObject);

@@ -676,6 +676,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1975089661283386510, guid: b37b6fd1d8f7c5446a98c59b9a5edc16, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1975089662068670486, guid: b37b6fd1d8f7c5446a98c59b9a5edc16, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1975089662108811860, guid: b37b6fd1d8f7c5446a98c59b9a5edc16, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1975089662108811861, guid: b37b6fd1d8f7c5446a98c59b9a5edc16, type: 3}
+      propertyPath: checkPaddingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1975089662108811861, guid: b37b6fd1d8f7c5446a98c59b9a5edc16, type: 3}
+      propertyPath: m_enableExtraPadding
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1975089662108811863, guid: b37b6fd1d8f7c5446a98c59b9a5edc16, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1975089662214453519, guid: b37b6fd1d8f7c5446a98c59b9a5edc16, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1975089662706123843, guid: b37b6fd1d8f7c5446a98c59b9a5edc16, type: 3}
       propertyPath: m_Name
       value: Canvas
