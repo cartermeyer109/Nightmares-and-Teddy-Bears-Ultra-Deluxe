@@ -223,9 +223,13 @@ public class MovementScript : MonoBehaviour
 
         if (thingProtagHit.gameObject.CompareTag("Void"))
         {
-            Debug.Log("Cuddlesworth ran into " + thingProtagHit.gameObject.name);
-            Destroy(this.gameObject);
-            SceneManager.LoadScene("GameOver");
+            //Debug.Log("Cuddlesworth ran into " + thingProtagHit.gameObject.name);
+            //Destroy(this.gameObject);
+            //SceneManager.LoadScene("GameOver");
+            this.transform.position = new Vector3(thingProtagHit.gameObject.transform.position.x, thingProtagHit.gameObject.transform.position.y, 0);
+            this.takeDamage();
+            //Destroy(this.gameObject);
+            //SceneManager.LoadScene("GameOver");
         }
 
     }
