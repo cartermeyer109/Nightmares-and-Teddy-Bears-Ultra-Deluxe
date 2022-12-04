@@ -27,14 +27,15 @@ TagManager:
   - ImpProj
   - Rope
   - Hulk
+  - Fear
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
-  - 
+  - Glow
   - 
   - 
   - 

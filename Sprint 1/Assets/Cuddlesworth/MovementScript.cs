@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+//TODO still need to make protag invincible during transformation
 
 public class MovementScript : MonoBehaviour
 {
@@ -18,6 +18,7 @@ public class MovementScript : MonoBehaviour
     private float jumpTimeCounter;
     public float jumpTime;
     private bool isJumping;
+    private float switchTimer = 2.5f;
 
 
     float fallForce;
@@ -29,8 +30,13 @@ public class MovementScript : MonoBehaviour
     Animator protagAnimator;
 
     //Stats
-    public static int courage;
+    public static int courage = 0;
+    public static int maxCourage = 100;
     public static int fear = 400;
+
+    //This is for the fear bar, not the currency
+    public static float fearBarCtr = 250;
+    public static int maxFear = 500;
     public int playerHealth;
 
     //Audio
@@ -84,11 +90,22 @@ public class MovementScript : MonoBehaviour
     private void FixedUpdate()
     {
         moveInput = Input.GetAxisRaw("Horizontal");
-        myPhysics.velocity = new Vector2(moveInput * speed, myPhysics.velocity.y);
+        if (this != null && !protagAnimator.GetBool("cutsceneIdle") && !protagAnimator.GetBool("isTransforming"))
+        {
+            myPhysics.velocity = new Vector2(moveInput * speed, myPhysics.velocity.y);
+        }
     }
     void Update()
     {
-        if (this != null && !protagAnimator.GetBool("cutsceneIdle"))
+
+        if (protagAnimator.GetBool("isTransforming"))
+        {
+            myPhysics.velocity = new Vector2(0, 0);  
+        }
+
+        switchTimer += Time.deltaTime;
+
+        if (this != null && !protagAnimator.GetBool("cutsceneIdle") && !protagAnimator.GetBool("isTransforming"))
         {
             if(moveInput > 0)
             {
@@ -105,7 +122,7 @@ public class MovementScript : MonoBehaviour
                 protagAnimator.SetBool("ADPressed", false);
             }
 
-            if (isGrounded == true && Input.GetKeyDown(KeyCode.W))
+            if (isGrounded == true && Input.GetKeyDown(KeyCode.W)) //potentially if j is pressed as well
             {
                 protagAnimator.SetBool("WPressed", true);
                 protagAnimator.SetBool("GroundTapped", false);
@@ -192,12 +209,39 @@ public class MovementScript : MonoBehaviour
             {
                 //do stuff (light/courage magic)
             }
+
+            //2.5 seconds
+            //It turns back from fear mode if it is already in it as well. Also it can only be activated if there is fear in the bar
             if (Input.GetKey(KeyCode.L))
             {
-                //fear mode
+                if (fearBarCtr >= 10)
+                {
+                    if (switchTimer >= 2.5)
+                    {
+                        if (protagAnimator.GetBool("NightmareSwitch"))
+                        {
+                            protagAnimator.SetBool("NightmareSwitch", false);
+                        }
+                        else
+                        {
+                            protagAnimator.SetBool("NightmareSwitch", true);
+                        }
+                        switchTimer = 0;
+                    }
+                }
             }
-            
-            
+
+            //deltatime is 1 per second
+            if (protagAnimator.GetBool("NightmareSwitch"))
+            {
+                fearBarCtr -= Time.deltaTime * 25;
+            }
+            if (fearBarCtr <= 0)
+            {
+                protagAnimator.SetBool("NightmareSwitch", false);
+            }
+
+
             if (myPhysics.velocity.y < -0.5)
             {
                 protagAnimator.SetBool("GoingDown", true);
@@ -231,7 +275,6 @@ public class MovementScript : MonoBehaviour
             //Destroy(this.gameObject);
             //SceneManager.LoadScene("GameOver");
         }
-
     }
 
     public void OnCollisionExit2D(Collision2D thingProtagHit)
@@ -245,6 +288,11 @@ public class MovementScript : MonoBehaviour
             isGrounded = false;
         }
 
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        
     }
 
 
@@ -261,17 +309,19 @@ public class MovementScript : MonoBehaviour
     public void takeDamage()
     { //To be called in other scripts when something hits this enemy
 
+        if (!protagAnimator.GetBool("isTransforming"))
+        {
+            Debug.Log("Player health before hit: " + playerHealth);
 
-        Debug.Log("Player health before hit: " + playerHealth);
+            //Lowers enemy health
+            playerHealth--;
 
-        //Lowers enemy health
-        playerHealth--;
+            //Plays damage taking animation
+            protagAnimator.SetBool("TookDamage", true);
+            Debug.Log("Player health after hit: " + playerHealth);
 
-        //Plays damage taking animation
-        protagAnimator.SetBool("TookDamage", true);
-        Debug.Log("Player health after hit: " + playerHealth);
-
-        //Kills enemy if they have no health
+            //Kills enemy if they have no health
+        }
         if (playerHealth <= 0)
         {
             SceneManager.LoadScene("GameOver");
@@ -329,6 +379,29 @@ public class MovementScript : MonoBehaviour
         gpAttack = i;
     }
 
+    public bool getNightmare()
+    {
+        return protagAnimator.GetBool("NightmareSwitch");
+    }
+    public int getCourage()
+    {
+        return courage;
+    }
+
+    public float getFearBar()
+    {
+        return fearBarCtr;
+    }
+
+    private void OnParticleCollision(GameObject other)
+    {
+        fear += 10;
+        if (fearBarCtr < maxFear)
+        {
+            fearBarCtr += 10;
+        }
+        Debug.Log("Fear is " + fear);
+    }
 
 }
 

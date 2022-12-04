@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class GooGremlinDefaultScript : MonoBehaviour
 {
-    //Hello
     //Fields
+    //public ParticleSystem particleBurst;
+
     Animator enemyAnimator;
     private int enemyHealth;
     GameObject player;
@@ -52,6 +53,7 @@ public class GooGremlinDefaultScript : MonoBehaviour
     void Update()
     {// This entire update function is kinda complicated but it effectively makes it
      //so that the enemy is ALWAYS facing in the direction of the player
+
         if (player != null)
         {
             if (enemyAnimator.GetBool("hasAwoken"))
@@ -189,6 +191,8 @@ public class GooGremlinDefaultScript : MonoBehaviour
         if (enemyHealth <= 0)
         {
             dieSound.Play();
+            //particleBurst.transform.position = transform.position;
+            //particleBurst.Play();
             enemyAnimator.SetBool("healthIsZero", true);
         }
     }

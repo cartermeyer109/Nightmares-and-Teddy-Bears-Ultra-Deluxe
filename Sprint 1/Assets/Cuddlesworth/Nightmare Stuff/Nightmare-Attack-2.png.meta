@@ -1,28 +1,34 @@
 fileFormatVersion: 2
-guid: eaa0c47642c583d43a56e0977c4f4791
+guid: c6000eff3a88bc543b0d14715ed53266
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 492294312700710392
-    second: Healthbar_0
+      213: -5968527880321603223
+    second: Nightmare-Attack-2_0
   - first:
-      213: -4820266478397548756
-    second: Healthbar_1
+      213: -4042518999689124049
+    second: Nightmare-Attack-2_1
   - first:
-      213: 1433150741489427827
-    second: Healthbar_2
+      213: 2427887682101461354
+    second: Nightmare-Attack-2_2
   - first:
-      213: -8947679856231861078
-    second: Healthbar_3
+      213: -6578484453793302392
+    second: Nightmare-Attack-2_3
   - first:
-      213: 2507519226623998461
-    second: Healthbar_4
+      213: -1576007878001656033
+    second: Nightmare-Attack-2_4
   - first:
-      213: -2623376977026066100
-    second: Healthbar_5
+      213: -1450528706139978033
+    second: Nightmare-Attack-2_5
   - first:
-      213: 8689527458692105449
-    second: Healthbar_6
+      213: -489161239336816661
+    second: Nightmare-Attack-2_6
+  - first:
+      213: 2738696484991021210
+    second: Nightmare-Attack-2_7
+  - first:
+      213: 4774661267462191474
+    second: Nightmare-Attack-2_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -67,7 +73,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,148 +118,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Healthbar_0
+      name: Nightmare-Attack-2_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 86
-        width: 174
-        height: 80
-      alignment: 9
-      pivot: {x: 0.1149289, y: 0.6747769}
+        x: 0
+        y: 158
+        width: 92
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fd8871b11bf4d600800000000000000
-      internalID: 492294312700710392
+      spriteID: 9696a65f3878b2da0800000000000000
+      internalID: -5968527880321603223
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Healthbar_1
+      name: Nightmare-Attack-2_1
       rect:
         serializedVersion: 2
-        x: 183
-        y: 86
-        width: 174
-        height: 80
-      alignment: 9
-      pivot: {x: 0.1149289, y: 0.6747769}
+        x: 92
+        y: 158
+        width: 92
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2714604d29fa1db0800000000000000
-      internalID: -4820266478397548756
+      spriteID: f2723c1536616e7c0800000000000000
+      internalID: -4042518999689124049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Healthbar_2
+      name: Nightmare-Attack-2_2
       rect:
         serializedVersion: 2
-        x: 363
-        y: 85
-        width: 174
-        height: 80
-      alignment: 9
-      pivot: {x: 0.1149289, y: 0.6747769}
+        x: 184
+        y: 158
+        width: 92
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 375a018910393e310800000000000000
-      internalID: 1433150741489427827
+      spriteID: a61443ebbf691b120800000000000000
+      internalID: 2427887682101461354
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Healthbar_3
+      name: Nightmare-Attack-2_3
       rect:
         serializedVersion: 2
-        x: 543
-        y: 86
-        width: 174
-        height: 80
-      alignment: 9
-      pivot: {x: 0.1149289, y: 0.6747769}
+        x: 0
+        y: 79
+        width: 92
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa4b16dd39473d380800000000000000
-      internalID: -8947679856231861078
+      spriteID: 888783b5e3784b4a0800000000000000
+      internalID: -6578484453793302392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Healthbar_4
+      name: Nightmare-Attack-2_4
       rect:
         serializedVersion: 2
-        x: 3
-        y: 2
-        width: 174
-        height: 80
-      alignment: 9
-      pivot: {x: 0.1149289, y: 0.6747769}
+        x: 92
+        y: 79
+        width: 92
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df9b262837f7cc220800000000000000
-      internalID: 2507519226623998461
+      spriteID: f1f7e7c5f25e02ae0800000000000000
+      internalID: -1576007878001656033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Healthbar_5
+      name: Nightmare-Attack-2_5
       rect:
         serializedVersion: 2
-        x: 183
-        y: 2
-        width: 174
-        height: 80
-      alignment: 9
-      pivot: {x: 0.1149289, y: 0.6747769}
+        x: 184
+        y: 79
+        width: 92
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c495c64e984e79bd0800000000000000
-      internalID: -2623376977026066100
+      spriteID: fc60506b3dfaedbe0800000000000000
+      internalID: -1450528706139978033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Healthbar_6
+      name: Nightmare-Attack-2_6
       rect:
         serializedVersion: 2
-        x: 363
-        y: 1
-        width: 174
-        height: 80
-      alignment: 9
-      pivot: {x: 0.1149289, y: 0.6747769}
+        x: 0
+        y: 0
+        width: 92
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e488514f27679870800000000000000
-      internalID: 8689527458692105449
+      spriteID: bef607bc1762639f0800000000000000
+      internalID: -489161239336816661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightmare-Attack-2_7
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 0
+        width: 92
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a90308f51fdc10620800000000000000
+      internalID: 2738696484991021210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightmare-Attack-2_8
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 0
+        width: 92
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27976e12021034240800000000000000
+      internalID: 4774661267462191474
       vertices: []
       indices: 
       edges: []

@@ -2,16 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyDeath : StateMachineBehaviour
+public class transformingScript : StateMachineBehaviour
 {
-    public ParticleSystem particleBurst;
-    public GameObject particleBurstObject;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        particleBurstObject = GameObject.Find("GremlinParticleSystem");
-        particleBurst = particleBurstObject.GetComponent<ParticleSystem>();
+        animator.SetBool("isTransforming", true);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -23,10 +20,7 @@ public class enemyDeath : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //-0.7
-        particleBurst.transform.position = new Vector2(animator.gameObject.transform.position.x, animator.gameObject.transform.position.y - 0.7f);
-        particleBurst.Play();
-        Destroy(animator.gameObject);  
+        animator.SetBool("isTransforming", false);
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

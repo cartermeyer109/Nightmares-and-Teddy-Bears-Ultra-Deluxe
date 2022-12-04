@@ -1,28 +1,31 @@
 fileFormatVersion: 2
-guid: eaa0c47642c583d43a56e0977c4f4791
+guid: bf74e68e2e79dcd479a16126bb9f203d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 492294312700710392
-    second: Healthbar_0
+      213: -6284111336543598629
+    second: Nightmare_Run_Sheet_0
   - first:
-      213: -4820266478397548756
-    second: Healthbar_1
+      213: -6774106421511834025
+    second: Nightmare_Run_Sheet_1
   - first:
-      213: 1433150741489427827
-    second: Healthbar_2
+      213: 2335725873664422396
+    second: Nightmare_Run_Sheet_2
   - first:
-      213: -8947679856231861078
-    second: Healthbar_3
+      213: 3962532172196171995
+    second: Nightmare_Run_Sheet_3
   - first:
-      213: 2507519226623998461
-    second: Healthbar_4
+      213: -321902445059370445
+    second: Nightmare_Run_Sheet_4
   - first:
-      213: -2623376977026066100
-    second: Healthbar_5
+      213: 1898908164715583910
+    second: Nightmare_Run_Sheet_5
   - first:
-      213: 8689527458692105449
-    second: Healthbar_6
+      213: 506352190792738986
+    second: Nightmare_Run_Sheet_6
+  - first:
+      213: -2719884921411382660
+    second: Nightmare_Run_Sheet_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -67,7 +70,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,148 +115,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Healthbar_0
+      name: Nightmare_Run_Sheet_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 86
-        width: 174
-        height: 80
-      alignment: 9
-      pivot: {x: 0.1149289, y: 0.6747769}
+        x: 0
+        y: 158
+        width: 93
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fd8871b11bf4d600800000000000000
-      internalID: 492294312700710392
+      spriteID: bd74058b80a5ac8a0800000000000000
+      internalID: -6284111336543598629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Healthbar_1
+      name: Nightmare_Run_Sheet_1
       rect:
         serializedVersion: 2
-        x: 183
-        y: 86
-        width: 174
-        height: 80
-      alignment: 9
-      pivot: {x: 0.1149289, y: 0.6747769}
+        x: 93
+        y: 158
+        width: 93
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2714604d29fa1db0800000000000000
-      internalID: -4820266478397548756
+      spriteID: 7563813b91a8df1a0800000000000000
+      internalID: -6774106421511834025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Healthbar_2
+      name: Nightmare_Run_Sheet_2
       rect:
         serializedVersion: 2
-        x: 363
-        y: 85
-        width: 174
-        height: 80
-      alignment: 9
-      pivot: {x: 0.1149289, y: 0.6747769}
+        x: 186
+        y: 158
+        width: 93
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 375a018910393e310800000000000000
-      internalID: 1433150741489427827
+      spriteID: cf1f4709e4a2a6020800000000000000
+      internalID: 2335725873664422396
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Healthbar_3
+      name: Nightmare_Run_Sheet_3
       rect:
         serializedVersion: 2
-        x: 543
-        y: 86
-        width: 174
-        height: 80
-      alignment: 9
-      pivot: {x: 0.1149289, y: 0.6747769}
+        x: 0
+        y: 79
+        width: 93
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa4b16dd39473d380800000000000000
-      internalID: -8947679856231861078
+      spriteID: bd05fc6240ebdf630800000000000000
+      internalID: 3962532172196171995
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Healthbar_4
+      name: Nightmare_Run_Sheet_4
       rect:
         serializedVersion: 2
-        x: 3
-        y: 2
-        width: 174
-        height: 80
-      alignment: 9
-      pivot: {x: 0.1149289, y: 0.6747769}
+        x: 93
+        y: 79
+        width: 93
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df9b262837f7cc220800000000000000
-      internalID: 2507519226623998461
+      spriteID: 33218e58e6f588bf0800000000000000
+      internalID: -321902445059370445
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Healthbar_5
+      name: Nightmare_Run_Sheet_5
       rect:
         serializedVersion: 2
-        x: 183
-        y: 2
-        width: 174
-        height: 80
-      alignment: 9
-      pivot: {x: 0.1149289, y: 0.6747769}
+        x: 186
+        y: 79
+        width: 93
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c495c64e984e79bd0800000000000000
-      internalID: -2623376977026066100
+      spriteID: 6a916fa3ae64a5a10800000000000000
+      internalID: 1898908164715583910
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Healthbar_6
+      name: Nightmare_Run_Sheet_6
       rect:
         serializedVersion: 2
-        x: 363
-        y: 1
-        width: 174
-        height: 80
-      alignment: 9
-      pivot: {x: 0.1149289, y: 0.6747769}
+        x: 0
+        y: 0
+        width: 93
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e488514f27679870800000000000000
-      internalID: 8689527458692105449
+      spriteID: aa8217f72ace60700800000000000000
+      internalID: 506352190792738986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightmare_Run_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 0
+        width: 93
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7255551317014ad0800000000000000
+      internalID: -2719884921411382660
       vertices: []
       indices: 
       edges: []
