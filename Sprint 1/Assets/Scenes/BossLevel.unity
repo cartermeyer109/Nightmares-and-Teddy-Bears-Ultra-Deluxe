@@ -860,6 +860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bb33f93c1b439744a9c617143ea8e37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isEnd: 0
 --- !u!1 &680676079
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,7 +1163,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 295420cb63cdfbc46933b085e2f4228f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 1028421176}
+  h12Sprite: {fileID: 0}
+  h11Sprite: {fileID: 0}
+  h10Sprite: {fileID: 0}
+  h9Sprite: {fileID: 0}
+  h8Sprite: {fileID: 0}
+  h7Sprite: {fileID: 0}
   h6Sprite: {fileID: 492294312700710392, guid: eaa0c47642c583d43a56e0977c4f4791, type: 3}
   h5Sprite: {fileID: -4820266478397548756, guid: eaa0c47642c583d43a56e0977c4f4791, type: 3}
   h4Sprite: {fileID: 1433150741489427827, guid: eaa0c47642c583d43a56e0977c4f4791, type: 3}
@@ -1170,8 +1176,6 @@ MonoBehaviour:
   h2Sprite: {fileID: -2623376977026066100, guid: eaa0c47642c583d43a56e0977c4f4791, type: 3}
   h1Sprite: {fileID: -8947679856231861078, guid: eaa0c47642c583d43a56e0977c4f4791, type: 3}
   h0Sprite: {fileID: 8689527458692105449, guid: eaa0c47642c583d43a56e0977c4f4791, type: 3}
-  player: {fileID: 0}
-  playerScript: {fileID: 0}
 --- !u!212 &1028421176
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -59,7 +59,7 @@ public class CameraFollowPlayer : MonoBehaviour
                     }
                 }
                 else
-                    this.transform.position = new Vector3(0, 0, -10);
+                    this.transform.position = new Vector3(startLine, floor, -10);
             }
             else if (player.transform.position.x >= endLine)
             {

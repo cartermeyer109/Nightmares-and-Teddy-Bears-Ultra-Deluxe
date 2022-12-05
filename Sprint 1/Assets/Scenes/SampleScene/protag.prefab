@@ -162,6 +162,10 @@ PrefabInstance:
       propertyPath: jumpForce
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 4214800327517488326, guid: 46ad27810eb758145954f187bb5831b4, type: 3}
+      propertyPath: LevelTracker
+      value: 
+      objectReference: {fileID: 4541092080561664228, guid: 409914519dd80fa46b6b1b455a26980e, type: 3}
     - target: {fileID: 4214800327517488327, guid: 46ad27810eb758145954f187bb5831b4, type: 3}
       propertyPath: m_Size.x
       value: 0.25
