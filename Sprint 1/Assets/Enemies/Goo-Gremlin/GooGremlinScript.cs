@@ -88,7 +88,7 @@ public class GooGremlinScript : MonoBehaviour
                 }
 
                 //Beginner Gremlin Movement Code
-                if (Mathf.Abs(player.transform.position.x - this.transform.position.x) > 1.5)
+                if (Mathf.Abs(player.transform.position.x - this.transform.position.x) > 1.15)
                 {
                     enemyAnimator.SetBool("canWalk", true);
                 }
