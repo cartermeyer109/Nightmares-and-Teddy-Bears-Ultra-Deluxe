@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class levelTracker : MonoBehaviour
 {
@@ -21,6 +22,11 @@ public class levelTracker : MonoBehaviour
         return level[numLevel];
     }
 
+    public int getLevelNum()
+    {
+        return numLevel;
+    }
+
     public void nextLevel()
     {
 
@@ -32,6 +38,17 @@ public class levelTracker : MonoBehaviour
         {
             numLevel = 0;
         }
-
     }
+
+    public void progressLevel()
+    {
+        nextLevel();
+        SceneManager.LoadScene("Hopscotch Shop");
+    }
+
+    public void reloadShop()
+    {
+        SceneManager.LoadScene("Hopscotch Shop");
+    }
+
 }

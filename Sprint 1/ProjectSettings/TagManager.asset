@@ -28,8 +28,7 @@ TagManager:
   - Rope
   - Hulk
   - Fear
-  - FearBall
-  - Stats
+  - LevelTracker
   layers:
   - Default
   - TransparentFX

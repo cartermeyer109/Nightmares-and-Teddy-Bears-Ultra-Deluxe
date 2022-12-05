@@ -3,7 +3,9 @@ guid: 8bbd8c9cc2a5f2f4686b471c11705a55
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - myPhysics: {instanceID: 0}
+  - LevelTracker: {fileID: 4541092080561664228, guid: 409914519dd80fa46b6b1b455a26980e, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
