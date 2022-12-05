@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class HealthUI : MonoBehaviour
@@ -31,6 +32,7 @@ public class HealthUI : MonoBehaviour
     private GameObject fearStat;
     private GameObject fearBar;
     private RectTransform fearBarTransform;
+    public TextMeshProUGUI fearCtrNum;
 
 
     //Player Stats
@@ -42,7 +44,7 @@ public class HealthUI : MonoBehaviour
     void Start()
     {
         //Health
-        health = GameObject.Find("Health");
+        health = transform.GetChild(0).gameObject;
         healthSpriteRenderer = health.GetComponent<SpriteRenderer>();
         player = GameObject.FindGameObjectWithTag("Player");
         playerScript = player.GetComponent<MovementScript>();
@@ -119,6 +121,11 @@ public class HealthUI : MonoBehaviour
 
         //Mana
         manaBarTransform.localScale = new Vector3(playerScript.getCourage() * 0.336f, 9.62f, 1);
+
+        //FearBar
         fearBarTransform.localScale = new Vector3(playerScript.getFearBar() / 14.7710487445f, 13, 1);
+
+        //FearCurrency
+        fearCtrNum.text = "" + playerScript.getFear();
     }
 }

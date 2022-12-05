@@ -28,6 +28,8 @@ TagManager:
   - Rope
   - Hulk
   - Fear
+  - FearBall
+  - Stats
   layers:
   - Default
   - TransparentFX

@@ -14,6 +14,9 @@ public class particleSystemControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.position = new Vector2(player.transform.position.x, player.transform.position.y + 0.6f);
+        if (player != null)
+        {
+            this.transform.position = new Vector2(player.transform.position.x, player.transform.position.y + 0.6f);
+        }
     }
 }

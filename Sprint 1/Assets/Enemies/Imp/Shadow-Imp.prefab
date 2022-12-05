@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 3884614217630120725}
   - component: {fileID: 3884614217630120730}
   - component: {fileID: 3884614217630120731}
+  - component: {fileID: 7733783579517538196}
   m_Layer: 0
   m_Name: Shadow-Imp
   m_TagString: Imp
@@ -281,7 +282,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.022859015, y: 0}
+  m_Offset: {x: -0.022859007, y: 0.073273644}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -292,7 +293,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.324462, y: 0.828125}
+  m_Size: {x: 0.324462, y: 0.6815777}
   m_EdgeRadius: 0
 --- !u!50 &3884614217630120731
 Rigidbody2D:
@@ -315,6 +316,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!61 &7733783579517538196
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3884614217630120728}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.011882156, y: 0.057430744}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8178062, y: 0.82176685}
+  m_EdgeRadius: 0
 --- !u!1 &3884614217809267286
 GameObject:
   m_ObjectHideFlags: 0

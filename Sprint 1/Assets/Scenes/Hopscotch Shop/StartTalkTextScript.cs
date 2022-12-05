@@ -48,7 +48,7 @@ public class StartTalkTextScript : MonoBehaviour
         if (player.transform.position.x >= hopscotch.transform.position.x - 1.4 && player.transform.position.x <= hopscotch.transform.position.x + 1.4)
         {
             //Turn on the text in the textbox
-            dialogue.transform.GetChild(0).gameObject.SetActive(true);
+            dialogue.transform.GetChild(3).gameObject.SetActive(true);
 
             //Mark that we are now in range of hopscotch
             enteredRange = true;
@@ -57,7 +57,7 @@ public class StartTalkTextScript : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 //Turn on instructions text
-                dialogue.transform.GetChild(1).gameObject.SetActive(true);
+                dialogue.transform.GetChild(4).gameObject.SetActive(true);
 
                 //turn on shop
                 shop.transform.GetChild(0).gameObject.SetActive(true);
@@ -71,7 +71,7 @@ public class StartTalkTextScript : MonoBehaviour
             if (!shop.transform.GetChild(0).gameObject.activeSelf)
             {
                 //Turn off the instructions
-                dialogue.transform.GetChild(1).gameObject.SetActive(false);
+                dialogue.transform.GetChild(4).gameObject.SetActive(false);
 
                 //Mark that we are not shopping
                 shopping = false;
@@ -84,7 +84,7 @@ public class StartTalkTextScript : MonoBehaviour
             //Mark that you are not in the range
             enteredRange = false;
             //Turn off the text in the textbox
-            dialogue.transform.GetChild(0).gameObject.SetActive(false);
+            dialogue.transform.GetChild(3).gameObject.SetActive(false);
         }
         //If you are in range and the text is not visible
         if (enteredRange)

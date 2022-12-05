@@ -16,6 +16,7 @@ public class cameraScript : MonoBehaviour
     Animator protagAnimator;
     Rigidbody2D protagPhysics;
     float protagPositionCS3;
+    GameObject stats;
 
     //Goo Gremlin Fields
     GameObject gremlin;
@@ -54,6 +55,7 @@ public class cameraScript : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         protagAnimator = player.GetComponent<Animator>();
         protagPhysics = player.GetComponent<Rigidbody2D>();
+        stats = GameObject.FindGameObjectWithTag("Stats");
 
         //Gremlin initiations
         gremlin = GameObject.FindGameObjectWithTag("Enemy");
@@ -135,6 +137,7 @@ public class cameraScript : MonoBehaviour
 
             //Activate the black bars which start the default animation of them entering the scene
             blackBarsHolder.SetActive(true);
+            stats.SetActive(false);
 
             //Set protag's animation to idle
             protagAnimator.SetBool("cutsceneIdle", true);
@@ -167,6 +170,7 @@ public class cameraScript : MonoBehaviour
         {
             //hide the black bars
             blackBarsAnimator.SetBool("hideBars", true);
+            stats.SetActive(true);
 
             //Mark that the cutscene has been completed
             cutsceneCompleted = true;
@@ -190,7 +194,7 @@ public class cameraScript : MonoBehaviour
             gremPositionCS2 = gremlin.transform.position.x;
 
             //Start tutorial text and its code
-            //TODO organize tutorialTexts code into functions :)
+            stats.SetActive(false);
             tutorialText.SetActive(true);
 
             //Set start time and mark that the cutscene has started
@@ -218,6 +222,7 @@ public class cameraScript : MonoBehaviour
         }
         else if (cutsceneOn2)
         {
+            stats.SetActive(true);
             cutsceneCompleted2 = true;
             cutsceneOn2 = false;
         }
@@ -230,7 +235,7 @@ public class cameraScript : MonoBehaviour
         if (gremlin == null && !cutsceneOn3)
         {
             //Start tutorial text and its code
-            //TODO organize tutorialTexts code into functions :)
+            stats.SetActive(false);
             thankYouText.SetActive(true);
 
             //Mark that cutscene 3 has started
@@ -253,6 +258,7 @@ public class cameraScript : MonoBehaviour
         }
         else if (cutsceneOn3)
         {
+            stats.SetActive(true);
             cutsceneCompleted3 = true;
             cutsceneOn3 = false;
         }

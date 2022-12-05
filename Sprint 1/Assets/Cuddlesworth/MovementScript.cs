@@ -30,13 +30,13 @@ public class MovementScript : MonoBehaviour
     Animator protagAnimator;
 
     //Stats
-    public static int courage = 0;
-    public static int maxCourage = 100;
-    public static int fear = 400;
+    public static int courage = maxCourage;
+    public static int maxCourage ;
+    public static int fear;
 
     //This is for the fear bar, not the currency
-    public static float fearBarCtr = 250;
-    public static int maxFear = 500;
+    public static float fearBarCtr;
+    public static int maxFear;
     public int playerHealth;
 
     //Audio
@@ -47,7 +47,7 @@ public class MovementScript : MonoBehaviour
     private AudioSource jumpSound;
 
     //INVENTORY
-    private static int maxHealth = 6; 
+    private static int maxHealth; 
     private static bool goldenNeedle = false;
     private static bool projAttack = false;
     private static bool gpAttack = false;
@@ -60,7 +60,6 @@ public class MovementScript : MonoBehaviour
         //jumpTime = 0.3f;
 
         //Debug.Log("Starting...");
-        playerHealth = maxHealth;
         courage = 0;
         fear = 0;
 
@@ -83,8 +82,32 @@ public class MovementScript : MonoBehaviour
         meleeSound = meleeSoundObject.GetComponent<AudioSource>();
         jumpSound = jumpSoundObject.GetComponent<AudioSource>();
 
-        fear = 400;
-
+        if (SceneManager.GetActiveScene().name == "TutorialLevel")
+        {
+            fear = 400;
+            maxFear = 500;
+            maxHealth = 6;
+            fearBarCtr = 250;
+            maxCourage = 100;
+            courage = maxCourage;
+            playerHealth = maxHealth;
+            goldenNeedle = false;
+            projAttack = false;
+            gpAttack = false;
+        }
+        else
+        {
+            fear = PlayerPrefs.GetInt("fear");
+            maxFear = PlayerPrefs.GetInt("maxFear");
+            maxHealth = PlayerPrefs.GetInt("maxHealth");
+            fearBarCtr = PlayerPrefs.GetFloat("fearBarCtr");
+            maxCourage = PlayerPrefs.GetInt("maxCourage");
+            courage = PlayerPrefs.GetInt("courage");
+            playerHealth = PlayerPrefs.GetInt("playerHealth");
+            goldenNeedle = intToBool(PlayerPrefs.GetInt("goldenNeedle"));
+            projAttack = intToBool(PlayerPrefs.GetInt("projAttack"));
+            gpAttack = intToBool(PlayerPrefs.GetInt("gpAttack"));
+        }
     }
 
     private void FixedUpdate()
@@ -97,6 +120,25 @@ public class MovementScript : MonoBehaviour
     }
     void Update()
     {
+        //SETTING THE STATS
+        {
+            PlayerPrefs.SetInt("fear", fear);
+            PlayerPrefs.SetInt("maxFear", maxFear);
+            PlayerPrefs.SetInt("maxHealth", maxHealth);
+            PlayerPrefs.SetFloat("fearBarCtr", fearBarCtr);
+            PlayerPrefs.SetInt("maxCourage", maxCourage);
+            PlayerPrefs.SetInt("courage", courage);
+            PlayerPrefs.SetInt("playerHealth", playerHealth);
+            PlayerPrefs.SetInt("goldenNeedle", boolToInt(goldenNeedle));
+            PlayerPrefs.SetInt("projAttack", boolToInt(projAttack));
+            PlayerPrefs.SetInt("gpAttack", boolToInt(gpAttack));
+        }
+
+
+        if (SceneManager.GetActiveScene().name == "Hopscotch Shop")
+        {
+            playerHealth = maxHealth;
+        }
 
         if (protagAnimator.GetBool("isTransforming"))
         {
@@ -292,7 +334,19 @@ public class MovementScript : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.gameObject.CompareTag("FearBall"))
+        {
+            fear += 50;
+            if (fearBarCtr <=  maxFear - 50)
+            {
+                fearBarCtr += 50;
+            }
+            else
+            {
+                fearBarCtr += maxFear - fearBarCtr;
+            }
+            Object.Destroy(collision.gameObject);
+        }
     }
 
 
@@ -381,7 +435,14 @@ public class MovementScript : MonoBehaviour
 
     public bool getNightmare()
     {
-        return protagAnimator.GetBool("NightmareSwitch");
+        if (this != null)
+        {
+            return protagAnimator.GetBool("NightmareSwitch");
+        }
+        else
+        {
+            return false;
+        }
     }
     public int getCourage()
     {
@@ -401,6 +462,29 @@ public class MovementScript : MonoBehaviour
             fearBarCtr += 10;
         }
         Debug.Log("Fear is " + fear);
+    }
+
+    private int boolToInt(bool b)
+    {
+        if (b)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+    private bool intToBool(int i)
+    {
+        if (i == 0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 
 }

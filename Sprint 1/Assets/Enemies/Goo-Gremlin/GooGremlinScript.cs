@@ -9,6 +9,7 @@ public class GooGremlinScript : MonoBehaviour
     Animator enemyAnimator;
     private int enemyHealth;
     GameObject player;
+    MovementScript playerScript;
 
     private GameObject dieSoundObject;
     private GameObject hurtSoundObject;
@@ -87,7 +88,7 @@ public class GooGremlinScript : MonoBehaviour
                 }
 
                 //Beginner Gremlin Movement Code
-                if (Mathf.Abs(player.transform.position.x - this.transform.position.x) > 1)
+                if (Mathf.Abs(player.transform.position.x - this.transform.position.x) > 1.5)
                 {
                     enemyAnimator.SetBool("canWalk", true);
                 }
@@ -146,6 +147,43 @@ public class GooGremlinScript : MonoBehaviour
 
         }
     }
+
+    public void OnCollisionEnter2D(Collision2D thingHit)
+    {
+        if (thingHit.gameObject.CompareTag("Void"))
+        {
+            Destroy(this.gameObject);
+        }
+        if (player != null)
+        {
+            if (thingHit.gameObject.CompareTag("Player"))
+            {
+                playerScript = thingHit.gameObject.GetComponent<MovementScript>();
+                Vector2 direction = thingHit.GetContact(0).normal;
+                if (direction.x == 1)
+                {
+                    playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
+                    Debug.Log("left");
+                }
+                if (direction.x == -1)
+                {
+                    playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
+                    Debug.Log("right ");
+                }
+                if (direction.y == 1)
+                {
+                    playerScript.myPhysics.AddForce(new Vector2(0, -10), ForceMode2D.Impulse);
+                    Debug.Log("down");
+                }
+                if (direction.y == -1)
+                {
+                    playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
+                    Debug.Log("up");
+                }
+            }
+        }
+    }
+
 
     public void takeDamage()
     { //To be called in other scripts when something hits this enemy

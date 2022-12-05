@@ -9,6 +9,7 @@ public class enemyRange : MonoBehaviour
     GameObject player;
     Animator enemyAnimator;
     float attackTime = 0f;
+    Rigidbody2D myPhysics;
 
 
     // Start is called before the first frame update
@@ -17,6 +18,7 @@ public class enemyRange : MonoBehaviour
         //If you dont have the tag "Player" on the player object then you will need to change this to work
         player = GameObject.FindGameObjectWithTag("Player");
         enemyAnimator = GetComponent<Animator>();
+        myPhysics = GetComponent<Rigidbody2D>();
 
     }
 
@@ -32,9 +34,10 @@ public class enemyRange : MonoBehaviour
                 //I have it set to 2 difference x, and 3 difference y. But I don't know the
                 //dimensions of the player we're using or if we are going to scale them.
                 //(My GooGremlin is currently set to a scale of 5)
-                if (Mathf.Abs(player.transform.position.x - this.transform.position.x) <= 1.5 &&
+                if (Mathf.Abs(player.transform.position.x - this.transform.position.x) <= 1.15 &&
                     Mathf.Abs(player.transform.position.y - this.transform.position.y) <= 2)
                 {
+                    myPhysics.velocity = new Vector2(0, 0);
                     //This basically checks that at least 2 second has passed between attacks
                     //so the enemy doesn't attack constatnly. I chose one second because thats
                     //how long one loop of the idle animation is

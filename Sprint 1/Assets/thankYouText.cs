@@ -57,14 +57,20 @@ public class thankYouText : MonoBehaviour
         //Code going through dialogue
         if (Input.GetKeyDown(KeyCode.Return) && textNum == 0)
         {
-            textbox.text = "Thank you for killing that monster.";
+            textbox.text = "Thanks for killing that monster.";
             textNum = 1;
             timeButtonHit = Time.time;
         }
         if (Input.GetKeyDown(KeyCode.Return) && textNum == 1 && Time.time - timeButtonHit > 1)
         {
-            textbox.text = "My shop is now open to you";
+            textbox.text = "What just went inside you was fear.";
             textNum = 2;
+            timeButtonHit = Time.time;
+        }
+        if (Input.GetKeyDown(KeyCode.Return) && textNum == 2 && Time.time - timeButtonHit > 1)
+        {
+            textbox.text = "Don't worry, I'll buy it off of you!";
+            textNum = 3;
             transitionCam = true;
             timeButtonHit = Time.time;
 
@@ -88,10 +94,10 @@ public class thankYouText : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Return) && textNum == 2 && Time.time - timeButtonHit > 3)
+        if (Input.GetKeyDown(KeyCode.Return) && textNum == 3 && Time.time - timeButtonHit > 3)
         {
-            textbox.text = "Jump down into the burrow to my right";
-            textNum = 3;
+            textbox.text = "Just jump into my shop over there";
+            textNum = 4;
             timeButtonHit = Time.time;
             transitionCam = false;
             //doorCanOpen = true;
@@ -100,7 +106,7 @@ public class thankYouText : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Return) && textNum == 3 && Time.time - timeButtonHit > 1)
+        if (Input.GetKeyDown(KeyCode.Return) && textNum == 4 && Time.time - timeButtonHit > 1)
         {
             textbox.text = "";
             door.GetComponent<doorOpeningScript>().enabled = true;

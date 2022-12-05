@@ -144,7 +144,7 @@ public class GooGremlinDefaultScript : MonoBehaviour
         {
             if (thingHit.gameObject.CompareTag("Player"))
             {
-                playerScript = playerScript = thingHit.gameObject.GetComponent<MovementScript>();
+                playerScript = thingHit.gameObject.GetComponent<MovementScript>();
                 playerScript.takeDamage();
                 Vector2 direction = thingHit.GetContact(0).normal;
                 if (direction.x == 1)
