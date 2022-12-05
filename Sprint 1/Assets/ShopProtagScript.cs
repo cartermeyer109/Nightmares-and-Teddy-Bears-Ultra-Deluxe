@@ -17,7 +17,7 @@ public class ShopProtagScript : MonoBehaviour
         trackerObject = GameObject.FindWithTag("LevelTracker");
         LevelTracker = trackerObject.gameObject.GetComponent<levelTracker>();
         if (LevelTracker.getLevelNum() == 0)
-        {
+        { 
             LevelTracker.nextLevel();
         }
         player = GameObject.FindGameObjectWithTag("Player");

@@ -29,6 +29,8 @@ TagManager:
   - Hulk
   - Fear
   - LevelTracker
+  - Stats
+  - FearBall
   layers:
   - Default
   - TransparentFX
