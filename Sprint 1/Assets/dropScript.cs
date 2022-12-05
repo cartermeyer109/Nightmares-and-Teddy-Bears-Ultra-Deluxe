@@ -29,13 +29,7 @@ public class dropScript : MonoBehaviour
             playerScript.takeDamage();
         }
         //Debug.Log("Collision Detected with" + other.name);
-
-
-        if (other.gameObject.CompareTag("ground"))
-        {
-            animator.SetBool("HitGround", true);
-
-        }
+        animator.SetBool("HitGround", true);
 
     }
 
