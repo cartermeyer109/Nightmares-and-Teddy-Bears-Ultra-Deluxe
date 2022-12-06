@@ -46,9 +46,7 @@ public class levelTracker : MonoBehaviour
         SceneManager.LoadScene("Hopscotch Shop");
     }
 
-    public void reloadShop()
-    {
-        SceneManager.LoadScene("Hopscotch Shop");
-    }
+    public void reloadShop(){ SceneManager.LoadScene("Hopscotch Shop"); }
 
+    public void setLevel(int i){ numLevel = i; }
 }

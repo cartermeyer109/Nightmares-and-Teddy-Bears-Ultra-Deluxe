@@ -23,6 +23,8 @@ public class MovementScript : MonoBehaviour
     private Transform pitRespawnPoint;
 
     public GameObject LevelTracker;
+    levelTracker LTScript;
+    public int currLevel = -1;
 
     float fallForce;
     bool canJump;
@@ -116,6 +118,9 @@ public class MovementScript : MonoBehaviour
         {
             Instantiate(LevelTracker);
         }
+        LevelTracker = GameObject.FindWithTag("LevelTracker");
+        LTScript = LevelTracker.GetComponent<levelTracker>();
+        if (currLevel >= 0) { LTScript.setLevel(currLevel); }
 
     }
 
