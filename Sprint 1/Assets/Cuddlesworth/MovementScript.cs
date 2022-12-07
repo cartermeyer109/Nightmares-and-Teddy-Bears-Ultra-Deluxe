@@ -87,7 +87,7 @@ public class MovementScript : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "TutorialLevel")
         {
-            fear = 150;
+            fear = 150; //Set to 400 for demonstration purposes (150 for normal game if we don't change gremlins particle system)
             maxFear = 500;
             maxHealth = 6;
             fearBarCtr = 0;
