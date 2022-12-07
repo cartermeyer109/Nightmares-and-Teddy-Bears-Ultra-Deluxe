@@ -2425,6 +2425,10 @@ PrefabInstance:
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 855710918021234377, guid: 795557c33366b2b4b8e232888f58a5c0, type: 3}
+      propertyPath: currLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 855710918021234377, guid: 795557c33366b2b4b8e232888f58a5c0, type: 3}
       propertyPath: jumpForce
       value: 9
       objectReference: {fileID: 0}
