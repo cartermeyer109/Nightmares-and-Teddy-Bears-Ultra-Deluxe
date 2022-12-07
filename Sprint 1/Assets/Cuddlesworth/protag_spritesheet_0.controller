@@ -803,6 +803,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: cutsceneIdle
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: NeedleObtained
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3037905192518556619}
   m_Solo: 0
@@ -830,6 +833,9 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: cutsceneIdle
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: NeedleObtained
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2990172919181110086}
@@ -1443,6 +1449,9 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: cutsceneIdle
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: NeedleObtained
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8293639849060315460}
@@ -2750,6 +2759,9 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: cutsceneIdle
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: NeedleObtained
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6555431363318623741}

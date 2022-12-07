@@ -31,6 +31,7 @@ TagManager:
   - LevelTracker
   - Stats
   - FearBall
+  - Boundary
   layers:
   - Default
   - TransparentFX
