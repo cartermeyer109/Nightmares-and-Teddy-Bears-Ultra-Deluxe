@@ -1,25 +1,19 @@
 fileFormatVersion: 2
-guid: 868eef4ec23e8e5439c82f8f44c43751
+guid: 4dc0b2b8f65361f43bed41ae046b1a3f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3761391534879895596
-    second: DarkObjects_0
+      213: 8587359526649880212
+    second: new_door_0
   - first:
-      213: 7862655147212809020
-    second: DarkObjects_1
+      213: 4869897368624606922
+    second: new_door_1
   - first:
-      213: 3723724171418753752
-    second: DarkObjects_2
+      213: 7083694068754655324
+    second: new_door_2
   - first:
-      213: 8114348863358487179
-    second: DarkObjects_3
-  - first:
-      213: 8579510334634533312
-    second: DarkObjects_4
-  - first:
-      213: -7781948364577367553
-    second: DarkObjects_5
+      213: -2573985115221807126
+    second: new_door_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,127 +103,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DarkObjects_0
+      name: new_door_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 297
-        width: 559
-        height: 548
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c207da91ca5233430800000000000000
-      internalID: 3761391534879895596
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DarkObjects_1
-      rect:
-        serializedVersion: 2
-        x: 668
-        y: 669
-        width: 184
-        height: 131
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c332401c233cd1d60800000000000000
-      internalID: 7862655147212809020
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DarkObjects_2
-      rect:
-        serializedVersion: 2
-        x: 636
-        y: 490
-        width: 248
-        height: 149
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8da53fe97635da330800000000000000
-      internalID: 3723724171418753752
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DarkObjects_3
-      rect:
-        serializedVersion: 2
-        x: 614
-        y: 269
-        width: 312
-        height: 199
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b8ac310bc45fb9070800000000000000
-      internalID: 8114348863358487179
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DarkObjects_4
-      rect:
-        serializedVersion: 2
-        x: 3
+        x: 7
         y: 5
-        width: 703
-        height: 229
+        width: 498
+        height: 688
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c12fa2713b801770800000000000000
-      internalID: 8579510334634533312
+      spriteID: 49e5880edfd6c2770800000000000000
+      internalID: 8587359526649880212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DarkObjects_5
+      name: new_door_1
       rect:
         serializedVersion: 2
-        x: 744
-        y: 6
-        width: 182
-        height: 170
+        x: 598
+        y: 489
+        width: 184
+        height: 57
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff91fe46137f00490800000000000000
-      internalID: -7781948364577367553
+      spriteID: aceaa7ddad9559340800000000000000
+      internalID: 4869897368624606922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_door_2
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 320
+        width: 248
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c58a9a979365e4260800000000000000
+      internalID: 7083694068754655324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: new_door_3
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 121
+        width: 312
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aefaf0edc2e574cd0800000000000000
+      internalID: -2573985115221807126
       vertices: []
       indices: 
       edges: []

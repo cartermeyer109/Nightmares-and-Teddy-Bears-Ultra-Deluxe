@@ -1,25 +1,37 @@
 fileFormatVersion: 2
-guid: 868eef4ec23e8e5439c82f8f44c43751
+guid: 8b8206692cb70774baab96ec887caa62
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3761391534879895596
-    second: DarkObjects_0
+      213: 5483957540974987821
+    second: darknesstiles (1)_0
   - first:
-      213: 7862655147212809020
-    second: DarkObjects_1
+      213: 1890592302254279625
+    second: darknesstiles (1)_1
   - first:
-      213: 3723724171418753752
-    second: DarkObjects_2
+      213: 4488254610724146383
+    second: darknesstiles (1)_2
   - first:
-      213: 8114348863358487179
-    second: DarkObjects_3
+      213: 5020781384036853286
+    second: darknesstiles (1)_3
   - first:
-      213: 8579510334634533312
-    second: DarkObjects_4
+      213: -1165232634975384101
+    second: darknesstiles (1)_4
   - first:
-      213: -7781948364577367553
-    second: DarkObjects_5
+      213: 4126293871306419753
+    second: darknesstiles (1)_5
+  - first:
+      213: 1518579804552366258
+    second: darknesstiles (1)_6
+  - first:
+      213: -7821365136317907129
+    second: darknesstiles (1)_7
+  - first:
+      213: -8588104115918947410
+    second: darknesstiles (1)_8
+  - first:
+      213: 8227746515165891920
+    second: darknesstiles (1)_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -64,7 +76,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 60
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -109,34 +121,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DarkObjects_0
+      name: darknesstiles (1)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 297
-        width: 559
-        height: 548
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c207da91ca5233430800000000000000
-      internalID: 3761391534879895596
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DarkObjects_1
-      rect:
-        serializedVersion: 2
-        x: 668
-        y: 669
-        width: 184
-        height: 131
+        x: 2
+        y: 60
+        width: 60
+        height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,20 +135,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c332401c233cd1d60800000000000000
-      internalID: 7862655147212809020
+      spriteID: d2a8329045eea1c40800000000000000
+      internalID: 5483957540974987821
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DarkObjects_2
+      name: darknesstiles (1)_1
       rect:
         serializedVersion: 2
-        x: 636
-        y: 490
-        width: 248
-        height: 149
+        x: 66
+        y: 60
+        width: 60
+        height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8da53fe97635da330800000000000000
-      internalID: 3723724171418753752
+      spriteID: 9cb44fe9eabbc3a10800000000000000
+      internalID: 1890592302254279625
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DarkObjects_3
+      name: darknesstiles (1)_2
       rect:
         serializedVersion: 2
-        x: 614
-        y: 269
-        width: 312
-        height: 199
+        x: 130
+        y: 60
+        width: 60
+        height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8ac310bc45fb9070800000000000000
-      internalID: 8114348863358487179
+      spriteID: fccc8b5e9cb794e30800000000000000
+      internalID: 4488254610724146383
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DarkObjects_4
+      name: darknesstiles (1)_3
       rect:
         serializedVersion: 2
-        x: 3
-        y: 5
-        width: 703
-        height: 229
+        x: 194
+        y: 60
+        width: 60
+        height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,20 +198,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c12fa2713b801770800000000000000
-      internalID: 8579510334634533312
+      spriteID: 626296a41166da540800000000000000
+      internalID: 5020781384036853286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DarkObjects_5
+      name: darknesstiles (1)_4
       rect:
         serializedVersion: 2
-        x: 744
-        y: 6
-        width: 182
-        height: 170
+        x: 258
+        y: 60
+        width: 60
+        height: 60
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,8 +219,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff91fe46137f00490800000000000000
-      internalID: -7781948364577367553
+      spriteID: bdd8997971344dfe0800000000000000
+      internalID: -1165232634975384101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darknesstiles (1)_5
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 0
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92e2716f96a834930800000000000000
+      internalID: 4126293871306419753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darknesstiles (1)_6
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b80d655944131510800000000000000
+      internalID: 1518579804552366258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darknesstiles (1)_7
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f752f09dde47390800000000000000
+      internalID: -7821365136317907129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darknesstiles (1)_8
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 0
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eabb49ceecce0d880800000000000000
+      internalID: -8588104115918947410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darknesstiles (1)_9
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 0
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05dcb62fcd3de2270800000000000000
+      internalID: 8227746515165891920
       vertices: []
       indices: 
       edges: []
