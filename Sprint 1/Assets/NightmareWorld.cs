@@ -80,9 +80,10 @@ public class NightmareWorld : MonoBehaviour
                 didGlitch = true;
 
             }
-            else if (!isNightmareScene /*&& didGlitch*/)
+            /*else */if (!isNightmareScene /*&& didGlitch*/)
             {
-                StartCoroutine(nighmareWorldTransition());
+                //StartCoroutine(nighmareWorldTransition());
+
             }
             else
             {
@@ -106,9 +107,11 @@ public class NightmareWorld : MonoBehaviour
         endNightmareMode();
         for (int i = 0; i < glitchTime; ++i) { yield return null; }
         setNightmareMode();
-        for (int i = 0; i < glitchTime; ++i) { yield return null; }
-        endNightmareMode();
-        DreamMusic.Play();
+        //for (int i = 0; i < glitchTime; ++i) { yield return null; }
+        //endNightmareMode();
+        //DreamMusic.Play();
+        //StartCoroutine(nighmareWorldTransition());
+        NightmareMusic.Play();
     }
 
     //switches a little back and forth and ending in the nightmare mode

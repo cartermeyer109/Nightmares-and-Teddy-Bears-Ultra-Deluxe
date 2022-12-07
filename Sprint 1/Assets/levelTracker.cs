@@ -7,8 +7,8 @@ public class levelTracker : MonoBehaviour
 {
 
     private string[] level;
-    private int numLevel; // 0=tutorial, 1=level1.5, 2=level2, 3=bosslevel(?)
-    private const int MAX_LEVEL = 4;
+    public int numLevel; // 0=tutorial, 1=level1.5, 2=level2, 3=bosslevel(?)
+    private const int MAX_LEVEL = 3;
 
     // Start is called before the first frame update
     void Start()
