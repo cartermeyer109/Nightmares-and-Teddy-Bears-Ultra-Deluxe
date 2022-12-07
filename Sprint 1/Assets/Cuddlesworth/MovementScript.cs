@@ -44,8 +44,11 @@ public class MovementScript : MonoBehaviour
     public static int maxFear;
     public int playerHealth;
 
+    public float nightmareCooldown;
+
     //Audio
-    private GameObject meleeSoundObject;
+    //This now plays in the animation script so that it ONLY plays when the animation actually happens
+    //private GameObject meleeSoundObject;
     private GameObject jumpSoundObject;
 
     private AudioSource meleeSound;
@@ -67,6 +70,7 @@ public class MovementScript : MonoBehaviour
         //Debug.Log("Starting...");
         courage = 0;
         fear = 0;
+        nightmareCooldown = 25;
 
         facingRight = true;
         hasFlipped = false;
@@ -81,10 +85,10 @@ public class MovementScript : MonoBehaviour
         fallForce = 0f;
         //jumpForce = new Vector2(0, 28); //(0,22);
 
-        meleeSoundObject = GameObject.Find("MeleeSound");
+        //meleeSoundObject = GameObject.Find("MeleeSound");
         jumpSoundObject = GameObject.Find("JumpSound");
 
-        meleeSound = meleeSoundObject.GetComponent<AudioSource>();
+        //meleeSound = meleeSoundObject.GetComponent<AudioSource>();
         jumpSound = jumpSoundObject.GetComponent<AudioSource>();
 
         if (SceneManager.GetActiveScene().name == "TutorialLevel")
@@ -134,6 +138,7 @@ public class MovementScript : MonoBehaviour
     }
     void Update()
     {
+        Debug.Log("cooldown timer is " + nightmareCooldown);
         //SETTING THE STATS
         {
             PlayerPrefs.SetInt("fear", fear);
@@ -262,7 +267,7 @@ public class MovementScript : MonoBehaviour
             {
                 //Debug.Log("Attack");
                 protagAnimator.SetBool("JPressed", true);
-                meleeSound.Play();
+                //meleeSound.Play();
             }
             
             if (Input.GetKey(KeyCode.K))
@@ -274,7 +279,7 @@ public class MovementScript : MonoBehaviour
             //It turns back from fear mode if it is already in it as well. Also it can only be activated if there is fear in the bar
             if (Input.GetKey(KeyCode.L))
             {
-                if (fearBarCtr >= 10)
+                if (fearBarCtr >= 10 && nightmareCooldown == 25)
                 {
                     if (switchTimer >= 2.5)
                     {
@@ -295,6 +300,14 @@ public class MovementScript : MonoBehaviour
             if (protagAnimator.GetBool("NightmareSwitch"))
             {
                 fearBarCtr -= Time.deltaTime * 25;
+                nightmareCooldown = 0;
+            }
+            else
+            {
+                if (nightmareCooldown < 25)
+                {
+                    nightmareCooldown += Time.deltaTime;
+                }
             }
             if (fearBarCtr <= 0)
             {

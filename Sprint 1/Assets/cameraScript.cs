@@ -7,6 +7,11 @@ using UnityEngine.UI;
 public class cameraScript : MonoBehaviour
 {
 
+    //Left Border
+    GameObject leftWall;
+    float wallPosX;
+    float playerPosX;
+
     //Text objects
     GameObject tutorialText;
     GameObject thankYouText;
@@ -45,6 +50,9 @@ public class cameraScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        leftWall = GameObject.FindGameObjectWithTag("Boundary");
+        leftWall.SetActive(false);
+
         thankYouText = GameObject.FindGameObjectWithTag("Thank You");
         thankYouText.SetActive(false);
 
@@ -73,6 +81,25 @@ public class cameraScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Controls boundary
+        //If going forward
+        if (!cutsceneOn3) //Fixes a specific glitch with cutscene 3 where it wont show the hatch opening
+        {
+            if (protagPhysics.velocity.x >= 0 && player.transform.position.x >= playerPosX)
+            {
+                leftWall.transform.position = new Vector2(player.transform.position.x - 11, player.transform.position.y);
+                wallPosX = leftWall.transform.position.x;
+                playerPosX = player.transform.position.x;
+
+            }
+            //If going backwards
+            if (player.transform.position.x < playerPosX)
+            {
+                leftWall.transform.position = new Vector2(wallPosX, player.transform.position.y);
+                this.transform.position = new Vector3(playerPosX, this.transform.position.y, -10);
+            }
+        }
+
         //Solves an issue where protagAnim's "goingdown" variable wont turn off during cutscenes
         if (protagPhysics.velocity.y < -0.5)
         {
@@ -88,7 +115,10 @@ public class cameraScript : MonoBehaviour
         if (!cutsceneOn && !cutsceneOn2 && !cutsceneOn3)
         {
             //Camera follows player but has a fixed y axis
-            this.transform.position = new Vector3(player.transform.position.x, 1, -10);
+            if (player.transform.position.x >= playerPosX)
+            {
+                this.transform.position = new Vector3(player.transform.position.x, 1, -10);
+            }
 
             //Protag is set to normal behavior
             protagAnimator.SetBool("cutsceneIdle", false);
@@ -118,6 +148,7 @@ public class cameraScript : MonoBehaviour
         }
 
 
+
     }
 
 
@@ -129,6 +160,7 @@ public class cameraScript : MonoBehaviour
             //*Set start time* and mark that the cutscene has started
             cutsceneStartTime = Time.time;
             cutsceneOn = true;
+            leftWall.SetActive(true);
         }
 
         //For the duration of the entire cutscene (5 seconds)
@@ -225,6 +257,7 @@ public class cameraScript : MonoBehaviour
             stats.SetActive(true);
             cutsceneCompleted2 = true;
             cutsceneOn2 = false;
+            protagAnimator.SetBool("JPressed", false);
         }
     }
 
