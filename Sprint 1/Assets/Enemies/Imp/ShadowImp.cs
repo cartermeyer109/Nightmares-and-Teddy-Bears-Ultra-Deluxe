@@ -126,6 +126,7 @@ public class ShadowImp : MonoBehaviour
             {
                 playerScript = thingHit.gameObject.GetComponent<MovementScript>();
                 playerScript.takeDamage();
+                //weird
                 Vector2 direction = thingHit.GetContact(0).normal;
                 if (direction.x == 1)
                 {

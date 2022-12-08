@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthUI : MonoBehaviour
 {
@@ -33,6 +34,9 @@ public class HealthUI : MonoBehaviour
     private GameObject fearBar;
     private RectTransform fearBarTransform;
     public TextMeshProUGUI fearCtrNum;
+    private GameObject fearCooldown;
+    private Image fearCooldownImage;
+    private Image fearCooldownCover;
 
 
     //Player Stats
@@ -59,6 +63,9 @@ public class HealthUI : MonoBehaviour
         fearStat = GameObject.Find("FearStat");
         fearBar = fearStat.transform.GetChild(0).gameObject;
         fearBarTransform = fearBar.GetComponent<RectTransform>();
+        fearCooldown = transform.GetChild(4).gameObject;
+        fearCooldownImage = fearCooldown.GetComponent<Image>();
+        fearCooldownCover = fearCooldown.transform.GetChild(0).gameObject.GetComponent<Image>();
 
     }
 
@@ -123,9 +130,23 @@ public class HealthUI : MonoBehaviour
         manaBarTransform.localScale = new Vector3(playerScript.getCourage() * 0.336f, 9.62f, 1);
 
         //FearBar
-        fearBarTransform.localScale = new Vector3(playerScript.getFearBar() / 14.7710487445f, 13, 1);
+        if (playerScript.getFearBar() >= 0)
+        {
+            fearBarTransform.localScale = new Vector3(playerScript.getFearBar() / 14.7710487445f, 13, 1);
+        }
 
         //FearCurrency
         fearCtrNum.text = "" + playerScript.getFear();
+
+        fearCooldownCover.fillAmount = playerScript.getNightmareCooldown() * 0.04f;
+
+        if (playerScript.nightmareReady())
+        {
+            fearCooldownImage.color = new Color(255, 255, 255);
+        }
+        else
+        {
+            fearCooldownImage.color = new Color(100, 100, 100);
+        }
     }
 }

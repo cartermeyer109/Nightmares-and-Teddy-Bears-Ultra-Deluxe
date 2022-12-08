@@ -43,8 +43,12 @@ public class MovementScript : MonoBehaviour
     public static float fearBarCtr;
     public static int maxFear;
     public int playerHealth;
+    public float fearOverUseTimer = 0;
+    public bool nightmareDmg = false;
+    public float nightmareDmgTimer = 0;
 
     public float nightmareCooldown;
+    public float nightmareCooldownTime = 25;
 
     //Audio
     //This now plays in the animation script so that it ONLY plays when the animation actually happens
@@ -67,10 +71,11 @@ public class MovementScript : MonoBehaviour
         //jumpForce = 10;
         //jumpTime = 0.3f;
 
+
         //Debug.Log("Starting...");
         courage = 0;
         fear = 0;
-        nightmareCooldown = 25;
+        nightmareCooldown = 0;
 
         facingRight = true;
         hasFlipped = false;
@@ -96,7 +101,7 @@ public class MovementScript : MonoBehaviour
             fear = 150; //Set to 400 for demonstration purposes (150 for normal game if we don't change gremlins particle system)
             maxFear = 500;
             maxHealth = 6;
-            fearBarCtr = 0;
+            fearBarCtr = 5;
             maxCourage = 100;
             courage = maxCourage;
             playerHealth = maxHealth;
@@ -139,6 +144,8 @@ public class MovementScript : MonoBehaviour
     void Update()
     {
         Debug.Log("cooldown timer is " + nightmareCooldown);
+        Debug.Log("Fearbar is at " + fearBarCtr);
+        Debug.Log("fear over use timer is  " + fearOverUseTimer);
         //SETTING THE STATS
         {
             PlayerPrefs.SetInt("fear", fear);
@@ -279,7 +286,7 @@ public class MovementScript : MonoBehaviour
             //It turns back from fear mode if it is already in it as well. Also it can only be activated if there is fear in the bar
             if (Input.GetKey(KeyCode.L))
             {
-                if (fearBarCtr >= 10 && nightmareCooldown == 25)
+                if (fearBarCtr >= 10)
                 {
                     if (switchTimer >= 2.5)
                     {
@@ -287,7 +294,7 @@ public class MovementScript : MonoBehaviour
                         {
                             protagAnimator.SetBool("NightmareSwitch", false);
                         }
-                        else
+                        else if (nightmareCooldown == 0)
                         {
                             protagAnimator.SetBool("NightmareSwitch", true);
                         }
@@ -299,19 +306,43 @@ public class MovementScript : MonoBehaviour
             //deltatime is 1 per second
             if (protagAnimator.GetBool("NightmareSwitch"))
             {
-                fearBarCtr -= Time.deltaTime * 25;
-                nightmareCooldown = 0;
+                if (fearBarCtr > 0)
+                {
+                    fearBarCtr -= Time.deltaTime * 25;
+                }
+                else
+                {
+                    fearBarCtr = 0;
+                }
+                nightmareCooldown = nightmareCooldownTime;
             }
             else
             {
-                if (nightmareCooldown < 25)
+                if (nightmareCooldown > 0)
                 {
-                    nightmareCooldown += Time.deltaTime;
+                    nightmareCooldown -= Time.deltaTime;
                 }
+                else
+                {
+                    nightmareCooldown = 0;
+                }
+                fearOverUseTimer = 0;
             }
-            if (fearBarCtr <= 0)
+            if (fearBarCtr == 0 && protagAnimator.GetBool("NightmareSwitch"))
             {
-                protagAnimator.SetBool("NightmareSwitch", false);
+                fearOverUseTimer += Time.deltaTime;
+                nightmareDmgTimer += Time.deltaTime;
+                if (Mathf.RoundToInt(fearOverUseTimer) % 5 == 0 && !nightmareDmg)
+                {
+                    takeDamage();
+                    nightmareDmg = true;
+                    nightmareDmgTimer = 0;
+                }
+                if (Mathf.RoundToInt(nightmareDmgTimer) == 2)
+                {
+                    nightmareDmg = false;
+                }
+
             }
 
 
@@ -415,6 +446,11 @@ public class MovementScript : MonoBehaviour
         if (playerHealth <= 0)
         {
             SceneManager.LoadScene("GameOver");
+
+            //Fixes glitch where fearbar ctr will be out of bounds when revived
+            fearBarCtr = 0;
+            PlayerPrefs.SetFloat("fearBarCtr", fearBarCtr);
+
             Destroy(this.gameObject);
         }
     }
@@ -488,6 +524,23 @@ public class MovementScript : MonoBehaviour
     public float getFearBar()
     {
         return fearBarCtr;
+    }
+
+    public float getNightmareCooldown()
+    {
+        return nightmareCooldown;
+    }
+
+    public bool nightmareReady()
+    {
+        if (nightmareCooldown > 0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 
     private void OnParticleCollision(GameObject other)
