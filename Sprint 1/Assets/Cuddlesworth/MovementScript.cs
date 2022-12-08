@@ -64,7 +64,10 @@ public class MovementScript : MonoBehaviour
     private static bool projAttack = false;
     private static bool gpAttack = false;
 
-
+    public void heal()
+    {
+        playerHealth = maxHealth;
+    }
 
     void Start()
     {
@@ -143,9 +146,9 @@ public class MovementScript : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log("cooldown timer is " + nightmareCooldown);
-        Debug.Log("Fearbar is at " + fearBarCtr);
-        Debug.Log("fear over use timer is  " + fearOverUseTimer);
+        //Debug.Log("cooldown timer is " + nightmareCooldown);
+        //Debug.Log("Fearbar is at " + fearBarCtr);
+        //Debug.Log("fear over use timer is  " + fearOverUseTimer);
         //SETTING THE STATS
         {
             PlayerPrefs.SetInt("fear", fear);
@@ -414,6 +417,21 @@ public class MovementScript : MonoBehaviour
         {
 
         }
+        if (collision.gameObject.CompareTag("CourageOrb"))
+        {
+            courage += 50;
+            heal();
+            maxCourage += 10;
+            //if (fearBarCtr <= maxFear - 50)
+            //{
+            //    fearBarCtr += 50;
+            //}
+            //else
+            //{
+            //    fearBarCtr += maxFear - fearBarCtr;
+            //}
+            Object.Destroy(collision.gameObject);
+        }
     }
 
 
@@ -576,10 +594,10 @@ public class MovementScript : MonoBehaviour
         }
     }
 
-    public void heal() //****************************************************************
-    {
-        playerHealth = maxHealth;
-    }
+    //public void heal() //****************************************************************
+    //{
+    //    playerHealth = maxHealth;
+    //}
 
 }
 

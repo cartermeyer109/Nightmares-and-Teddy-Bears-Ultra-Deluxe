@@ -32,6 +32,7 @@ TagManager:
   - Stats
   - FearBall
   - Boundary
+  - CourageOrb
   layers:
   - Default
   - TransparentFX

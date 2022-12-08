@@ -8,13 +8,13 @@ public class levelTracker : MonoBehaviour
 
     private string[] level;
     public int numLevel; // 0=tutorial, 1=level1.5, 2=level2, 3=bosslevel(?)
-    private const int MAX_LEVEL = 3;
+    private const int MAX_LEVEL = 4;
 
     // Start is called before the first frame update
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
-        level = new string[] {"TutorialLevel", "Level1.5", "Level2", "BossLevel" };
+        level = new string[] {"TutorialLevel", "Level1.5", "Level2", "Level 3", "BossLevel" };
     }
 
     public string getLevel()
