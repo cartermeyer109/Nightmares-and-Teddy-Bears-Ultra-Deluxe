@@ -155,6 +155,14 @@ PrefabInstance:
       propertyPath: LevelTracker
       value: 
       objectReference: {fileID: 4541092080561664228, guid: 409914519dd80fa46b6b1b455a26980e, type: 3}
+    - target: {fileID: 855710918021234377, guid: 795557c33366b2b4b8e232888f58a5c0, type: 3}
+      propertyPath: normAnimator
+      value: 
+      objectReference: {fileID: 740566006}
+    - target: {fileID: 855710918021234377, guid: 795557c33366b2b4b8e232888f58a5c0, type: 3}
+      propertyPath: nightmareAnimator
+      value: 
+      objectReference: {fileID: 740566007}
     - target: {fileID: 855710918021234380, guid: 795557c33366b2b4b8e232888f58a5c0, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -716,6 +724,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d8991760012234c9d06fc8a67108d5, type: 3}
+--- !u!95 &740566006 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6415345064717943045, guid: c2d8991760012234c9d06fc8a67108d5, type: 3}
+  m_PrefabInstance: {fileID: 740566005}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &740566007 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8201602592527090373, guid: c2d8991760012234c9d06fc8a67108d5, type: 3}
+  m_PrefabInstance: {fileID: 740566005}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &775680990
 GameObject:
   m_ObjectHideFlags: 0

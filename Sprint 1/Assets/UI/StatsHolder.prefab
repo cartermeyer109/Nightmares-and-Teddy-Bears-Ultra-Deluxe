@@ -554,6 +554,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5082208535031033487}
   - component: {fileID: 1239840539758511809}
+  - component: {fileID: 6415345064717943045}
   m_Layer: 5
   m_Name: RegularHealth
   m_TagString: Untagged
@@ -631,6 +632,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6415345064717943045
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3394381657506913333}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 504e883edef8b85449976537260a406c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3527393105095493807
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,6 +1110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2144147840702399311}
   - component: {fileID: 3692184088192715194}
+  - component: {fileID: 8201602592527090373}
   m_Layer: 5
   m_Name: NightmareHealth
   m_TagString: Untagged
@@ -1167,6 +1188,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8201602592527090373
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6424262227476099577}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c3b084233f571a84d9be084b57aac9e5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6596425433693573385
 GameObject:
   m_ObjectHideFlags: 0

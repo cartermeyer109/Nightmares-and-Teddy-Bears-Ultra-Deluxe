@@ -64,6 +64,10 @@ public class MovementScript : MonoBehaviour
     private static bool projAttack = false;
     private static bool gpAttack = false;
 
+    //UI
+    public Animator normAnimator;
+    public Animator nightmareAnimator;
+
 
 
     void Start()
@@ -143,9 +147,17 @@ public class MovementScript : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log("cooldown timer is " + nightmareCooldown);
-        Debug.Log("Fearbar is at " + fearBarCtr);
-        Debug.Log("fear over use timer is  " + fearOverUseTimer);
+        if (playerHealth <= 2)
+        {
+            normAnimator.SetBool("lowHealth", true);
+            nightmareAnimator.SetBool("lowHealth", true);
+        }
+        else
+        {
+            normAnimator.SetBool("lowHealth", false);
+            nightmareAnimator.SetBool("lowHealth", false);
+        }
+
         //SETTING THE STATS
         {
             PlayerPrefs.SetInt("fear", fear);
@@ -439,6 +451,8 @@ public class MovementScript : MonoBehaviour
 
             //Plays damage taking animation
             protagAnimator.SetBool("TookDamage", true);
+            normAnimator.SetBool("dmgTaken", true);
+            nightmareAnimator.SetBool("dmgTaken", true);
             Debug.Log("Player health after hit: " + playerHealth);
 
             //Kills enemy if they have no health
