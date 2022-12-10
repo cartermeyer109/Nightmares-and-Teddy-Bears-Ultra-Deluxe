@@ -1,13 +1,7 @@
 fileFormatVersion: 2
-guid: 822505d9267ebcb4bb8aecad2552853d
+guid: 4f7ccaa4d33c80d47bff26694274f240
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -3901134009339046649
-    second: MoreFurniture_0
-  - first:
-      213: -4134179954136021729
-    second: MoreFurniture_1
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -38,7 +32,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -47,7 +41,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,49 +89,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: MoreFurniture_0
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 9
-        width: 507
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7059620a9436cd9c0800000000000000
-      internalID: -3901134009339046649
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MoreFurniture_1
-      rect:
-        serializedVersion: 2
-        x: 522
-        y: 9
-        width: 158
-        height: 580
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f158e2c4c3170a6c0800000000000000
-      internalID: -4134179954136021729
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []

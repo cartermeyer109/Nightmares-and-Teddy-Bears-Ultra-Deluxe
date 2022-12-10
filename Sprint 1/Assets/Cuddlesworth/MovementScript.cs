@@ -64,11 +64,10 @@ public class MovementScript : MonoBehaviour
     private static bool projAttack = false;
     private static bool gpAttack = false;
 
-    //UI
-    public Animator normAnimator;
-    public Animator nightmareAnimator;
-
-
+    public void heal()
+    {
+        playerHealth = maxHealth;
+    }
 
     void Start()
     {
@@ -147,17 +146,9 @@ public class MovementScript : MonoBehaviour
     }
     void Update()
     {
-        if (playerHealth <= 2)
-        {
-            normAnimator.SetBool("lowHealth", true);
-            nightmareAnimator.SetBool("lowHealth", true);
-        }
-        else
-        {
-            normAnimator.SetBool("lowHealth", false);
-            nightmareAnimator.SetBool("lowHealth", false);
-        }
-
+        //Debug.Log("cooldown timer is " + nightmareCooldown);
+        //Debug.Log("Fearbar is at " + fearBarCtr);
+        //Debug.Log("fear over use timer is  " + fearOverUseTimer);
         //SETTING THE STATS
         {
             PlayerPrefs.SetInt("fear", fear);
@@ -426,6 +417,21 @@ public class MovementScript : MonoBehaviour
         {
 
         }
+        if (collision.gameObject.CompareTag("CourageOrb"))
+        {
+            courage += 50;
+            heal();
+            maxCourage += 10;
+            //if (fearBarCtr <= maxFear - 50)
+            //{
+            //    fearBarCtr += 50;
+            //}
+            //else
+            //{
+            //    fearBarCtr += maxFear - fearBarCtr;
+            //}
+            Object.Destroy(collision.gameObject);
+        }
     }
 
 
@@ -451,8 +457,6 @@ public class MovementScript : MonoBehaviour
 
             //Plays damage taking animation
             protagAnimator.SetBool("TookDamage", true);
-            normAnimator.SetBool("dmgTaken", true);
-            nightmareAnimator.SetBool("dmgTaken", true);
             Debug.Log("Player health after hit: " + playerHealth);
 
             //Kills enemy if they have no health
@@ -590,10 +594,10 @@ public class MovementScript : MonoBehaviour
         }
     }
 
-    public void heal() //****************************************************************
-    {
-        playerHealth = maxHealth;
-    }
+    //public void heal() //****************************************************************
+    //{
+    //    playerHealth = maxHealth;
+    //}
 
 }
 
