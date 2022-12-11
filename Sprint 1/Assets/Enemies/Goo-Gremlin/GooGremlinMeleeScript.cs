@@ -36,7 +36,8 @@ public class GooGremlinMeleeScript : MonoBehaviour
             //Use the takeDamage(); function that they player has to lower the players health.
             playerScript = collision.gameObject.GetComponent<MovementScript>();
             playerScript.takeDamage();
-            playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
+            //playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
+            //I WANT TO IMPLIMENT A PUSHBACK
         }
     }
 }

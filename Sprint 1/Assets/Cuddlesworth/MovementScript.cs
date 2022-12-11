@@ -63,6 +63,11 @@ public class MovementScript : MonoBehaviour
     private static bool goldenNeedle = false;
     private static bool projAttack = false;
     private static bool gpAttack = false;
+    private static bool dash = false;
+    private static bool shadowNeedle = false;
+    private static bool sandNeedle = false;
+    private static bool healer = false;
+    private static bool wave = false;
 
     //UI
     public Animator normAnimator;
@@ -115,6 +120,9 @@ public class MovementScript : MonoBehaviour
             goldenNeedle = false;
             projAttack = false;
             gpAttack = false;
+            dash = false;
+            shadowNeedle = false;
+            sandNeedle = false;
         }
         else
         {
@@ -128,6 +136,11 @@ public class MovementScript : MonoBehaviour
             goldenNeedle = intToBool(PlayerPrefs.GetInt("goldenNeedle"));
             projAttack = intToBool(PlayerPrefs.GetInt("projAttack"));
             gpAttack = intToBool(PlayerPrefs.GetInt("gpAttack"));
+            dash = intToBool(PlayerPrefs.GetInt("dash"));
+            shadowNeedle = intToBool(PlayerPrefs.GetInt("shadowNeedle"));
+            sandNeedle = intToBool(PlayerPrefs.GetInt("sandNeedle"));
+            healer = intToBool(PlayerPrefs.GetInt("healer"));
+            wave = intToBool(PlayerPrefs.GetInt("wave"));
         }
 
         if (GameObject.FindWithTag("LevelTracker") == null) //****************************************************************
@@ -173,6 +186,11 @@ public class MovementScript : MonoBehaviour
             PlayerPrefs.SetInt("goldenNeedle", boolToInt(goldenNeedle));
             PlayerPrefs.SetInt("projAttack", boolToInt(projAttack));
             PlayerPrefs.SetInt("gpAttack", boolToInt(gpAttack));
+            PlayerPrefs.SetInt("dash", boolToInt(dash));
+            PlayerPrefs.SetInt("shadowNeedle", boolToInt(shadowNeedle));
+            PlayerPrefs.SetInt("sandNeedle", boolToInt(sandNeedle));
+            PlayerPrefs.SetInt("healer", boolToInt(healer));
+            PlayerPrefs.SetInt("wave", boolToInt(wave));
         }
 
         if (courage < maxCourage)
@@ -426,10 +444,6 @@ public class MovementScript : MonoBehaviour
             }
             Object.Destroy(collision.gameObject);
         }
-        else
-        {
-
-        }
         if (collision.gameObject.CompareTag("CourageOrb"))
         {
             courage += 50;
@@ -470,6 +484,11 @@ public class MovementScript : MonoBehaviour
 
             //Plays damage taking animation
             protagAnimator.SetBool("TookDamage", true);
+            normAnimator.SetBool("dmgTaken", true);
+            if (protagAnimator.GetBool("NightmareSwitch"))
+            {
+                nightmareAnimator.SetBool("dmgTaken", true);
+            }
             Debug.Log("Player health after hit: " + playerHealth);
 
             //Kills enemy if they have no health
@@ -509,6 +528,56 @@ public class MovementScript : MonoBehaviour
     public int getFear()
     {
         return fear;
+    }
+
+    public bool getDash()
+    {
+        return dash;
+    }
+
+    public bool getShadowNeedle()
+    {
+        return shadowNeedle;
+    }
+
+    public bool getSandNeedle()
+    {
+        return sandNeedle;
+    }
+
+    public bool getHealer()
+    {
+        return healer;
+    }
+
+    public bool getWave()
+    {
+        return wave;
+    }
+
+    public void setWave(bool b)
+    {
+        wave = b;
+    }
+
+    public void setHealer(bool b)
+    {
+        healer = b;
+    }
+
+    public void setSandNeedle(bool b)
+    {
+        sandNeedle = b;
+    }
+
+    public void setShadowNeedle(bool b)
+    {
+        shadowNeedle = b;
+    }
+
+    public void setDash(bool b)
+    {
+        dash = b;
     }
 
     public void setFear(int f)
@@ -576,10 +645,10 @@ public class MovementScript : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        fear += 10;
+        fear += 1;
         if (fearBarCtr < maxFear)
         {
-            fearBarCtr += 10;
+            fearBarCtr += 1;
         }
         Debug.Log("Fear is " + fear);
     }
@@ -606,6 +675,8 @@ public class MovementScript : MonoBehaviour
             return true;
         }
     }
+
+
 
     //public void heal() //****************************************************************
     //{

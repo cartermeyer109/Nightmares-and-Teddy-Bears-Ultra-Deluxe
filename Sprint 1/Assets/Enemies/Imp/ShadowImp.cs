@@ -87,29 +87,34 @@ public class ShadowImp : MonoBehaviour
 
             //ShadowImp Pomvement
             //There is no dealing with animator booleans because there is no different between idle and wa;lomg
-            if (Mathf.Abs(player.transform.position.x - this.transform.position.x) <= 8 && Mathf.Abs(player.transform.position.y - this.transform.position.y) <= 8)
+            if (Mathf.Abs(player.transform.position.x - this.transform.position.x) <= 10 && Mathf.Abs(player.transform.position.y - this.transform.position.y) <= 8)
             {
-                if (!facingLeft && player.transform.position.x - this.transform.position.x > 4.5 )
+                if (Mathf.Abs(player.transform.position.x - this.transform.position.x) > 4.5)
                 {
-                    fallForce = myPhysics.velocity.y;
-                    myPhysics.velocity = new Vector2(speed, fallForce);
-                }
-                else if (facingLeft && player.transform.position.x - this.transform.position.x < -4.5)
-                {
-                    fallForce = myPhysics.velocity.y;
-                    myPhysics.velocity = new Vector2(-1 * speed, fallForce);
-
+                    enemyAnimator.SetBool("canWalk", true);
                 }
                 else
                 {
-                    fallForce = myPhysics.velocity.y;
-                    myPhysics.velocity = new Vector2(0, fallForce);
+                    enemyAnimator.SetBool("canWalk", false);
+                }
+
+                if (enemyAnimator.GetBool("isWalking"))
+                {
+                    if (!facingLeft)
+                    {
+                        fallForce = myPhysics.velocity.y;
+                        myPhysics.velocity = new Vector2(speed, fallForce);
+                    }
+                    else if (facingLeft)
+                    {
+                        fallForce = myPhysics.velocity.y;
+                        myPhysics.velocity = new Vector2(-1 * speed, fallForce);
+                    }
                 }
             }
             else
             {
-                fallForce = myPhysics.velocity.y;
-                myPhysics.velocity = new Vector2(0, fallForce);
+                enemyAnimator.SetBool("canWalk", false);
             }
         }
     }
@@ -124,29 +129,32 @@ public class ShadowImp : MonoBehaviour
         {
             if (thingHit.gameObject.CompareTag("Player"))
             {
-                playerScript = thingHit.gameObject.GetComponent<MovementScript>();
-                playerScript.takeDamage();
-                //weird
-                Vector2 direction = thingHit.GetContact(0).normal;
-                if (direction.x == 1)
+                if (enemyHealth > 0)
                 {
-                    playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
-                    Debug.Log("left");
-                }
-                if (direction.x == -1)
-                {
-                    playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
-                    Debug.Log("right ");
-                }
-                if (direction.y == 1)
-                {
-                    playerScript.myPhysics.AddForce(new Vector2(0, -10), ForceMode2D.Impulse);
-                    Debug.Log("down");
-                }
-                if (direction.y == -1)
-                {
-                    playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
-                    Debug.Log("up");
+                    Debug.Log("Enemies health is " + enemyHealth);
+                    playerScript = thingHit.gameObject.GetComponent<MovementScript>();
+                    playerScript.takeDamage();
+                    Vector2 direction = thingHit.GetContact(0).normal;
+                    if (direction.x == 1)
+                    {
+                        playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
+                        Debug.Log("left");
+                    }
+                    if (direction.x == -1)
+                    {
+                        playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
+                        Debug.Log("right ");
+                    }
+                    if (direction.y == 1)
+                    {
+                        playerScript.myPhysics.AddForce(new Vector2(0, -10), ForceMode2D.Impulse);
+                        Debug.Log("down");
+                    }
+                    if (direction.y == -1)
+                    {
+                        playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
+                        Debug.Log("up");
+                    }
                 }
             }
         }
@@ -155,6 +163,20 @@ public class ShadowImp : MonoBehaviour
 
     public void takeDamage()
     { //To be called in other scripts when something hits this enemy
+
+        enemyAnimator.SetBool("isWalking", false);
+
+        if (player != null)
+        {
+            if (player.transform.position.x > this.transform.position.x)
+            {
+                myPhysics.AddForce(new Vector2(-450, 0), ForceMode2D.Impulse);
+            }
+            else
+            {
+                myPhysics.AddForce(new Vector2(450, 0), ForceMode2D.Impulse);
+            }
+        }
 
         if (enemyHealth > 0)
         {

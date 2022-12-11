@@ -22,7 +22,7 @@ public class BoogeyManScript : MonoBehaviour
         playerScript = player.GetComponent<MovementScript>();
         boogeyAnimator = GetComponent<Animator>();
         attackFreq = 5;
-        enemyHealth = 100;
+        enemyHealth = 5;
         boogeyMan = GetComponent<SpriteRenderer>();
         boogeyMan.color = new Color(255, 255, 255);
 }
@@ -73,14 +73,6 @@ void Update()
         }
     }
 
-    //Not attacking = receiving the code
-    //Attacking =protag receives the code
-
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-
-    }
-
     public void takeDamage()
     {
         if (enemyHealth > 0)
@@ -94,7 +86,7 @@ void Update()
         if (enemyHealth <= 0)
         {
             //dieSound.Play();
-            //enemyAnimator.SetBool("healthIsZero", true);
+            boogeyAnimator.SetBool("HealthIsZero", true);
         }
 
     }

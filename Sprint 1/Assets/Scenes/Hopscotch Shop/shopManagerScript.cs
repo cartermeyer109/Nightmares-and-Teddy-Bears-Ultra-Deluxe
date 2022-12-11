@@ -18,13 +18,18 @@ public class shopManagerScript : MonoBehaviour
 
     //All of the shopitems
     ShopItems heartItem;
+    ShopItems dashItem;
     ShopItems needleItem;
+    ShopItems sandNeedleItem;
+    ShopItems shadowNeedleItem;
     ShopItems projAttackItem;
     ShopItems gpAttackItem;
+    ShopItems waveItem;
+    ShopItems healItem;
 
     //Variables for the shopitems objects array
-    int maxItems = 4; ////Change this number with whatever the max size could be (Right now we only have 4 items made)
-    ShopItems[] Items = new ShopItems[4]; //change this too
+    int maxItems = 9; ////Change this number with whatever the max size could be (Right now we only have 4 items made)
+    ShopItems[] Items = new ShopItems[9]; //change this too
     int itemsSize = 0;
 
     //the text of the items to be put on the list (made for ease of putting it into the shopitem object
@@ -32,12 +37,22 @@ public class shopManagerScript : MonoBehaviour
     GameObject needle;
     GameObject projAttack;
     GameObject gpAttack;
+    GameObject dash;
+    GameObject shadowNeedle;
+    GameObject sandNeedle;
+    GameObject heal;
+    GameObject wave;
 
     //PREVIEWS
     GameObject heartPrev;
     GameObject needlePrev;
     GameObject projAttackPrev;
     GameObject gpAttackPrev;
+    GameObject dashPrev;
+    GameObject shadowNeedlePrev;
+    GameObject sandNeedlePrev;
+    GameObject healPrev;
+    GameObject wavePrev;
 
     //Player and its stats
     GameObject player;
@@ -84,9 +99,35 @@ public class shopManagerScript : MonoBehaviour
         gpAttackPrev = GameObject.Find("ItemPrevs").transform.GetChild(3).gameObject;
         gpAttackItem = new ShopItems(gpAttack, gpAttack.GetComponent<RectTransform>(), gpAttackPrev, 200, 3);
 
+        //Dash Item
+        dash = GameObject.Find("Content").transform.GetChild(4).gameObject;
+        dashPrev = GameObject.Find("ItemPrevs").transform.GetChild(4).gameObject;
+        dashItem = new ShopItems(dash, dash.GetComponent<RectTransform>(), dashPrev, 200, 4);
+
+        //Shadow Needle Item
+        shadowNeedle = GameObject.Find("Content").transform.GetChild(5).gameObject;
+        shadowNeedlePrev = GameObject.Find("ItemPrevs").transform.GetChild(5).gameObject;
+        shadowNeedleItem = new ShopItems(shadowNeedle, shadowNeedle.GetComponent<RectTransform>(), shadowNeedlePrev, 200, 5);
+
+        //Sand Needle Item
+        sandNeedle = GameObject.Find("Content").transform.GetChild(6).gameObject;
+        sandNeedlePrev = GameObject.Find("ItemPrevs").transform.GetChild(6).gameObject;
+        sandNeedleItem = new ShopItems(sandNeedle, sandNeedle.GetComponent<RectTransform>(), sandNeedlePrev, 200, 6);
+       
+        //Heal Item
+        heal = GameObject.Find("Content").transform.GetChild(7).gameObject;
+        healPrev = GameObject.Find("ItemPrevs").transform.GetChild(7).gameObject;
+        healItem = new ShopItems(heal, heal.GetComponent<RectTransform>(), healPrev, 200, 7);
+
+        //Wave Item
+        wave = GameObject.Find("Content").transform.GetChild(8).gameObject;
+        wavePrev = GameObject.Find("ItemPrevs").transform.GetChild(8).gameObject;
+        waveItem = new ShopItems(wave, wave.GetComponent<RectTransform>(), wavePrev, 200, 8);
+
+
         itemHighlighter = transform.GetChild(4).gameObject;
         itemHighlighterTF = itemHighlighter.GetComponent<RectTransform>();
-        highlightSpot = new Vector3(-45.52f, 16.93f, 0);
+        highlightSpot = new Vector3(-45.52f, 23f, 0);
         buyTextHighlighter = transform.GetChild(3).gameObject;
 
         readPlayerStats();
@@ -202,6 +243,26 @@ public class shopManagerScript : MonoBehaviour
                         playerStats.setGPAttack(true);
                         removeItem(slotSelected);
                         break;
+                    case 4:
+                        playerStats.setDash(true);
+                        removeItem(slotSelected);
+                        break;
+                    case 5:
+                        playerStats.setShadowNeedle(true);
+                        removeItem(slotSelected);
+                        break;
+                    case 6:
+                        playerStats.setSandNeedle(true);
+                        removeItem(slotSelected);
+                        break;
+                    case 7:
+                        playerStats.setHealer(true);
+                        removeItem(slotSelected);
+                        break;
+                    case 8:
+                        playerStats.setWave(true);
+                        removeItem(slotSelected);
+                        break;
                 }
 
                 menuProgress = 0;
@@ -252,6 +313,16 @@ public class shopManagerScript : MonoBehaviour
             itemsSize++;
         }
 
+        if (playerStats.getDash())
+        {
+            dashItem.Deactivate();
+        }
+        else
+        {
+            Items[itemsSize] = dashItem;
+            itemsSize++;
+        }
+
         if (playerStats.getGoldenNeedle())
         {
             needleItem.Deactivate();
@@ -259,6 +330,26 @@ public class shopManagerScript : MonoBehaviour
         else
         {
             Items[itemsSize] = needleItem;
+            itemsSize++;
+        }
+
+        if (playerStats.getShadowNeedle())
+        {
+            shadowNeedleItem.Deactivate();
+        }
+        else
+        {
+            Items[itemsSize] = shadowNeedleItem;
+            itemsSize++;
+        }
+
+        if (playerStats.getSandNeedle())
+        {
+            sandNeedleItem.Deactivate();
+        }
+        else
+        {
+            Items[itemsSize] = sandNeedleItem;
             itemsSize++;
         }
 
@@ -272,6 +363,16 @@ public class shopManagerScript : MonoBehaviour
             itemsSize++;
         }
 
+        if (playerStats.getWave())
+        {
+            waveItem.Deactivate();
+        }
+        else
+        {
+            Items[itemsSize] = waveItem;
+            itemsSize++;
+        }
+
         if (playerStats.getGPAttack())
         {
             gpAttackItem.Deactivate();
@@ -279,6 +380,16 @@ public class shopManagerScript : MonoBehaviour
         else
         {
             Items[itemsSize] = gpAttackItem;
+            itemsSize++;
+        }
+
+        if (playerStats.getHealer())
+        {
+            healItem.Deactivate();
+        }
+        else
+        {
+            Items[itemsSize] = healItem;
             itemsSize++;
         }
 

@@ -81,23 +81,50 @@ public class cameraScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Controls boundary
-        //If going forward
-        if (!cutsceneOn3 && !cutsceneCompleted2 && cutsceneCompleted && !cutsceneCompleted3) //Fixes a specific glitch with cutscene 3 where it wont show the hatch opening
+        //Regular Movement only allows when not in a cutscene
+        if (!cutsceneOn && !cutsceneOn2 && !cutsceneOn3)
         {
-            if (protagPhysics.velocity.x >= 0 && player.transform.position.x >= playerPosX)
+            //Exclusive forward moving camera only availble between custcene 1 and 3
+            if (cutsceneCompleted && !cutsceneCompleted3)
             {
-                leftWall.transform.position = new Vector2(player.transform.position.x - 11, player.transform.position.y);
-                wallPosX = leftWall.transform.position.x;
-                playerPosX = player.transform.position.x;
+                //If the protagonist moves to the left of the center point
+                if (protagPhysics.velocity.x < 0)
+                {
+                    //Leave the camera and left boundary in their position
+                }
+                //Else if the protagonist is at the middle or right of the center point
+                else if (protagPhysics.velocity.x >= 0 && player.transform.position.x >= playerPosX)
+                {
+                    this.transform.position = new Vector3(player.transform.position.x, 1, -10);
+                    leftWall.transform.position = new Vector2(player.transform.position.x - 11, player.transform.position.y);
+                    playerPosX = player.transform.position.x;
+                }
+                //Establishes a right boundary at the end of the level
+                if (this.transform.position.x >= 69.9)
+                {
+                    this.transform.position = new Vector3(69.9f, transform.position.y, -10);
+                    leftWall.transform.position = new Vector2(59, player.transform.position.y);
+                }
+            }
+            //Default movement when not between cutscene 1 and 3
+            else
+            {
+                //Camera follows player but has a fixed y axis
+                this.transform.position = new Vector3(player.transform.position.x, 1, -10);
 
+                //Protag is set to normal behavior
+                protagAnimator.SetBool("cutsceneIdle", false);
+
+                //Gremlin is idle during cutscenes unless he doesn't exist!
+                if (gremlin != null)
+                {
+                    enemyAnimator.SetBool("cutsceneIdle", false);
+                }
             }
-            //If going backwards
-            if (player.transform.position.x < playerPosX)
-            {
-                leftWall.transform.position = new Vector2(wallPosX, player.transform.position.y);
-                this.transform.position = new Vector3(playerPosX, this.transform.position.y, -10);
-            }
+        }
+        if (cutsceneCompleted3)
+        {
+            Object.Destroy(leftWall);
         }
 
         //Solves an issue where protagAnim's "goingdown" variable wont turn off during cutscenes
@@ -108,24 +135,6 @@ public class cameraScript : MonoBehaviour
         else
         {
             protagAnimator.SetBool("GoingDown", false);
-        }
-
-        //DEFAULT STUFF
-        //Set camera to normal if a cutscene is not on
-        if (!cutsceneOn && !cutsceneOn2 && !cutsceneOn3)
-        {
-            //Camera follows player but has a fixed y axis
-            this.transform.position = new Vector3(player.transform.position.x, 1, -10);
-
-            //Protag is set to normal behavior
-            protagAnimator.SetBool("cutsceneIdle", false);
-
-            //Gremlin is idle during cutscenes unless he doesn't exist!
-            if (gremlin != null)
-            {
-                enemyAnimator.SetBool("cutsceneIdle", false);
-            }
-
         }
 
         //Goes down through th eorder of cutscenes
@@ -203,6 +212,7 @@ public class cameraScript : MonoBehaviour
 
             //Mark that the cutscene has been completed
             cutsceneCompleted = true;
+            protagAnimator.SetBool("cutsceneIdle", false);
 
             //mark that the cutscene is over
             cutsceneOn = false;
@@ -255,6 +265,9 @@ public class cameraScript : MonoBehaviour
             cutsceneCompleted2 = true;
             cutsceneOn2 = false;
             protagAnimator.SetBool("JPressed", false);
+            protagAnimator.SetBool("cutsceneIdle", false);
+            enemyAnimator.SetBool("cutsceneIdle", false);
+
         }
     }
 
@@ -291,6 +304,7 @@ public class cameraScript : MonoBehaviour
             stats.SetActive(true);
             cutsceneCompleted3 = true;
             cutsceneOn3 = false;
+            protagAnimator.SetBool("cutsceneIdle", false);
         }
     }
 }

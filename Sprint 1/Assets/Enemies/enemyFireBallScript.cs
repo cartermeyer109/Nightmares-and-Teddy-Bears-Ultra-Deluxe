@@ -44,7 +44,7 @@ public class enemyFireBallScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.gameObject.CompareTag("Imp"))
+        if (!other.gameObject.CompareTag("Imp") && !other.gameObject.CompareTag("ImpHitBox"))
         {
             if (other.gameObject.CompareTag("Player"))
             {

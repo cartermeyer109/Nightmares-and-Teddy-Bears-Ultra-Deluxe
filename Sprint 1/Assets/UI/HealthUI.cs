@@ -9,19 +9,56 @@ public class HealthUI : MonoBehaviour
     //Health
     private GameObject health;
     private SpriteRenderer healthSpriteRenderer;
-    public Sprite h12Sprite;
-    public Sprite h11Sprite;
-    public Sprite h10Sprite;
-    public Sprite h9Sprite;
-    public Sprite h8Sprite;
-    public Sprite h7Sprite;
-    public Sprite h6Sprite;
-    public Sprite h5Sprite;
-    public Sprite h4Sprite;
-    public Sprite h3Sprite;
-    public Sprite h2Sprite;
-    public Sprite h1Sprite;
-    public Sprite h0Sprite;
+
+    //6MaxHearts
+    public Sprite m12h12Sprite;
+    public Sprite m12h11Sprite;
+    public Sprite m12h10Sprite;
+    public Sprite m12h9Sprite;
+    public Sprite m12h8Sprite;
+    public Sprite m12h7Sprite;
+    public Sprite m12h6Sprite;
+    public Sprite m12h5Sprite;
+    public Sprite m12h4Sprite;
+    public Sprite m12h3Sprite;
+    public Sprite m12h2Sprite;
+    public Sprite m12h1Sprite;
+    public Sprite m12h0Sprite;
+
+    //5MaxHears
+    public Sprite m10h10Sprite;
+    public Sprite m10h9Sprite;
+    public Sprite m10h8Sprite;
+    public Sprite m10h7Sprite;
+    public Sprite m10h6Sprite;
+    public Sprite m10h5Sprite;
+    public Sprite m10h4Sprite;
+    public Sprite m10h3Sprite;
+    public Sprite m10h2Sprite;
+    public Sprite m10h1Sprite;
+    public Sprite m10h0Sprite;
+
+    //4MaxHears
+    public Sprite m8h8Sprite;
+    public Sprite m8h7Sprite;
+    public Sprite m8h6Sprite;
+    public Sprite m8h5Sprite;
+    public Sprite m8h4Sprite;
+    public Sprite m8h3Sprite;
+    public Sprite m8h2Sprite;
+    public Sprite m8h1Sprite;
+    public Sprite m8h0Sprite;
+
+    //3MaxHearts
+    public Sprite m6h6Sprite;
+    public Sprite m6h5Sprite;
+    public Sprite m6h4Sprite;
+    public Sprite m6h3Sprite;
+    public Sprite m6h2Sprite;
+    public Sprite m6h1Sprite;
+    public Sprite m6h0Sprite;
+
+
     private GameObject nightmareHealth;
 
     //Mana
@@ -73,48 +110,149 @@ public class HealthUI : MonoBehaviour
     void Update()
     {
         //Health
-        switch (playerScript.playerHealth)
+        if (playerScript.getMaxHealth() == 6)
         {
-            case 0:
-                healthSpriteRenderer.sprite = h0Sprite;
-                break;
-            case 1:
-                healthSpriteRenderer.sprite = h1Sprite;
-                break;
-            case 2:
-                healthSpriteRenderer.sprite = h2Sprite;
-                break;
-            case 3:
-                healthSpriteRenderer.sprite = h3Sprite;
-                break;
-            case 4:
-                healthSpriteRenderer.sprite = h4Sprite;
-                break;
-            case 5:
-                healthSpriteRenderer.sprite = h5Sprite;
-                break;
-            case 6:
-                healthSpriteRenderer.sprite = h6Sprite;
-                break;
-            case 7:
-                healthSpriteRenderer.sprite = h7Sprite;
-                break;
-            case 8:
-                healthSpriteRenderer.sprite = h8Sprite;
-                break;
-            case 9:
-                healthSpriteRenderer.sprite = h9Sprite;
-                break;
-            case 10:
-                healthSpriteRenderer.sprite = h10Sprite;
-                break;
-            case 11:
-                healthSpriteRenderer.sprite = h11Sprite;
-                break;
-            case 12:
-                healthSpriteRenderer.sprite = h12Sprite;
-                break;
-
+            switch (playerScript.playerHealth)
+            {
+                case 0:
+                    healthSpriteRenderer.sprite = m6h0Sprite;
+                    break;
+                case 1:
+                    healthSpriteRenderer.sprite = m6h1Sprite;
+                    break;
+                case 2:
+                    healthSpriteRenderer.sprite = m6h2Sprite;
+                    break;
+                case 3:
+                    healthSpriteRenderer.sprite = m6h3Sprite;
+                    break;
+                case 4:
+                    healthSpriteRenderer.sprite = m6h4Sprite;
+                    break;
+                case 5:
+                    healthSpriteRenderer.sprite = m6h5Sprite;
+                    break;
+                case 6:
+                    healthSpriteRenderer.sprite = m6h6Sprite;
+                    break;
+            }
+        }
+        else if (playerScript.getMaxHealth() == 8)
+        {
+            switch (playerScript.playerHealth)
+            {
+                case 0:
+                    healthSpriteRenderer.sprite = m8h0Sprite;
+                    break;
+                case 1:
+                    healthSpriteRenderer.sprite = m8h1Sprite;
+                    break;
+                case 2:
+                    healthSpriteRenderer.sprite = m8h2Sprite;
+                    break;
+                case 3:
+                    healthSpriteRenderer.sprite = m8h3Sprite;
+                    break;
+                case 4:
+                    healthSpriteRenderer.sprite = m8h4Sprite;
+                    break;
+                case 5:
+                    healthSpriteRenderer.sprite = m8h5Sprite;
+                    break;
+                case 6:
+                    healthSpriteRenderer.sprite = m8h6Sprite;
+                    break;
+                case 7:
+                    healthSpriteRenderer.sprite = m8h7Sprite;
+                    break;
+                case 8:
+                    healthSpriteRenderer.sprite = m8h8Sprite;
+                    break;
+            }
+        }
+        else if (playerScript.getMaxHealth() == 10)
+        {
+            switch (playerScript.playerHealth)
+            {
+                case 0:
+                    healthSpriteRenderer.sprite = m10h0Sprite;
+                    break;
+                case 1:
+                    healthSpriteRenderer.sprite = m10h1Sprite;
+                    break;
+                case 2:
+                    healthSpriteRenderer.sprite = m10h2Sprite;
+                    break;
+                case 3:
+                    healthSpriteRenderer.sprite = m10h3Sprite;
+                    break;
+                case 4:
+                    healthSpriteRenderer.sprite = m10h4Sprite;
+                    break;
+                case 5:
+                    healthSpriteRenderer.sprite = m10h5Sprite;
+                    break;
+                case 6:
+                    healthSpriteRenderer.sprite = m10h6Sprite;
+                    break;
+                case 7:
+                    healthSpriteRenderer.sprite = m10h7Sprite;
+                    break;
+                case 8:
+                    healthSpriteRenderer.sprite = m10h8Sprite;
+                    break;
+                case 9:
+                    healthSpriteRenderer.sprite = m10h9Sprite;
+                    break;
+                case 10:
+                    healthSpriteRenderer.sprite = m10h10Sprite;
+                    break;
+            }
+        }
+        else if (playerScript.getMaxHealth() == 12)
+        {
+            switch (playerScript.playerHealth)
+            {
+                case 0:
+                    healthSpriteRenderer.sprite = m12h0Sprite;
+                    break;
+                case 1:
+                    healthSpriteRenderer.sprite = m12h1Sprite;
+                    break;
+                case 2:
+                    healthSpriteRenderer.sprite = m12h2Sprite;
+                    break;
+                case 3:
+                    healthSpriteRenderer.sprite = m12h3Sprite;
+                    break;
+                case 4:
+                    healthSpriteRenderer.sprite = m12h4Sprite;
+                    break;
+                case 5:
+                    healthSpriteRenderer.sprite = m12h5Sprite;
+                    break;
+                case 6:
+                    healthSpriteRenderer.sprite = m12h6Sprite;
+                    break;
+                case 7:
+                    healthSpriteRenderer.sprite = m12h7Sprite;
+                    break;
+                case 8:
+                    healthSpriteRenderer.sprite = m12h8Sprite;
+                    break;
+                case 9:
+                    healthSpriteRenderer.sprite = m12h9Sprite;
+                    break;
+                case 10:
+                    healthSpriteRenderer.sprite = m12h10Sprite;
+                    break;
+                case 11:
+                    healthSpriteRenderer.sprite = m12h11Sprite;
+                    break;
+                case 12:
+                    healthSpriteRenderer.sprite = m12h12Sprite;
+                    break;
+            }
         }
 
         if (playerScript.getNightmare())

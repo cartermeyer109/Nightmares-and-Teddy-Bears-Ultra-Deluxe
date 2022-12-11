@@ -23,28 +23,28 @@ public class AttackScript : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("GremlinHitBox"))
         {//uncomment this when you have the enemy script
             //Debug.Log("Player attack hit");
-            myGremlinScript = collision.gameObject.GetComponent<GooGremlinScript>();
+            myGremlinScript = collision.gameObject.transform.GetComponentInParent<GooGremlinScript>();
             myGremlinScript.takeDamage();
         }
-        if (collision.gameObject.CompareTag("EnemyDF"))
+        if (collision.gameObject.CompareTag("GremlinHitBoxDF"))
         {//uncomment this when you have the enemy script
             //Debug.Log("Player attack hit");
-            myGremlinDefaultScript = collision.gameObject.GetComponent<GooGremlinDefaultScript>();
+            myGremlinDefaultScript = collision.gameObject.transform.GetComponentInParent<GooGremlinDefaultScript>();
             myGremlinDefaultScript.takeDamage();
         }
-        if (collision.gameObject.CompareTag("Imp"))
+        if (collision.gameObject.CompareTag("ImpHitBox"))
         {//uncomment this when you have the enemy script
             //Debug.Log("Player attack hit");
-            myImpScript = collision.gameObject.GetComponent<ShadowImp>();
+            myImpScript = collision.gameObject.transform.GetComponentInParent<ShadowImp>();
             myImpScript.takeDamage();
         }
-        if (collision.gameObject.CompareTag("Hulk"))
+        if (collision.gameObject.CompareTag("HulkHitBox"))
         {//uncomment this when you have the enemy script
             //Debug.Log("Player attack hit");
-            myHulkDefaultScript = collision.gameObject.GetComponent<HulkDefuaultScript>();
+            myHulkDefaultScript = collision.gameObject.transform.GetComponentInParent<HulkDefuaultScript>();
             myHulkDefaultScript.takeDamage();
         }
         Debug.Log("Attack Collision Happened");

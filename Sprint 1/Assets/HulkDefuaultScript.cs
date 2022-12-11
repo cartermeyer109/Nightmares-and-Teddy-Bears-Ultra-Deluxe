@@ -30,10 +30,13 @@ public class HulkDefuaultScript : MonoBehaviour
     public bool facingLeft = true;
     public bool hasFlipped = false;
 
+    private SpriteRenderer hulk;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        enemyHealth = 4;
+        enemyHealth = 16;
 
         //If you dont have the tag "Player" on the player object then you will need to change this to work
         player = GameObject.FindGameObjectWithTag("Player");
@@ -51,6 +54,9 @@ public class HulkDefuaultScript : MonoBehaviour
 
         dieSound = dieSoundObject.GetComponent<AudioSource>();
         hurtSound = hurtSoundObject.GetComponent<AudioSource>();
+
+        hulk = GetComponent<SpriteRenderer>();
+        hulk.color = new Color(255, 255, 255);
 
     }
 
@@ -128,16 +134,18 @@ public class HulkDefuaultScript : MonoBehaviour
 
                 }
             }
-/*            else
-            {
-                myPhysics.constraints = RigidbodyConstraints2D.FreezePositionX;
-            }
-*/
-/*            if (enemyAnimator.GetBool   ("isAttacking"))
-            {
-                myPhysics.constraints = RigidbodyConstraints2D.FreezePositionX;
-            }
-*/        }
+        }
+
+        //Color Code
+        if (hulk.color.g != 255)
+        {
+            hulk.color += new Color(0, 1, 0) * Time.deltaTime;
+        }
+        if (hulk.color.b != 255)
+        {
+            hulk.color += new Color(0, 0, 1) * Time.deltaTime;
+        }
+
     }
 
     public void OnCollisionEnter2D(Collision2D thingHit)
@@ -150,28 +158,32 @@ public class HulkDefuaultScript : MonoBehaviour
         {
             if (thingHit.gameObject.CompareTag("Player"))
             {
-                playerScript = playerScript = thingHit.gameObject.GetComponent<MovementScript>();
-                playerScript.takeDamage();
-                Vector2 direction = thingHit.GetContact(0).normal;
-                if (direction.x == 1)
+                if (enemyHealth > 0)
                 {
-                    playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
-                    Debug.Log("left");
-                }
-                if (direction.x == -1)
-                {
-                    playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
-                    Debug.Log("right ");
-                }
-                if (direction.y == 1)
-                {
-                    playerScript.myPhysics.AddForce(new Vector2(0, -10), ForceMode2D.Impulse);
-                    Debug.Log("down");
-                }
-                if (direction.y == -1)
-                {
-                    playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
-                    Debug.Log("up");
+                    Debug.Log("Enemies health is " + enemyHealth);
+                    playerScript = thingHit.gameObject.GetComponent<MovementScript>();
+                    playerScript.takeDamage();
+                    Vector2 direction = thingHit.GetContact(0).normal;
+                    if (direction.x == 1)
+                    {
+                        playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
+                        Debug.Log("left");
+                    }
+                    if (direction.x == -1)
+                    {
+                        playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
+                        Debug.Log("right ");
+                    }
+                    if (direction.y == 1)
+                    {
+                        playerScript.myPhysics.AddForce(new Vector2(0, -10), ForceMode2D.Impulse);
+                        Debug.Log("down");
+                    }
+                    if (direction.y == -1)
+                    {
+                        playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
+                        Debug.Log("up");
+                    }
                 }
             }
         }
@@ -179,15 +191,30 @@ public class HulkDefuaultScript : MonoBehaviour
     public void takeDamage()
     { //To be called in other scripts when something hits this enemy
 
+        enemyAnimator.SetBool("isWalking", false);
+
+        if (player != null)
+        {
+            if (player.transform.position.x > this.transform.position.x)
+            {
+                myPhysics.AddForce(new Vector2(-1000, 0), ForceMode2D.Impulse);
+            }
+            else
+            {
+                myPhysics.AddForce(new Vector2(1000, 0), ForceMode2D.Impulse);
+            }
+        }
+
         if (enemyHealth > 0)
         {
             hurtSound.Play();
             //Debug.Log("Enemy health before hit: " + enemyHealth);
             //Lowers enemy health
             enemyHealth--;
+            Debug.Log("Enemy health is" + enemyHealth);
 
             //Plays damage taking animation
-            enemyAnimator.SetBool("dmgTaken", true);
+            //enemyAnimator.SetBool("dmgTaken", true);
             //Debug.Log("Enemy health after hit: " + enemyHealth);
         }
 
@@ -198,5 +225,6 @@ public class HulkDefuaultScript : MonoBehaviour
             dieSound.Play();
             enemyAnimator.SetBool("healthIsZero", true);
         }
+        hulk.color = new Color(255, 0, 0);
     }
 }

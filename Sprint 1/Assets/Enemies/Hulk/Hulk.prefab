@@ -1,5 +1,62 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2483835154415745375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6926696307785576832}
+  - component: {fileID: 6655787991004567612}
+  m_Layer: 0
+  m_Name: AttackableHitBox
+  m_TagString: HulkHitBox
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6926696307785576832
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2483835154415745375}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.2, y: -0.1, z: 0}
+  m_LocalScale: {x: 1.1416667, y: 1.18718, z: 0}
+  m_Children: []
+  m_Father: {fileID: 2148789328468724704}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &6655787991004567612
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2483835154415745375}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.18667391, y: -0.06819171}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.875, y: 0.84375}
+    newSize: {x: 0.56, y: 0.54}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5427728, y: 1.622409}
+  m_EdgeRadius: 0
 --- !u!61 &3272031874512093779
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25,32 +82,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.68753314, y: 1.9269321}
-  m_EdgeRadius: 0
---- !u!61 &3719583561815106362
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2148789328468724713}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.02721554, y: -0.1394772}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.25, y: 2.25}
-    newSize: {x: 0.56, y: 0.54}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.9778494, y: 1.9710456}
   m_EdgeRadius: 0
 --- !u!114 &-6707089165074091142
 MonoBehaviour:
@@ -88,11 +119,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5017589789840747856, guid: 2c593c603b7a1a241b475c35c83536f1, type: 3}
       propertyPath: m_Mass
-      value: 100
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 5017589789840747856, guid: 2c593c603b7a1a241b475c35c83536f1, type: 3}
       propertyPath: m_BodyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5017589789840747857, guid: 2c593c603b7a1a241b475c35c83536f1, type: 3}
       propertyPath: m_Controller
@@ -120,7 +151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5017589789840747861, guid: 2c593c603b7a1a241b475c35c83536f1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5017589789840747861, guid: 2c593c603b7a1a241b475c35c83536f1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -154,6 +185,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -4187750477261952082, guid: cd637ab9138695449aa9d3ee12358486, type: 3}
+    - target: {fileID: 5017589789840747862, guid: 2c593c603b7a1a241b475c35c83536f1, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5017589789840747862, guid: 2c593c603b7a1a241b475c35c83536f1, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5017589789840747862, guid: 2c593c603b7a1a241b475c35c83536f1, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5017589789840747863, guid: 2c593c603b7a1a241b475c35c83536f1, type: 3}
       propertyPath: m_Size.x
       value: 1.9776555
@@ -186,6 +229,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Hulk
       objectReference: {fileID: 0}
+    - target: {fileID: 5017589789900228071, guid: 2c593c603b7a1a241b475c35c83536f1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5017589789840747858, guid: 2c593c603b7a1a241b475c35c83536f1, type: 3}
     - {fileID: 5017589789840747859, guid: 2c593c603b7a1a241b475c35c83536f1, type: 3}
@@ -194,5 +241,10 @@ PrefabInstance:
 --- !u!1 &2148789328468724713 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5017589789840747868, guid: 2c593c603b7a1a241b475c35c83536f1, type: 3}
+  m_PrefabInstance: {fileID: 6372602089248581301}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2148789328468724704 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5017589789840747861, guid: 2c593c603b7a1a241b475c35c83536f1, type: 3}
   m_PrefabInstance: {fileID: 6372602089248581301}
   m_PrefabAsset: {fileID: 0}

@@ -37,7 +37,6 @@ public class enemyRange : MonoBehaviour
                 if (Mathf.Abs(player.transform.position.x - this.transform.position.x) <= 1.15 &&
                     Mathf.Abs(player.transform.position.y - this.transform.position.y) <= 2)
                 {
-                    myPhysics.velocity = new Vector2(0, 0);
                     //This basically checks that at least 2 second has passed between attacks
                     //so the enemy doesn't attack constatnly. I chose one second because thats
                     //how long one loop of the idle animation is

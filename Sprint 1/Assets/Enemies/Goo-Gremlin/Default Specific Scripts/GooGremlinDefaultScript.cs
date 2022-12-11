@@ -54,6 +54,7 @@ public class GooGremlinDefaultScript : MonoBehaviour
     {// This entire update function is kinda complicated but it effectively makes it
      //so that the enemy is ALWAYS facing in the direction of the player
 
+        
         if (player != null)
         {
             if (enemyAnimator.GetBool("hasAwoken"))
@@ -113,7 +114,6 @@ public class GooGremlinDefaultScript : MonoBehaviour
                         {
                             fallForce = myPhysics.velocity.y;
                             myPhysics.velocity = new Vector2(-1 * speed, fallForce);
-
                         }
                     }
                 }
@@ -128,12 +128,11 @@ public class GooGremlinDefaultScript : MonoBehaviour
             {
                 enemyAnimator.SetBool("inRange", true);
             }
-
-
         }
     }
 
 
+    //Collision for if player touches goo gremlins Collider
     public void OnCollisionEnter2D(Collision2D thingHit)
     {
         if (thingHit.gameObject.CompareTag("Void"))
@@ -144,28 +143,32 @@ public class GooGremlinDefaultScript : MonoBehaviour
         {
             if (thingHit.gameObject.CompareTag("Player"))
             {
-                playerScript = thingHit.gameObject.GetComponent<MovementScript>();
-                playerScript.takeDamage();
-                Vector2 direction = thingHit.GetContact(0).normal;
-                if (direction.x == 1)
+                if (enemyAnimator.GetBool("hasAwoken")&& enemyHealth > 0)
                 {
-                    playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
-                    Debug.Log("left");
-                }
-                if (direction.x == -1)
-                {
-                    playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
-                    Debug.Log("right ");
-                }
-                if (direction.y == 1)
-                {
-                    playerScript.myPhysics.AddForce(new Vector2(0, -10), ForceMode2D.Impulse);
-                    Debug.Log("down");
-                }
-                if (direction.y == -1)
-                {
-                    playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
-                    Debug.Log("up");
+                    Debug.Log("Enemies health is " + enemyHealth);
+                    playerScript = thingHit.gameObject.GetComponent<MovementScript>();
+                    playerScript.takeDamage();
+                    Vector2 direction = thingHit.GetContact(0).normal;
+                    if (direction.x == 1)
+                    {
+                        playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
+                        Debug.Log("left");
+                    }
+                    if (direction.x == -1)
+                    {
+                        playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
+                        Debug.Log("right ");
+                    }
+                    if (direction.y == 1)
+                    {
+                        playerScript.myPhysics.AddForce(new Vector2(0, -10), ForceMode2D.Impulse);
+                        Debug.Log("down");
+                    }
+                    if (direction.y == -1)
+                    {
+                        playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
+                        Debug.Log("up");
+                    }
                 }
             }
         }
@@ -173,6 +176,20 @@ public class GooGremlinDefaultScript : MonoBehaviour
 
     public void takeDamage()
     { //To be called in other scripts when something hits this enemy
+
+        enemyAnimator.SetBool("isWalking", false);
+
+        if (player != null)
+        {
+            if (player.transform.position.x > this.transform.position.x)
+            {
+                myPhysics.AddForce(new Vector2(-450, 0), ForceMode2D.Impulse);
+            }
+            else
+            {
+                myPhysics.AddForce(new Vector2(450, 0), ForceMode2D.Impulse);
+            }
+        }
 
         if (enemyHealth > 0)
         {

@@ -7,7 +7,7 @@ public class ShopItems
 {
     //The Locations of each slot possibility (could be stored within the item)
     //private Vector3[] slotsVec = new Vector3[4];
-    private Vector3 location = new Vector3(6.5f, 107f, 0);
+    private Vector3 location = new Vector3(6.5f, 130.7f, 0);
 
     //Stores the visual in the list
     private GameObject item;
