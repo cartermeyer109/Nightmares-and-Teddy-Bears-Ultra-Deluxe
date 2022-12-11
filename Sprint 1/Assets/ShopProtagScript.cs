@@ -28,11 +28,11 @@ public class ShopProtagScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)){
-            //Debug.Log("test");
-            SceneManager.LoadScene(LevelTracker.getLevel());
-            //SceneManager.LoadScene("Tutorial Level");
-        }
+        //if (Input.GetKeyDown(KeyCode.Space)){
+        //    //Debug.Log("test");
+        //    SceneManager.LoadScene(LevelTracker.getLevel());
+        //    //SceneManager.LoadScene("Tutorial Level");
+        //}
         if (Input.GetKeyDown(KeyCode.H))
         {
             //Debuging only
@@ -46,7 +46,7 @@ public class ShopProtagScript : MonoBehaviour
         if (thingProtagHit.gameObject.CompareTag("Rope")) 
         {
             //Debug.Log("Rope");
-            if (Input.GetKey(KeyCode.W))
+            if (Input.GetKey(KeyCode.Space))
             {
                 SceneManager.LoadScene(LevelTracker.getLevel());
             }
