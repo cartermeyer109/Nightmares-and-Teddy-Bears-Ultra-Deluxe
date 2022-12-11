@@ -191,8 +191,6 @@ public class GooGremlinDefaultScript : MonoBehaviour
         if (enemyHealth <= 0)
         {
             dieSound.Play();
-            //particleBurst.transform.position = transform.position;
-            //particleBurst.Play();
             enemyAnimator.SetBool("healthIsZero", true);
         }
     }

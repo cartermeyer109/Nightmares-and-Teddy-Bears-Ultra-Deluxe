@@ -483,6 +483,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1169730335113917890, guid: fc3f6817af8a3fa479381ba434154d30, type: 3}
   m_PrefabInstance: {fileID: 70193865}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &74479175 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6415345064717943045, guid: c2d8991760012234c9d06fc8a67108d5, type: 3}
+  m_PrefabInstance: {fileID: 598449727}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &78007266 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4550178608919684385, guid: fdcd2c38314d4974fbe2004e1083a2f2, type: 3}
@@ -1516,7 +1521,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1312072182}
   m_PlaneDistance: 100
   m_PixelPerfect: 1
   m_ReceivesEvents: 1
@@ -3275,6 +3280,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &624723104 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8201602592527090373, guid: c2d8991760012234c9d06fc8a67108d5, type: 3}
+  m_PrefabInstance: {fileID: 598449727}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &637174683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5392,6 +5402,14 @@ PrefabInstance:
       propertyPath: currLevel
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4506771555686184283, guid: 82c90a45502d3aa479bf255899d69f57, type: 3}
+      propertyPath: normAnimator
+      value: 
+      objectReference: {fileID: 74479175}
+    - target: {fileID: 4506771555686184283, guid: 82c90a45502d3aa479bf255899d69f57, type: 3}
+      propertyPath: nightmareAnimator
+      value: 
+      objectReference: {fileID: 624723104}
     - target: {fileID: 4506771555686184285, guid: 82c90a45502d3aa479bf255899d69f57, type: 3}
       propertyPath: m_RootOrder
       value: 1

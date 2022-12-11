@@ -83,7 +83,7 @@ public class cameraScript : MonoBehaviour
     {
         //Controls boundary
         //If going forward
-        if (!cutsceneOn3) //Fixes a specific glitch with cutscene 3 where it wont show the hatch opening
+        if (!cutsceneOn3 && !cutsceneCompleted2 && cutsceneCompleted && !cutsceneCompleted3) //Fixes a specific glitch with cutscene 3 where it wont show the hatch opening
         {
             if (protagPhysics.velocity.x >= 0 && player.transform.position.x >= playerPosX)
             {
@@ -115,10 +115,7 @@ public class cameraScript : MonoBehaviour
         if (!cutsceneOn && !cutsceneOn2 && !cutsceneOn3)
         {
             //Camera follows player but has a fixed y axis
-            if (player.transform.position.x >= playerPosX)
-            {
-                this.transform.position = new Vector3(player.transform.position.x, 1, -10);
-            }
+            this.transform.position = new Vector3(player.transform.position.x, 1, -10);
 
             //Protag is set to normal behavior
             protagAnimator.SetBool("cutsceneIdle", false);

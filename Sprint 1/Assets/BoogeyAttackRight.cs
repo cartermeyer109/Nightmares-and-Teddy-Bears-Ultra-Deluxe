@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoogeyAttack : StateMachineBehaviour
+public class BoogeyAttackRight : StateMachineBehaviour
 {
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.SetBool("Attack", false);
         animator.SetBool("isAttacking", true);
-        animator.SetBool("leftAttacking", true);
+        animator.SetBool("rightAttacking", true);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -22,7 +22,7 @@ public class BoogeyAttack : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.SetBool("isAttacking", false);
-        animator.SetBool("leftAttacking", false);
+        animator.SetBool("rightAttacking", false);
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

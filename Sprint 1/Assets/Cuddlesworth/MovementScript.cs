@@ -64,6 +64,10 @@ public class MovementScript : MonoBehaviour
     private static bool projAttack = false;
     private static bool gpAttack = false;
 
+    //UI
+    public Animator normAnimator;
+    public Animator nightmareAnimator;
+
     public void heal()
     {
         playerHealth = maxHealth;
@@ -146,9 +150,17 @@ public class MovementScript : MonoBehaviour
     }
     void Update()
     {
-        //Debug.Log("cooldown timer is " + nightmareCooldown);
-        //Debug.Log("Fearbar is at " + fearBarCtr);
-        //Debug.Log("fear over use timer is  " + fearOverUseTimer);
+        if (playerHealth <= 2)
+        {
+            normAnimator.SetBool("lowHealth", true);
+            nightmareAnimator.SetBool("lowHealth", true);
+        }
+        else
+        {
+            normAnimator.SetBool("lowHealth", false);
+            nightmareAnimator.SetBool("lowHealth", false);
+        }
+
         //SETTING THE STATS
         {
             PlayerPrefs.SetInt("fear", fear);
@@ -289,20 +301,21 @@ public class MovementScript : MonoBehaviour
             //It turns back from fear mode if it is already in it as well. Also it can only be activated if there is fear in the bar
             if (Input.GetKey(KeyCode.L))
             {
-                if (fearBarCtr >= 10)
+                if (switchTimer >= 2.5)
                 {
-                    if (switchTimer >= 2.5)
+                    if (protagAnimator.GetBool("NightmareSwitch"))
                     {
-                        if (protagAnimator.GetBool("NightmareSwitch"))
-                        {
-                            protagAnimator.SetBool("NightmareSwitch", false);
-                        }
-                        else if (nightmareCooldown == 0)
+                        protagAnimator.SetBool("NightmareSwitch", false);
+                    }
+                    else if (nightmareCooldown == 0)
+                    {
+                        if (fearBarCtr >= 10)
                         {
                             protagAnimator.SetBool("NightmareSwitch", true);
+
                         }
-                        switchTimer = 0;
                     }
+                    switchTimer = 0;
                 }
             }
 

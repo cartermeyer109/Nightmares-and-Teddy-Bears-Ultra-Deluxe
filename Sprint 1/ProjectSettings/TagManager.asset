@@ -33,6 +33,7 @@ TagManager:
   - FearBall
   - Boundary
   - CourageOrb
+  - Needle
   layers:
   - Default
   - TransparentFX
