@@ -38,6 +38,7 @@ TagManager:
   - ImpHitBox
   - GremlinHitBoxDF
   - HulkHitBox
+  - Page
   layers:
   - Default
   - TransparentFX

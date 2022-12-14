@@ -10,7 +10,6 @@ public class dropScript : MonoBehaviour
     Animator animator;
 
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -24,13 +23,12 @@ public class dropScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
 
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && !animator.GetBool("HitGround"))
         {
             playerScript.takeDamage();
         }
         //Debug.Log("Collision Detected with" + other.name);
         animator.SetBool("HitGround", true);
-
     }
 
     public void DestroyDrop()

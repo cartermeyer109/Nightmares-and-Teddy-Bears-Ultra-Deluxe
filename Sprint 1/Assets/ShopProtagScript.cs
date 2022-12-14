@@ -33,12 +33,12 @@ public class ShopProtagScript : MonoBehaviour
         //    SceneManager.LoadScene(LevelTracker.getLevel());
         //    //SceneManager.LoadScene("Tutorial Level");
         //}
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            //Debuging only
-            LevelTracker.nextLevel();
-            Debug.Log("current level is set to " + LevelTracker.getLevel());
-        }
+        //if (Input.GetKeyDown(KeyCode.H))
+        //{
+        //    //Debuging only
+        //    LevelTracker.nextLevel();
+        //    Debug.Log("current level is set to " + LevelTracker.getLevel());
+        //}
     }
 
     public void OnTriggerStay2D(Collider2D thingProtagHit)
