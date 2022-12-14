@@ -43,8 +43,8 @@ public class thankYouText : MonoBehaviour
         distanceToLock = 71 - cam.transform.position.x;
         camStartX = cam.transform.position.x;
 
-
-        this.enter.fontMaterial.SetFloat(ShaderUtilities.ID_FaceDilate, -1f);
+        enter = GameObject.Find("PressEnter2").GetComponent<TextMeshProUGUI>();
+        enter.fontMaterial.SetFloat(ShaderUtilities.ID_FaceDilate, -1f);
         textbox.text = "Nice job!";
         textNum = 0;
         timeButtonHit = Time.time;
@@ -69,13 +69,40 @@ public class thankYouText : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Return) && textNum == 2 && Time.time - timeButtonHit > 1)
         {
-            textbox.text = "Don't worry, I'll buy it off of you!";
+            textbox.text = "It fills up the black gauge in the upper left corner.";
             textNum = 3;
-            transitionCam = true;
+            timeButtonHit = Time.time;
+        }
+        if (Input.GetKeyDown(KeyCode.Return) && textNum == 3 && Time.time - timeButtonHit > 1)
+        {
+            textbox.text = "You can enter nightmare mode with L using the gauge.";
+            textNum = 4;
+            timeButtonHit = Time.time;
+        }
+        if (Input.GetKeyDown(KeyCode.Return) && textNum == 4 && Time.time - timeButtonHit > 1)
+        {
+            textbox.text = "If you keep it on past the gauge then it will hurt you.";
+            textNum = 5;
+            timeButtonHit = Time.time;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Return) && textNum == 5 && Time.time - timeButtonHit > 1)
+        {
+            textbox.text = "Don't worry though, I'll buy some off of you!";
+            textNum = 6;
             timeButtonHit = Time.time;
 
          
         }
+        if (Input.GetKeyDown(KeyCode.Return) && textNum == 6 && Time.time - timeButtonHit > 1)
+        {
+            textbox.text = "You can buy spells to use with K and I!";
+            textNum = 7;
+            transitionCam = true;
+            timeButtonHit = Time.time;
+
+        }
+
         if (transitionCam)
         {
             if (Time.time - timeButtonHit < 1.5)
@@ -94,10 +121,10 @@ public class thankYouText : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Return) && textNum == 3 && Time.time - timeButtonHit > 3)
+        if (Input.GetKeyDown(KeyCode.Return) && textNum == 7 && Time.time - timeButtonHit > 3)
         {
             textbox.text = "Just jump into my shop over there";
-            textNum = 4;
+            textNum = 8;
             timeButtonHit = Time.time;
             transitionCam = false;
             //doorCanOpen = true;
@@ -106,7 +133,7 @@ public class thankYouText : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Return) && textNum == 4 && Time.time - timeButtonHit > 1)
+        if (Input.GetKeyDown(KeyCode.Return) && textNum == 8 && Time.time - timeButtonHit > 1)
         {
             textbox.text = "";
             door.GetComponent<doorOpeningScript>().enabled = true;

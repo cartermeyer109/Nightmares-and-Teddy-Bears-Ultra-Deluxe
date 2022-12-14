@@ -123,6 +123,7 @@ public class MovementScript : MonoBehaviour
             dash = -1;
             shadowNeedle = -1;
             sandNeedle = -1;
+            protagAnimator.SetBool("NeedleObtained", false);
         }
         else
         {
@@ -141,6 +142,7 @@ public class MovementScript : MonoBehaviour
             sandNeedle = (PlayerPrefs.GetInt("sandNeedle"));
             healer = (PlayerPrefs.GetInt("healer"));
             wave = (PlayerPrefs.GetInt("wave"));
+            protagAnimator.SetBool("NeedleObtained", true);
         }
 
         if (GameObject.FindWithTag("LevelTracker") == null) //****************************************************************

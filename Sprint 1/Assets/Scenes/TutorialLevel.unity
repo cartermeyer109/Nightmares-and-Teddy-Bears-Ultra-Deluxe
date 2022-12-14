@@ -2405,7 +2405,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press A/d to Move
+  m_text: Press A/D to Move
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -26348,6 +26348,10 @@ PrefabInstance:
     - target: {fileID: 208089901741812851, guid: c2d8991760012234c9d06fc8a67108d5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4397220775595828672, guid: c2d8991760012234c9d06fc8a67108d5, type: 3}
+      propertyPath: m_Name
+      value: Not thank you text
       objectReference: {fileID: 0}
     - target: {fileID: 5041579772544119318, guid: c2d8991760012234c9d06fc8a67108d5, type: 3}
       propertyPath: m_Name
