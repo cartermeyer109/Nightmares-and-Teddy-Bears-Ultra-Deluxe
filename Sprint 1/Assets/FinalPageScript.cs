@@ -28,14 +28,11 @@ public class FinalPageScript : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (gameObject.transform.GetChild(0).gameObject != null)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            if (collision.gameObject.CompareTag("Player"))
-            {
-                playerAnimator.SetBool("cutsceneIdle", true);
-                GameObject.Find("Canvas").transform.GetChild(3).gameObject.SetActive(true);
-                Object.Destroy(gameObject.transform.GetChild(0).gameObject);
-            }
+            playerAnimator.SetBool("cutsceneIdle", true);
+            GameObject.Find("Canvas").transform.GetChild(3).gameObject.SetActive(true);
+            gameObject.transform.GetChild(0).gameObject.SetActive(false);
         }
     }
 }

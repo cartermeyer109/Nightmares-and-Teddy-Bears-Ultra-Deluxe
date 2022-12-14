@@ -159,11 +159,6 @@ public class GooGremlinDefaultScript : MonoBehaviour
                         playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
                         Debug.Log("right ");
                     }
-                    if (direction.y == 1)
-                    {
-                        playerScript.myPhysics.AddForce(new Vector2(0, -10), ForceMode2D.Impulse);
-                        Debug.Log("down");
-                    }
                     if (direction.y == -1)
                     {
                         playerScript.myPhysics.AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
