@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartScreenScript : MonoBehaviour
 {
     Transform optionHighlighter;
     bool startSelected = true;
     Animator camera;
-    float timer;
+    float timer = 0;
     float enterTime;
     bool buttonPressed;
 
@@ -59,15 +60,23 @@ public class StartScreenScript : MonoBehaviour
                 camera.Play("DownToUp");
             }
         }
-        if (Time.time - enterTime >= 2.66f && startSelected)
+        if (buttonPressed && Time.time - enterTime >= 2.66f && startSelected)
         {
             //NATE LOAD THE TUTORIAL SCENE IN THIS BOX HERE
+            StartCoroutine(enterScene(2.66f, "TutorialLevel"));
         }
-        if (Time.time - enterTime >= .56666f && !startSelected)
-        {
-            //NATE LOAD THE CREDIT SCENE IN THIS BOX HERE YOU BEAUTIFUL MAN
-        }
+        //if (buttonPressed && Time.time - enterTime >= .56666f && !startSelected)
+        //{
+        //    //NATE LOAD THE CREDIT SCENE IN THIS BOX HERE YOU BEAUTIFUL MAN
+        //    SceneManager.LoadScene("Credits");
+        //}
+        if (buttonPressed &&/* Time.time - enterTime >= .56666f &&*/ !startSelected) 
+            StartCoroutine(enterScene(.56666f, "Credits"));
+    }
 
-
+    public IEnumerator enterScene(float time, string scene)
+    {
+        yield return new WaitForSecondsRealtime(time);
+        SceneManager.LoadScene(scene);
     }
 }
