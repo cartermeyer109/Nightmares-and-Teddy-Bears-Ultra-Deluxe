@@ -22,7 +22,7 @@ public class BoogeyManScript : MonoBehaviour
         playerScript = player.GetComponent<MovementScript>();
         boogeyAnimator = GetComponent<Animator>();
         attackFreq = 5;
-        enemyHealth = 5;
+        enemyHealth = 10;
         boogeyMan = GetComponent<SpriteRenderer>();
         boogeyMan.color = new Color(255, 255, 255);
 }
@@ -102,5 +102,9 @@ void Update()
         }
         boogeyAnimator.SetBool("SwipeEnabled", false);
         return 0;
+    }
+    public float getHealth()
+    {
+        return enemyHealth;
     }
 }

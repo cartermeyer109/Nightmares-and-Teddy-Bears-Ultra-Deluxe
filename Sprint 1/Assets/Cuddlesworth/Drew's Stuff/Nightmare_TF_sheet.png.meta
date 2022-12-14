@@ -1,0 +1,420 @@
+fileFormatVersion: 2
+guid: d929c0d174f855140a47ecf5e2df4fd7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4733575481738417988
+    second: Nightmare_TF_sheet_0
+  - first:
+      213: -6470011699480189726
+    second: Nightmare_TF_sheet_1
+  - first:
+      213: -7682663796725099216
+    second: Nightmare_TF_sheet_2
+  - first:
+      213: -3689720447895981354
+    second: Nightmare_TF_sheet_3
+  - first:
+      213: -6361693934309601097
+    second: Nightmare_TF_sheet_4
+  - first:
+      213: 5471447737434278964
+    second: Nightmare_TF_sheet_5
+  - first:
+      213: -4452038973081953320
+    second: Nightmare_TF_sheet_6
+  - first:
+      213: 4634800090041988816
+    second: Nightmare_TF_sheet_7
+  - first:
+      213: 8045239140610303838
+    second: Nightmare_TF_sheet_8
+  - first:
+      213: -3773321602241702065
+    second: Nightmare_TF_sheet_9
+  - first:
+      213: -8078934924043901997
+    second: Nightmare_TF_sheet_10
+  - first:
+      213: 6361302846452132297
+    second: Nightmare_TF_sheet_11
+  - first:
+      213: -5847456010687600375
+    second: Nightmare_TF_sheet_12
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nightmare_TF_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 316
+        width: 93
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 447548232d901b140800000000000000
+      internalID: 4733575481738417988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightmare_TF_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 316
+        width: 93
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e4acdf83a6e536a0800000000000000
+      internalID: -6470011699480189726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightmare_TF_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 316
+        width: 93
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 035527b3bf1b16590800000000000000
+      internalID: -7682663796725099216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightmare_TF_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 237
+        width: 93
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d23aa63dca7bccc0800000000000000
+      internalID: -3689720447895981354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightmare_TF_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 237
+        width: 93
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b018bb8219b6b7a0800000000000000
+      internalID: -6361693934309601097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightmare_TF_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 237
+        width: 93
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c82ec6abc7eeb40800000000000000
+      internalID: 5471447737434278964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightmare_TF_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 158
+        width: 93
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db5143542e2732c0800000000000000
+      internalID: -4452038973081953320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightmare_TF_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 158
+        width: 93
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d6b6eb202e125040800000000000000
+      internalID: 4634800090041988816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightmare_TF_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 158
+        width: 93
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5765257f5e66af60800000000000000
+      internalID: 8045239140610303838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightmare_TF_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 79
+        width: 93
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f475313aef772abc0800000000000000
+      internalID: -3773321602241702065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightmare_TF_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 79
+        width: 93
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d3add89d7bd1ef80800000000000000
+      internalID: -8078934924043901997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightmare_TF_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 79
+        width: 93
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c9e5773c33e74850800000000000000
+      internalID: 6361302846452132297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightmare_TF_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 93
+        height: 79
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9092e3b4db9a9dea0800000000000000
+      internalID: -5847456010687600375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

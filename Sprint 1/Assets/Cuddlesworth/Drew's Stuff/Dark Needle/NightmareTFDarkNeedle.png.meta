@@ -1,0 +1,420 @@
+fileFormatVersion: 2
+guid: fca6880ec30edcd41b8db0d10b22f568
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4231547169258822861
+    second: NightmareTFDarkNeedle_0
+  - first:
+      213: 3438388924041143969
+    second: NightmareTFDarkNeedle_1
+  - first:
+      213: 4531179589798744604
+    second: NightmareTFDarkNeedle_2
+  - first:
+      213: -3587167470422427027
+    second: NightmareTFDarkNeedle_3
+  - first:
+      213: 3776320642315312990
+    second: NightmareTFDarkNeedle_4
+  - first:
+      213: 6788470465953861323
+    second: NightmareTFDarkNeedle_5
+  - first:
+      213: 3480503365433322480
+    second: NightmareTFDarkNeedle_6
+  - first:
+      213: 1573618600463779636
+    second: NightmareTFDarkNeedle_7
+  - first:
+      213: -72774867885451260
+    second: NightmareTFDarkNeedle_8
+  - first:
+      213: 4048369592844877594
+    second: NightmareTFDarkNeedle_9
+  - first:
+      213: 3013661296318505877
+    second: NightmareTFDarkNeedle_10
+  - first:
+      213: 2508682516387376135
+    second: NightmareTFDarkNeedle_11
+  - first:
+      213: -1856479581696019198
+    second: NightmareTFDarkNeedle_12
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NightmareTFDarkNeedle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 316
+        width: 93
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 333a40ee4468645c0800000000000000
+      internalID: -4231547169258822861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightmareTFDarkNeedle_1
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 316
+        width: 93
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a62c11528c97bf20800000000000000
+      internalID: 3438388924041143969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightmareTFDarkNeedle_2
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 316
+        width: 93
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c12547764dbf1ee30800000000000000
+      internalID: 4531179589798744604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightmareTFDarkNeedle_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 237
+        width: 93
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a72a7f032d73ec0800000000000000
+      internalID: -3587167470422427027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightmareTFDarkNeedle_4
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 237
+        width: 93
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5fdd2bcd9f286430800000000000000
+      internalID: 3776320642315312990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightmareTFDarkNeedle_5
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 237
+        width: 93
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce09630ced753e50800000000000000
+      internalID: 6788470465953861323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightmareTFDarkNeedle_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 158
+        width: 93
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fb6430de5b3d4030800000000000000
+      internalID: 3480503365433322480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightmareTFDarkNeedle_7
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 158
+        width: 93
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 437479c97cd96d510800000000000000
+      internalID: 1573618600463779636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightmareTFDarkNeedle_8
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 158
+        width: 93
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4089c1ba4a37dfef0800000000000000
+      internalID: -72774867885451260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightmareTFDarkNeedle_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 79
+        width: 93
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ff20d02b2be2830800000000000000
+      internalID: 4048369592844877594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightmareTFDarkNeedle_10
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 79
+        width: 93
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59368606bfca2d920800000000000000
+      internalID: 3013661296318505877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightmareTFDarkNeedle_11
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 79
+        width: 93
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70ca0830571a0d220800000000000000
+      internalID: 2508682516387376135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NightmareTFDarkNeedle_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 93
+        height: 79
+      alignment: 9
+      pivot: {x: 0.4516129, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2053e3018a57c36e0800000000000000
+      internalID: -1856479581696019198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

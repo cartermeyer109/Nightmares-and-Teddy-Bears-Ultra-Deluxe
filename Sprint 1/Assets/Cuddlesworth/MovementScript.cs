@@ -60,14 +60,14 @@ public class MovementScript : MonoBehaviour
 
     //INVENTORY
     private static int maxHealth; 
-    private static bool goldenNeedle = false;
-    private static bool projAttack = false;
-    private static bool gpAttack = false;
-    private static bool dash = false;
-    private static bool shadowNeedle = false;
-    private static bool sandNeedle = false;
-    private static bool healer = false;
-    private static bool wave = false;
+    private static int goldenNeedle = -1;
+    private static int projAttack = -1;
+    private static int gpAttack = -1;
+    private static int dash = -1;
+    private static int shadowNeedle = -1;
+    private static int sandNeedle = -1;
+    private static int healer = -1;
+    private static int wave = -1;
 
     //UI
     public Animator normAnimator;
@@ -117,12 +117,12 @@ public class MovementScript : MonoBehaviour
             maxCourage = 100;
             courage = maxCourage;
             playerHealth = maxHealth;
-            goldenNeedle = false;
-            projAttack = false;
-            gpAttack = false;
-            dash = false;
-            shadowNeedle = false;
-            sandNeedle = false;
+            goldenNeedle = -1;
+            projAttack = -1;
+            gpAttack = -1;
+            dash = -1;
+            shadowNeedle = -1;
+            sandNeedle = -1;
         }
         else
         {
@@ -133,14 +133,14 @@ public class MovementScript : MonoBehaviour
             maxCourage = PlayerPrefs.GetInt("maxCourage");
             courage = PlayerPrefs.GetFloat("courage");
             playerHealth = PlayerPrefs.GetInt("playerHealth");
-            goldenNeedle = intToBool(PlayerPrefs.GetInt("goldenNeedle"));
-            projAttack = intToBool(PlayerPrefs.GetInt("projAttack"));
-            gpAttack = intToBool(PlayerPrefs.GetInt("gpAttack"));
-            dash = intToBool(PlayerPrefs.GetInt("dash"));
-            shadowNeedle = intToBool(PlayerPrefs.GetInt("shadowNeedle"));
-            sandNeedle = intToBool(PlayerPrefs.GetInt("sandNeedle"));
-            healer = intToBool(PlayerPrefs.GetInt("healer"));
-            wave = intToBool(PlayerPrefs.GetInt("wave"));
+            goldenNeedle = PlayerPrefs.GetInt("goldenNeedle");
+            projAttack = PlayerPrefs.GetInt("projAttack");
+            gpAttack = (PlayerPrefs.GetInt("gpAttack"));
+            dash = (PlayerPrefs.GetInt("dash"));
+            shadowNeedle = (PlayerPrefs.GetInt("shadowNeedle"));
+            sandNeedle = (PlayerPrefs.GetInt("sandNeedle"));
+            healer = (PlayerPrefs.GetInt("healer"));
+            wave = (PlayerPrefs.GetInt("wave"));
         }
 
         if (GameObject.FindWithTag("LevelTracker") == null) //****************************************************************
@@ -183,19 +183,31 @@ public class MovementScript : MonoBehaviour
             PlayerPrefs.SetInt("maxCourage", maxCourage);
             PlayerPrefs.SetFloat("courage", courage);
             PlayerPrefs.SetInt("playerHealth", playerHealth);
-            PlayerPrefs.SetInt("goldenNeedle", boolToInt(goldenNeedle));
-            PlayerPrefs.SetInt("projAttack", boolToInt(projAttack));
-            PlayerPrefs.SetInt("gpAttack", boolToInt(gpAttack));
-            PlayerPrefs.SetInt("dash", boolToInt(dash));
-            PlayerPrefs.SetInt("shadowNeedle", boolToInt(shadowNeedle));
-            PlayerPrefs.SetInt("sandNeedle", boolToInt(sandNeedle));
-            PlayerPrefs.SetInt("healer", boolToInt(healer));
-            PlayerPrefs.SetInt("wave", boolToInt(wave));
+            PlayerPrefs.SetInt("goldenNeedle", (goldenNeedle));
+            PlayerPrefs.SetInt("projAttack", (projAttack));
+            PlayerPrefs.SetInt("gpAttack", (gpAttack));
+            PlayerPrefs.SetInt("dash", (dash));
+            PlayerPrefs.SetInt("shadowNeedle", (shadowNeedle));
+            PlayerPrefs.SetInt("sandNeedle", (sandNeedle));
+            PlayerPrefs.SetInt("healer", (healer));
+            PlayerPrefs.SetInt("wave", wave);
         }
 
+        if (sandNeedle > 0)
+        {
+            maxCourage = 150;
+        }
+        else
+        {
+            maxCourage = 100;
+        }
+        if (goldenNeedle > -1)
+        {
+            
+        }
         if (courage < maxCourage)
         {
-            courage += Time.deltaTime * 10;
+            courage += Time.deltaTime;
         }
 
         if (SceneManager.GetActiveScene().name == "Hopscotch Shop")
@@ -310,9 +322,88 @@ public class MovementScript : MonoBehaviour
                 //meleeSound.Play();
             }
             
+            if (sandNeedle == 1)
+            {
+                //sand needle anim bool true;
+            }
+
+            if (shadowNeedle == 1)
+            {
+                //shadow needle anim bool true;
+            }
+
             if (Input.GetKey(KeyCode.K))
             {
-                //do stuff (light/courage magic)
+                if (wave == 1)
+                {
+                    
+                }
+                if (healer == 1)
+                {
+                    if (courage >= 60 && playerHealth <= maxHealth - 1 && protagAnimator.GetBool("GroundTapped"))
+                    {
+                        protagAnimator.SetBool("heal", true);
+                        courage -= 60;
+
+                        if (playerHealth == maxHealth - 1)
+                        {
+                            playerHealth ++;
+                        }
+                        else
+                        {
+                            playerHealth += 2;
+                        }
+                    }
+                }
+                if (dash == 1)
+                {
+
+                }
+                if (gpAttack == 1)
+                {
+
+                }
+                if (projAttack == 1)
+                {
+
+                }
+                //Change an animator boolean. cost courage
+            }
+            if (Input.GetKey(KeyCode.I))
+            {
+                if (wave == 2)
+                {
+
+                }
+                if (healer == 2)
+                {
+                    if (courage >= 60 && playerHealth <= maxHealth - 1 && protagAnimator.GetBool("GroundTapped"))
+                    {
+                        protagAnimator.SetBool("heal", true);
+                        courage -= 60;
+
+                        if (playerHealth == maxHealth - 1)
+                        {
+                            playerHealth++;
+                        }
+                        else
+                        {
+                            playerHealth += 2;
+                        }
+                    }
+                }
+                if (dash == 2)
+                {
+
+                }
+                if (gpAttack == 2)
+                {
+
+                }
+                if (projAttack == 2)
+                {
+
+                }
             }
 
             //2.5 seconds
@@ -482,7 +573,7 @@ public class MovementScript : MonoBehaviour
     public void takeDamage()
     { //To be called in other scripts when something hits this enemy
 
-        if (!protagAnimator.GetBool("isTransforming") || !protagAnimator.GetBool("isDamaged"))
+        if (!protagAnimator.GetBool("isTransforming") || !protagAnimator.GetBool("isDamaged") || !protagAnimator.GetBool("cutsceneIdle"))
         {
             Debug.Log("Player health before hit: " + playerHealth);
 
@@ -517,17 +608,17 @@ public class MovementScript : MonoBehaviour
         return maxHealth;
     }
 
-    public bool getGoldenNeedle()
+    public int getGoldenNeedle()
     {
         return goldenNeedle;
     }
 
-    public bool getProjAttack()
+    public int getProjAttack()
     {
         return projAttack;
     }
 
-    public bool getGPAttack()
+    public int getGPAttack()
     {
         return gpAttack;
     }
@@ -537,52 +628,52 @@ public class MovementScript : MonoBehaviour
         return fear;
     }
 
-    public bool getDash()
+    public int getDash()
     {
         return dash;
     }
 
-    public bool getShadowNeedle()
+    public int getShadowNeedle()
     {
         return shadowNeedle;
     }
 
-    public bool getSandNeedle()
+    public int getSandNeedle()
     {
         return sandNeedle;
     }
 
-    public bool getHealer()
+    public int getHealer()
     {
         return healer;
     }
 
-    public bool getWave()
+    public int getWave()
     {
         return wave;
     }
 
-    public void setWave(bool b)
+    public void setWave(int b)
     {
         wave = b;
     }
 
-    public void setHealer(bool b)
+    public void setHealer(int b)
     {
         healer = b;
     }
 
-    public void setSandNeedle(bool b)
+    public void setSandNeedle(int b)
     {
         sandNeedle = b;
     }
 
-    public void setShadowNeedle(bool b)
+    public void setShadowNeedle(int b)
     {
         shadowNeedle = b;
     }
 
-    public void setDash(bool b)
+    public void setDash(int b)
     {
         dash = b;
     }
@@ -597,17 +688,17 @@ public class MovementScript : MonoBehaviour
         maxHealth = i;
     }
 
-    public void setGoldenNeedle(bool i)
+    public void setGoldenNeedle(int i)
     {
         goldenNeedle = i;
     }
 
-    public void setProjAttack(bool i)
+    public void setProjAttack(int i)
     {
         projAttack = i;
     }
 
-    public void setGPAttack(bool i)
+    public void setGPAttack(int i)
     {
         gpAttack = i;
     }
@@ -652,10 +743,30 @@ public class MovementScript : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        fear += 1;
-        if (fearBarCtr < maxFear)
+        if (shadowNeedle <= 0)
         {
-            fearBarCtr += 1;
+            fear += 1;
+            if (fearBarCtr < maxFear)
+            {
+                fearBarCtr += 1;
+            }
+            else
+            {
+                fearBarCtr = maxFear;
+            }
+        }
+        else
+        {
+            fear += 2;
+            if (fearBarCtr < maxFear)
+            {
+                fearBarCtr += 2;
+            }
+            else
+            {
+                fearBarCtr = maxFear;
+            }
+
         }
         Debug.Log("Fear is " + fear);
     }

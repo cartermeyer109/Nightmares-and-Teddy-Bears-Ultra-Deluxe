@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.Rendering.UI;
 
@@ -24,6 +25,10 @@ public class ShopItems
     //Item code to be used in a switch case in the main code
     private int itemCode;
 
+    private bool purchased;
+
+    private int equipped;
+
     public ShopItems(GameObject i, RectTransform it, GameObject ipv, int ipe, int ic)
     {
         item = i;
@@ -31,13 +36,8 @@ public class ShopItems
         itemPrev = ipv;
         itemPrice = ipe;
         itemCode = ic;
+        purchased = false;
 
-    }
-
-    public void Deactivate()
-    {
-        item.SetActive(false);
-        itemPrev.SetActive(false);
     }
 
     public void PlaceItem(int i)
@@ -64,5 +64,31 @@ public class ShopItems
     {
         return itemCode;
     }
+
+    public bool getItemPurchased()
+    {
+        return purchased;
+    }
+
+    public void setItemPurchased(bool b)
+    {
+        purchased = b;
+    }
+
+    public GameObject getItem()
+    {
+        return item;
+    }
+
+    public void setEquipped(int i)
+    {
+        equipped = i;
+    }
+
+    public int getEquipped()
+    {
+        return equipped;
+    }
+
 
 }

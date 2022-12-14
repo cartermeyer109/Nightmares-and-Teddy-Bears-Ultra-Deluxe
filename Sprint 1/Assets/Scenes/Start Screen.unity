@@ -434,7 +434,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Move: S/W \nSelect: Enter"
+  m_text: Move:S/W   Select:Enter
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 785a8661be5698a418a8278db99b87a2, type: 2}
   m_sharedMaterial: {fileID: 1687763290873911424, guid: 785a8661be5698a418a8278db99b87a2, type: 2}
@@ -545,7 +545,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!224 &873150781
 RectTransform:
@@ -563,8 +563,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.3, y: 4.07}
-  m_SizeDelta: {x: 43.0346, y: 6.0929}
+  m_AnchoredPosition: {x: 4.52, y: -5.11}
+  m_SizeDelta: {x: 43.0346, y: 6.5549}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1220223713
 GameObject:

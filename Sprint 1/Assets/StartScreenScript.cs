@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartScreenScript : MonoBehaviour
 {
     Transform optionHighlighter;
     bool startSelected = true;
     Animator camera;
-    float timer;
     float enterTime;
     bool buttonPressed;
 
@@ -20,14 +20,12 @@ public class StartScreenScript : MonoBehaviour
 
         camera = GameObject.Find("Main Camera").GetComponent<Animator>();
 
-        timer = 0;
+        camera.Play("MidToDown");
 
     }
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-
         if (!buttonPressed)
         {
             if (!startSelected && Input.GetKeyDown(KeyCode.W))
@@ -47,8 +45,8 @@ public class StartScreenScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return) && !buttonPressed)
         {
+            enterTime = Time.time;
             buttonPressed = true;
-            enterTime = timer;
 
             if (startSelected)
             {
@@ -59,13 +57,13 @@ public class StartScreenScript : MonoBehaviour
                 camera.Play("DownToUp");
             }
         }
-        if (Time.time - enterTime >= 2.66f && startSelected)
+        if (Time.time - enterTime >= 2.66f && startSelected && buttonPressed)
         {
-            //NATE LOAD THE TUTORIAL SCENE IN THIS BOX HERE
+            SceneManager.LoadScene("TutorialLevel");//NATE LOAD THE TUTORIAL SCENE IN THIS BOX HERE
         }
-        if (Time.time - enterTime >= .56666f && !startSelected)
+        if (Time.time - enterTime >= .56666f && !startSelected && buttonPressed)
         {
-            //NATE LOAD THE CREDIT SCENE IN THIS BOX HERE YOU BEAUTIFUL MAN
+            SceneManager.LoadScene("Credits");//NATE LOAD THE CREDIT SCENE IN THIS BOX HERE YOU BEAUTIFUL MAN
         }
 
 

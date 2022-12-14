@@ -1,0 +1,372 @@
+fileFormatVersion: 2
+guid: 706b96b9617dbf44c8b5aa396a4620d3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7170720258212148997
+    second: DARK-Small_projectile_attack_sheet_0
+  - first:
+      213: 8872622175307331557
+    second: DARK-Small_projectile_attack_sheet_1
+  - first:
+      213: -2296110681824748699
+    second: DARK-Small_projectile_attack_sheet_2
+  - first:
+      213: -7283759299933288894
+    second: DARK-Small_projectile_attack_sheet_3
+  - first:
+      213: -5680737938228446458
+    second: DARK-Small_projectile_attack_sheet_4
+  - first:
+      213: 1037914212601814571
+    second: DARK-Small_projectile_attack_sheet_5
+  - first:
+      213: -8457615784931756576
+    second: DARK-Small_projectile_attack_sheet_6
+  - first:
+      213: 7653885244147230365
+    second: DARK-Small_projectile_attack_sheet_7
+  - first:
+      213: 3934580170760625742
+    second: DARK-Small_projectile_attack_sheet_8
+  - first:
+      213: 5392632341410162000
+    second: DARK-Small_projectile_attack_sheet_9
+  - first:
+      213: 8467575129929699780
+    second: DARK-Small_projectile_attack_sheet_10
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DARK-Small_projectile_attack_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 237
+        width: 92
+        height: 79
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 507be6e2514838360800000000000000
+      internalID: 7170720258212148997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK-Small_projectile_attack_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 237
+        width: 92
+        height: 79
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e77279fbd2e12b70800000000000000
+      internalID: 8872622175307331557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK-Small_projectile_attack_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 237
+        width: 92
+        height: 79
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b1bdc00839220e0800000000000000
+      internalID: -2296110681824748699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK-Small_projectile_attack_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 158
+        width: 92
+        height: 79
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 246470af183eaea90800000000000000
+      internalID: -7283759299933288894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK-Small_projectile_attack_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 158
+        width: 92
+        height: 79
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60bfec961f6f921b0800000000000000
+      internalID: -5680737938228446458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK-Small_projectile_attack_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 158
+        width: 92
+        height: 79
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2ed57d2a79676e00800000000000000
+      internalID: 1037914212601814571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK-Small_projectile_attack_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 79
+        width: 92
+        height: 79
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e5f764014380aa80800000000000000
+      internalID: -8457615784931756576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK-Small_projectile_attack_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 79
+        width: 92
+        height: 79
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d96eff8d310183a60800000000000000
+      internalID: 7653885244147230365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK-Small_projectile_attack_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 79
+        width: 92
+        height: 79
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4e9b7aa1df6a9630800000000000000
+      internalID: 3934580170760625742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK-Small_projectile_attack_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 92
+        height: 79
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 055290a0b8a76da40800000000000000
+      internalID: 5392632341410162000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK-Small_projectile_attack_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 0
+        width: 92
+        height: 79
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c15460b7bed28570800000000000000
+      internalID: 8467575129929699780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

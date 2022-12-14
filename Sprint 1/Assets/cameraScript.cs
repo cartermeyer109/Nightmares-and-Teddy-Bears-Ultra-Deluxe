@@ -45,6 +45,7 @@ public class cameraScript : MonoBehaviour
     bool cutsceneOn3 = false;
     bool cutsceneCompleted3 = false;
 
+    Animator camAnim;
 
 
     // Start is called before the first frame update
@@ -75,6 +76,9 @@ public class cameraScript : MonoBehaviour
         blackBarsAnimator = blackBarsHolder.GetComponent<Animator>();
         blackBarsHolder.SetActive(false);
 
+        camAnim = gameObject.GetComponent<Animator>();
+
+        camAnim.Play("MidToUpIntro");
 
     }
 
