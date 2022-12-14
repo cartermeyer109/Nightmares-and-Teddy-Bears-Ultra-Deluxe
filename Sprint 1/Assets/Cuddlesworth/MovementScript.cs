@@ -446,9 +446,16 @@ public class MovementScript : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("CourageOrb"))
         {
-            courage += 50;
+            if (courage <= maxCourage - 50)
+            {
+                courage += 50;
+            }
+            else
+            {
+                courage += maxCourage - courage;
+            }
             heal();
-            maxCourage += 10;
+            //maxCourage += 10;
             //if (fearBarCtr <= maxFear - 50)
             //{
             //    fearBarCtr += 50;
@@ -475,7 +482,7 @@ public class MovementScript : MonoBehaviour
     public void takeDamage()
     { //To be called in other scripts when something hits this enemy
 
-        if (!protagAnimator.GetBool("isTransforming"))
+        if (!protagAnimator.GetBool("isTransforming") || !protagAnimator.GetBool("isDamaged"))
         {
             Debug.Log("Player health before hit: " + playerHealth);
 
